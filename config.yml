@@ -1,3 +1,63 @@
-baseURL: https://dev-helia.github.io/Blog-Website/
-title: Helia's Blog
-theme: PaperMod
+baseURL: "https://dev-helia.github.io/Blog-Website/"
+title: "Helia's Blog"
+theme: "PaperMod"
+
+paginate: 6
+languageCode: "en-us"
+defaultContentLanguage: "en"
+enableRobotsTXT: true
+
+params:
+  env: production
+  description: "A collection of curated prompts, AI thoughts, and tech experiments by Helia"
+  author: Helia
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+  comments: false
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  homeInfoParams:
+    Title: "👋 Welcome to Helia's Blog"
+    Content: |
+      Hi, I'm Helia.  
+      Welcome to my little corner of the internet 🧠✨  
+      I write about:
+      - 🌸 My favorite AI prompts  
+      - 🖋️ Technical notes  
+      - 🌿 Learnings & experiments  
+      Stay curious, stay creative 💡💘
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/dev-helia"
+    - name: email
+      url: "mailto:hetaoo.c@gmail.com"
+    - name: rss
+      url: "https://dev-helia.github.io/Blog-Website/index.xml"
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

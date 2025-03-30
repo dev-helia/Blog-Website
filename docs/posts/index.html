@@ -8,7 +8,7 @@
 <title>Posts | Helia&#39;s Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="Posts - Helia&#39;s Blog">
-<meta name="author" content="">
+<meta name="author" content="Helia">
 <link rel="canonical" href="https://dev-helia.github.io/Blog-Website/posts/">
 <link crossorigin="anonymous" href="/Blog-Website/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://dev-helia.github.io/Blog-Website/favicon.ico">
@@ -28,42 +28,15 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
 </noscript><meta property="og:url" content="https://dev-helia.github.io/Blog-Website/posts/">
   <meta property="og:site_name" content="Helia&#39;s Blog">
   <meta property="og:title" content="Posts">
-  <meta property="og:locale" content="en">
+  <meta property="og:description" content="A collection of curated prompts, AI thoughts, and tech experiments by Helia">
+  <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Posts">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="A collection of curated prompts, AI thoughts, and tech experiments by Helia">
 
 
 <script type="application/ld+json">
@@ -82,14 +55,10 @@
 </script>
 </head>
 
-<body class="list" id="top">
+<body class="list dark" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -122,11 +91,26 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://dev-helia.github.io/Blog-Website/posts/" title="Posts">
+                    <span class="active">Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dev-helia.github.io/Blog-Website/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dev-helia.github.io/Blog-Website/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header">
+<header class="page-header"><div class="breadcrumbs"><a href="https://dev-helia.github.io/Blog-Website/">Home</a></div>
   <h1>
     Posts
   </h1>
@@ -141,7 +125,7 @@
     <p>Building My Prompt Library This is the summary of my journey building a prompt collection website…
 </p>
   </div>
-  <footer class="entry-footer"></footer>
+  <footer class="entry-footer">1 min&nbsp;·&nbsp;16 words&nbsp;·&nbsp;Helia</footer>
   <a class="entry-link" aria-label="post link to " href="https://dev-helia.github.io/Blog-Website/posts/building-my-prompt-library/"></a>
 </article>
     </main>

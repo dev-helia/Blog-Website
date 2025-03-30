@@ -9,7 +9,7 @@
 <title>Helia&#39;s Blog</title>
 
 <meta name="description" content="A collection of curated prompts, AI thoughts, and more">
-<meta name="author" content="">
+<meta name="author" content="Helia">
 <link rel="canonical" href="https://dev-helia.github.io/Blog-Website/">
 <link crossorigin="anonymous" href="/Blog-Website/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://dev-helia.github.io/Blog-Website/favicon.ico">
@@ -20,6 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://dev-helia.github.io/Blog-Website/index.xml">
+<link rel="alternate" type="application/json" href="https://dev-helia.github.io/Blog-Website/index.json">
 <link rel="alternate" hreflang="en" href="https://dev-helia.github.io/Blog-Website/">
 <noscript>
     <style>
@@ -29,39 +30,11 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
 </noscript><meta property="og:url" content="https://dev-helia.github.io/Blog-Website/">
   <meta property="og:site_name" content="Helia&#39;s Blog">
   <meta property="og:title" content="Helia&#39;s Prompt Blog">
   <meta property="og:description" content="A collection of curated prompts, AI thoughts, and more">
-  <meta property="og:locale" content="en">
+  <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Helia&#39;s Prompt Blog">
@@ -73,23 +46,19 @@
   "@type": "Organization",
   "name": "Helia's Blog",
   "url": "https://dev-helia.github.io/Blog-Website/",
-  "description": "",
+  "description": "A collection of curated prompts, AI thoughts, and tech experiments by Helia",
   "logo": "https://dev-helia.github.io/Blog-Website/favicon.ico",
   "sameAs": [
-      
+      "https://github.com/dev-helia", "mailto:hetaoo.c@gmail.com", "https://dev-helia.github.io/Blog-Website/index.xml"
   ]
 }
 </script>
 </head>
 
-<body class="list" id="top">
+<body class="list dark" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
     }
 
 </script>
@@ -122,6 +91,21 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://dev-helia.github.io/Blog-Website/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dev-helia.github.io/Blog-Website/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dev-helia.github.io/Blog-Website/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -138,8 +122,55 @@ Welcome to my little corner of the internet 🧠✨</p>
 
 
 </div>
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>👋 Welcome to Helia&rsquo;s Blog</h1>
+    </header>
+    <div class="entry-content">
+        <p>Hi, I&rsquo;m Helia.<br>
+Welcome to my little corner of the internet 🧠✨<br>
+I write about:</p>
+<ul>
+<li>🌸 My favorite AI prompts</li>
+<li>🖋️ Technical notes</li>
+<li>🌿 Learnings &amp; experiments<br>
+Stay curious, stay creative 💡💘</li>
+</ul>
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons" >
+    <a href="https://github.com/dev-helia" target="_blank" rel="noopener noreferrer me"
+        title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+    <a href="mailto:hetaoo.c@gmail.com" target="_blank" rel="noopener noreferrer me"
+        title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+    </a>
+    <a href="https://dev-helia.github.io/Blog-Website/index.xml" target="_blank" rel="noopener noreferrer me"
+        title="Rss">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+    </a>
+</div>
 
-<article class="first-entry"> 
+    </footer>
+</article>
+
+<article class="post-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">
     </h2>
@@ -148,7 +179,7 @@ Welcome to my little corner of the internet 🧠✨</p>
     <p>Building My Prompt Library This is the summary of my journey building a prompt collection website…
 </p>
   </div>
-  <footer class="entry-footer"></footer>
+  <footer class="entry-footer">1 min&nbsp;·&nbsp;16 words&nbsp;·&nbsp;Helia</footer>
   <a class="entry-link" aria-label="post link to " href="https://dev-helia.github.io/Blog-Website/posts/building-my-prompt-library/"></a>
 </article>
     </main>
