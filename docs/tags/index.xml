@@ -6,6 +6,35 @@
     <description>Recent content in Tags on Helia&#39;s Tech-Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fullstack</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/fullstack/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/fullstack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prompt</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/prompt/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/prompt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/react/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Supabase</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/supabase/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/supabase/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

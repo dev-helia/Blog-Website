@@ -1,10 +1,10 @@
-# My first full-stack project -- promptllery
-
 ---
 title: "My First Full-Stack Project — Promptllery"
 date: 2025-03-30
 tags: ["prompt", "fullstack", "supabase", "react"]
 ---
+
+# My first full-stack project -- promptllery
 
 ## Why I Decided to Build a Full-Stack Project
 
@@ -152,43 +152,43 @@ and recorded a short video to walk through the full user experience — from upl
 
 ### 1. Homepage (Not Logged In)
 
-![Homepage — Not Logged In](/static/promptllery/1.png)  
+![Homepage — Not Logged In](/promptllery/1.png)  
 🔒 Before logging in, the homepage shows a search bar and a reminder: users need to log in to upload or interact with prompts.
 
 
 ### 2. Homepage (With Public Prompts)
 
-![Homepage with Public Prompts](/static/promptllery/2.png)  
+![Homepage with Public Prompts](/promptllery/2.png)  
 ✨ Once logged in, prompts are displayed as cards with title, tags, and quick actions like "Copy", "Like", and "Test".
 
 
 ### 3. Login Page
 
-![Login Page](/static/promptllery/3.png)  
+![Login Page](/promptllery/3.png)  
 🔐 Basic email + password login form using Supabase Auth. Authenticated users can upload and like prompts.
 
 ### 4. Upload Prompt Page
 
-![Upload Prompt](/static/promptllery/4.png)  
+![Upload Prompt](/promptllery/4.png)  
 📝 Authenticated users can upload new prompts with detailed metadata — title, description, tags, examples, usage tips.
 
 
 ### 5. Prompt Ranking Page
 
-![Prompt Ranking Page](/static/promptllery/5.png)  
+![Prompt Ranking Page](/promptllery/5.png)  
 🏆 Shows the most liked or latest prompts. Each entry shows the prompt title and like count.
 
 ---
 
 ### 6. Register Page
 
-![Register Page](/static/promptllery/6.png)  
+![Register Page](/promptllery/6.png)  
 🆕 Simple registration form for new users. Supabase handles user creation and secure password storage.
 
 
 ### 7. Prompt Details + Inline Testing
 
-![Prompt Detail + Test Input](/static/promptllery/7.png)  
+![Prompt Detail + Test Input](/promptllery/7.png)  
 💡 On the prompt detail page, users can:
 - View full prompt text  
 - Choose GPT model (default is GPT-3.5)  
@@ -198,19 +198,19 @@ and recorded a short video to walk through the full user experience — from upl
 
 ### 8. Prompt Detail + QR Sharing
 
-![Prompt QR Sharing](/static/promptllery/8.png)  
+![Prompt QR Sharing](/promptllery/8.png)  
 📲 Every prompt has a shareable QR code and a “Copy” feature, making it easy to send prompts to friends or open in another device.
 
 
 ### 9. Prompt Test Result
 
-![Prompt Test Result](/static/promptllery/9.png)  
+![Prompt Test Result](/promptllery/9.png)  
 🧠 After clicking “Run Prompt”, the GPT-3.5 model returns a live result in the frontend. This allows users to preview how a prompt performs before using it in their own tools.
 
 
 ### 🎬 Full Demo Video
 
-🎥 [Watch full demo video](/static/promptllery/demo.mp4)
+🎥 [Watch full demo video](/promptllery/demo.mp4)
 
 
 
