@@ -27,5 +27,128 @@
 &lt;blockquote&gt;
 &lt;p&gt;This avoids decoding complexity caused by variable field placement.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Registers File reg[]</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</guid>
+      <description>&lt;h1 id=&#34;05_registers&#34;&gt;05_registers&lt;/h1&gt;
+&lt;h2 id=&#34;registers-file-reg&#34;&gt;Registers File reg[]&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-how-many-registers-in-risc-v&#34;&gt;1. How Many Registers in RISC-V?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;RISC-V defines &lt;strong&gt;32 general-purpose registers&lt;/strong&gt;:&lt;br&gt;
+&lt;code&gt;x0&lt;/code&gt; ~ &lt;code&gt;x31&lt;/code&gt; (each 32-bit, holds a &lt;strong&gt;word&lt;/strong&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Trade-off:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More registers = more variables can be stored&lt;/li&gt;
+&lt;li&gt;But → harder to access quickly → slower hardware&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-register-classification&#34;&gt;2. Register Classification&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Type&lt;/th&gt;
+          &lt;th&gt;Alias&lt;/th&gt;
+          &lt;th&gt;Range&lt;/th&gt;
+          &lt;th&gt;Usage Hint&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Saved regs&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;s0&lt;/code&gt;~&lt;code&gt;s1&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x8&lt;/code&gt;~&lt;code&gt;x9&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Values preserved across function calls&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;s2&lt;/code&gt;~&lt;code&gt;s11&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x18&lt;/code&gt;~&lt;code&gt;x27&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Temp regs&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;t0&lt;/code&gt;~&lt;code&gt;t2&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x5&lt;/code&gt;~&lt;code&gt;x7&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Temporary variables&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;t3&lt;/code&gt;~&lt;code&gt;t6&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x28&lt;/code&gt;~&lt;code&gt;x31&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Registers have &lt;strong&gt;no inherent type&lt;/strong&gt;, unlike variables in C.&lt;br&gt;
+Their role depends on how you use them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clock Cycle and Instruction Stages</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</guid>
+      <description>&lt;h2 id=&#34;clock-cycle&#34;&gt;Clock Cycle&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;single-cycle CPU&lt;/strong&gt; completes &lt;strong&gt;all stages&lt;/strong&gt; of an instruction within &lt;strong&gt;one long clock cycle&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Each instruction goes through the following five stages:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Instruction Fetch&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decode / Register Read&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Memory Access&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Register Write Back&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The clock cycle is long enough to complete all these stages without interruption.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;instruction-execution-stages-risc-v&#34;&gt;Instruction Execution Stages (RISC-V)&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Stage&lt;/th&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;IF&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Instruction Fetch&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Fetch the instruction from &lt;code&gt;IMEM&lt;/code&gt;, increment &lt;code&gt;PC += 4&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ID&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Instruction Decode&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Decode the instruction, read &lt;code&gt;rs1&lt;/code&gt; and &lt;code&gt;rs2&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EX&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Execute&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Perform computation via ALU (arithmetic or address calculation)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MEM&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Memory Access&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;lw&lt;/code&gt;: read from memory; &lt;code&gt;sw&lt;/code&gt;: write to memory&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WB&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Write Back&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Write result to &lt;code&gt;rd&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Every instruction passes through &lt;strong&gt;IF, ID, EX, WB&lt;/strong&gt;.&lt;br&gt;
+Only &lt;code&gt;lw&lt;/code&gt; and &lt;code&gt;sw&lt;/code&gt; instructions go through the &lt;strong&gt;MEM&lt;/strong&gt; stage.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -9,10 +9,31 @@
     <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Clock Cycle</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/clock-cycle/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/clock-cycle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CPU</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/cpu/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/cpu/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Instruction Format</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/tags/instruction-format/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/instruction-format/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Instruction Stages</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/instruction-stages/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/instruction-stages/</guid>
       <description></description>
     </item>
     <item>
@@ -23,10 +44,38 @@
       <description></description>
     </item>
     <item>
+      <title>Pipeline</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/pipeline/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/pipeline/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Registers</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/registers/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/registers/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>RISC-V</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/tags/risc-v/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/risc-v/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>X0-X31</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/x0-x31/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/x0-x31/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zero Register</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/zero-register/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/zero-register/</guid>
       <description></description>
     </item>
     <item>

@@ -219,30 +219,36 @@ This avoids decoding complexity caused by variable field placement.
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">My First Full-Stack Project — Promptllery
+    <h2 class="entry-hint-parent">Registers File reg[]
     </h2>
   </header>
   <div class="entry-content">
-    <p>Why I Decided to Build a Full-Stack Project Honestly, the motivation wasn’t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.
-So I forced myself to make something that looks like a full-stack product.
-On the first day I broke down:
-What is JSX? What’s the deal between Vite and React? Why am I getting @babel/preset-react errors in testing? What’s the difference between Supabase and Node.js?
+    <p>05_registers Registers File reg[] 1. How Many Registers in RISC-V? RISC-V defines 32 general-purpose registers:
+x0 ~ x31 (each 32-bit, holds a word)
+Trade-off:
+More registers = more variables can be stored But → harder to access quickly → slower hardware 2. Register Classification Type Alias Range Usage Hint Saved regs s0~s1 x8~x9 Values preserved across function calls s2~s11 x18~x27 Temp regs t0~t2 x5~x7 Temporary variables t3~t6 x28~x31 Note: Registers have no inherent type, unlike variables in C.
+Their role depends on how you use them.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-30 00:00:00 +0000 UTC'>March 30, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;1007 words&nbsp;·&nbsp;Helia</footer>
-  <a class="entry-link" aria-label="post link to My First Full-Stack Project — Promptllery" href="https://dev-helia.github.io/Tech-Blog-Website/posts/promptllery/"></a>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;140 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Registers File reg[]" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">
+    <h2 class="entry-hint-parent">Clock Cycle and Instruction Stages
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.
+Each instruction goes through the following five stages:
+Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.
+Instruction Execution Stages (RISC-V) Stage Name Description IF Instruction Fetch Fetch the instruction from IMEM, increment PC &#43;= 4 ID Instruction Decode Decode the instruction, read rs1 and rs2 EX Execute Perform computation via ALU (arithmetic or address calculation) MEM Memory Access lw: read from memory; sw: write to memory WB Write Back Write result to rd Every instruction passes through IF, ID, EX, WB.
+Only lw and sw instructions go through the MEM stage.
+...</p>
   </div>
-  <footer class="entry-footer">0 min&nbsp;·&nbsp;0 words&nbsp;·&nbsp;Helia</footer>
-  <a class="entry-link" aria-label="post link to " href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/"></a>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;124 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Clock Cycle and Instruction Stages" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
