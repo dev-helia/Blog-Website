@@ -158,12 +158,12 @@ Before logging in, the homepage shows a search bar and a reminder: users need to
 ### 2. Homepage (With Public Prompts)
 
 ![Homepage with Public Prompts](../promptllery/2.png)  
-✨ Once logged in, prompts are displayed as cards with title, tags, and quick actions like "Copy", "Like", and "Test".
+Once logged in, prompts are displayed as cards with title, tags, and quick actions like "Copy", "Like", and "Test".
 
 
 ### 3. Login Page
 
-![Login Page](/promptllery/3.png)  
+![Login Page](../promptllery/3.png)  
 Basic email + password login form using Supabase Auth. Authenticated users can upload and like prompts.
 
 ### 4. Upload Prompt Page
@@ -207,7 +207,7 @@ Every prompt has a shareable QR code and a “Copy” feature, making it easy to
 After clicking “Run Prompt”, the GPT-3.5 model returns a live result in the frontend. This allows users to preview how a prompt performs before using it in their own tools.
 
 
-### 🎬 Full Demo Video
+### Full Demo Video
 
 [Watch full demo video](../promptllery/demo.mp4)
 
