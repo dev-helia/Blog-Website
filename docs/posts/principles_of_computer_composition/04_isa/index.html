@@ -108,8 +108,8 @@ This avoids decoding complexity caused by variable field placement.">
   "keywords": [
     "ISA", "Instruction Format", "RISC-V"
   ],
-  "articleBody": "Instruction Formats Overview 1. What is an Instruction Format? In most mainstream instruction set architectures (ISAs), an instruction is parsed from right to left in execution.\nFor example, after an instruction like:\necall It simply ends execution. But most other instructions contain:\nrd: destination register rs1, rs2: source registers In RISC-V, instruction format strictly requires rs1 and rs2 to be placed at fixed bit positions in the 32-bit instruction word.\nThis avoids decoding complexity caused by variable field placement.\n2. The 6 RISC-V Instruction Formats Format Description Examples R-Format Uses three register inputs add, xor, mul (arithmetic/logical) I-Format Contains immediate value, 1 source register addi, lw, jalr, slli S-Format Store-type instructions sw, sb SB-Format Branch instructions beq, bge U-Format Upper immediate (20-bit) instructions lui, auipc UJ-Format Jump-type instructions jal 3. Bit-Level Structure of Formats All RISC-V instructions are 32 bits wide.\nThe bit fields are assigned based on the instruction type. Below is a standard breakdown:\nR-Type: [ funct7 | rs2 | rs1 | funct3 | rd | opcode ] I-Type: [ imm[11:0] | rs1 | funct3 | rd | opcode ] S-Type: [ imm[11:5] | rs2 | rs1 | funct3 | imm[4:0] | opcode ] SB-Type: [ imm[12], imm[10:5], rs2, rs1, funct3, imm[4:1], imm[11], opcode ] U-Type: [ imm[31:12] | rd | opcode ] UJ-Type: [ imm[20], imm[10:1], imm[11], imm[19:12], rd, opcode ] Each format encodes information differently based on what is needed for that instruction.\n4. Why So Many Formats? Each instruction type serves different purposes and needs different fields:\nR-Type: needs 3 registers → rs1, rs2, rd I-Type: needs only one register + immediate → rs1, imm S-Type: uses split immediate → imm[11:5], imm[4:0] SB-Type: uses branch offset as an immediate → needs bit-rearranged imm U/UJ-Types: use large constants or absolute addresses (e.g., for jump or base) Each format ensures fixed decoding paths and consistent field positioning.\nISC-V Assembly Examples 1. Example: Load Array Elements and Constants .section .data arr: .word 2, 4, 6, 8 # Define an array n: .word 9 # Define an integer variable 'n' .section .text .globl _start _start: # Load the base address of arr into register a0 la a0, arr # a0 = base address of arr # Load array elements into a1–a4 lw a1, 0(a0) # a1 = arr[0] = 2 lw a2, 4(a0) # a2 = arr[1] = 4 lw a3, 8(a0) # a3 = arr[2] = 6 lw a4, 12(a0) # a4 = arr[3] = 8 # Load the value of variable n la a5, n # a5 = address of n lw a6, 0(a5) # a6 = value of n = 9 # Exit the program using ecall (syscall 10) li a7, 10 # syscall code 10 = exit ecall This demonstrates how .data and .text sections are used in RISC-V, and how addresses and values are handled using la (load address) and lw (load word).\n2. Example: Fibonacci Sequence in Assembly Below is a RISC-V assembly implementation of the Fibonacci sequence.\n# Fibonacci Sequence main: add t0, x0, x0 # t0 = 0 addi t1, x0, 1 # t1 = 1 la t3, n # t3 = address of n lw t3, 0(t3) # t3 = value of n fib: beq t3, x0, finish # if n == 0, jump to finish add t2, t0, t1 # t2 = t0 + t1 mv t0, t1 # move t1 → t0 mv t1, t2 # move t2 → t1 addi t3, t3, -1 # n = n - 1 j fib # jump to next iteration finish: addi a0, t0, 0 # prepare return value li a7, 1 # syscall code 1 = print integer ecall # print result li a7, 10 # syscall code 10 = exit ecall Notes: addi: add immediate value mv: pseudo-instruction for addi x, y, 0 beq: branch if equal j: unconditional jump (pseudoinstruction for jal x0, label) la: load address (pseudo-instruction expanded to auipc + addi) This example shows:\nRegister usage Looping Branching System calls via ecall This block clearly illustrates how a real algorithm like Fibonacci can be implemented directly in RISC-V instructions, showing you the flow of control and data step-by-step.\n",
-  "wordCount" : "692",
+  "articleBody": "Instruction Formats Overview 1. What is an Instruction Format? In most mainstream instruction set architectures (ISAs), an instruction is parsed from right to left in execution.\nFor example, after an instruction like:\necall It simply ends execution. But most other instructions contain:\nrd: destination register rs1, rs2: source registers In RISC-V, instruction format strictly requires rs1 and rs2 to be placed at fixed bit positions in the 32-bit instruction word.\nThis avoids decoding complexity caused by variable field placement.\n2. The 6 RISC-V Instruction Formats Format Description Examples R-Format Uses three register inputs add, xor, mul (arithmetic/logical) I-Format Contains immediate value, 1 source register addi, lw, jalr, slli S-Format Store-type instructions sw, sb SB-Format Branch instructions beq, bge U-Format Upper immediate (20-bit) instructions lui, auipc UJ-Format Jump-type instructions jal 3. Bit-Level Structure of Formats All RISC-V instructions are 32 bits wide.\nThe bit fields are assigned based on the instruction type. Below is a standard breakdown:\nR-Type: [ funct7 | rs2 | rs1 | funct3 | rd | opcode ] I-Type: [ imm[11:0] | rs1 | funct3 | rd | opcode ] S-Type: [ imm[11:5] | rs2 | rs1 | funct3 | imm[4:0] | opcode ] SB-Type: [ imm[12], imm[10:5], rs2, rs1, funct3, imm[4:1], imm[11], opcode ] U-Type: [ imm[31:12] | rd | opcode ] UJ-Type: [ imm[20], imm[10:1], imm[11], imm[19:12], rd, opcode ] Each format encodes information differently based on what is needed for that instruction.\n4. Why So Many Formats? Each instruction type serves different purposes and needs different fields:\nR-Type: needs 3 registers → rs1, rs2, rd I-Type: needs only one register + immediate → rs1, imm S-Type: uses split immediate → imm[11:5], imm[4:0] SB-Type: uses branch offset as an immediate → needs bit-rearranged imm U/UJ-Types: use large constants or absolute addresses (e.g., for jump or base) Each format ensures fixed decoding paths and consistent field positioning.\nISC-V Assembly Examples 1. Example: Load Array Elements and Constants .section .data arr: .word 2, 4, 6, 8 # Define an array n: .word 9 # Define an integer variable 'n' .section .text .globl _start _start: # Load the base address of arr into register a0 la a0, arr # a0 = base address of arr # Load array elements into a1–a4 lw a1, 0(a0) # a1 = arr[0] = 2 lw a2, 4(a0) # a2 = arr[1] = 4 lw a3, 8(a0) # a3 = arr[2] = 6 lw a4, 12(a0) # a4 = arr[3] = 8 # Load the value of variable n la a5, n # a5 = address of n lw a6, 0(a5) # a6 = value of n = 9 # Exit the program using ecall (syscall 10) li a7, 10 # syscall code 10 = exit ecall This demonstrates how .data and .text sections are used in RISC-V, and how addresses and values are handled using la (load address) and lw (load word).\n2. Example: Fibonacci Sequence in Assembly Below is a RISC-V assembly implementation of the Fibonacci sequence.\n# Fibonacci Sequence main: add t0, x0, x0 # t0 = 0 addi t1, x0, 1 # t1 = 1 la t3, n # t3 = address of n lw t3, 0(t3) # t3 = value of n fib: beq t3, x0, finish # if n == 0, jump to finish add t2, t0, t1 # t2 = t0 + t1 mv t0, t1 # move t1 → t0 mv t1, t2 # move t2 → t1 addi t3, t3, -1 # n = n - 1 j fib # jump to next iteration finish: addi a0, t0, 0 # prepare return value li a7, 1 # syscall code 1 = print integer ecall # print result li a7, 10 # syscall code 10 = exit ecall Notes: addi: add immediate value mv: pseudo-instruction for addi x, y, 0 beq: branch if equal j: unconditional jump (pseudoinstruction for jal x0, label) la: load address (pseudo-instruction expanded to auipc + addi) This example shows:\nRegister usage Looping Branching System calls via ecall This block clearly illustrates how a real algorithm like Fibonacci can be implemented directly in RISC-V instructions, showing you the flow of control and data step-by-step.\nShift Instructions \u0026 Formats 1. Shift Instructions 🧭 Instruction Format Summary Instruction Meaning sll rd, rs1, rs2 Shift Left Logical: rd = rs1 « rs2 slli rd, rs1, imm Shift Left Logical with immediate srl rd, rs1, rs2 Shift Right Logical: rd = rs1 » rs2 srli rd, rs1, imm Shift Right Logical with immediate sra rd, rs1, rs2 Shift Right Arithmetic (sign-preserving) srai rd, rs1, imm Shift Right Arithmetic with immediate These instructions shift the bits in rs1 and store the result in rd.\n2. R-Format Instruction Layout An R-type instruction is 32 bits wide and consists of the following fields:\nField Width (bits) Description funct7 7 Operation modifier rs2 5 Second source register rs1 5 First source register funct3 3 Operation selector rd 5 Destination register opcode 7 Operation category 31 25 24 20 19 15 14 12 11 7 6 0 [funct7][ rs2 ][ rs1 ][f3 ][ rd ][opcode] Note:\nAll fields are unsigned integers 5-bit fields represent values 0–31 (suitable for register numbers) funct3 and funct7 differentiate between similar instructions 3. I-Format Instruction Layout (for immediates) When an instruction has an immediate (like slli or srli), it uses I-type format.\nField Width (bits) Description imm[11:0] 12 Immediate value rs1 5 Source register funct3 3 Operation selector rd 5 Destination register opcode 7 Operation category 31 20 19 15 14 12 11 7 6 0 [ imm[11:0] ][ rs1 ][ f3 ][ rd ][opcode] Why I-format? 12 bits for the immediate field allow larger constants Only one source register (rs1) and one destination register (rd) Preserves simplicity for hardware decoder This section gives a compact overview of how bitwise shift operations are encoded and how R/I format structures differ.\nData Transfer Instructions 2. Data Transfer Instructions 🧭 Format: memop reg, offset(base_reg) memop = lw / sw / lb / sb / lh / sh / lbu / lhu reg = target register (for load) or source register (for store) offset = immediate value (in bytes) base_reg = register holding the base address The effective memory address is computed as:\neffective_address = base_reg + offset 3. Load Instructions Instruction Meaning lw rd, offset(rs1) Load 32-bit word from memory into rd lb rd, offset(rs1) Load 8-bit signed byte from memory into rd lbu rd, offset(rs1) Load 8-bit unsigned byte into rd lh rd, offset(rs1) Load 16-bit signed half-word lhu rd, offset(rs1) Load 16-bit unsigned half-word 4. Store Instructions Instruction Meaning sw rs2, offset(rs1) Store 32-bit word from rs2 into memory sb rs2, offset(rs1) Store lower 8 bits of rs2 into memory sh rs2, offset(rs1) Store lower 16 bits of rs2 into memory Note: All load/store addresses must be aligned if required by platform (e.g. 32-bit aligned for lw/sw)\n5. Register vs Memory Memory accesses are slower than registers Use registers (a0–a7 for arguments, a0–a1 for return values) when possible Stack memory is managed using sp (stack pointer) 6. Example (Assembly) .data var: .word 42 .text .globl _start _start: la a0, var # Load address of var lw a1, 0(a0) # Load 32-bit value from var to a1 (should be 42) li a2, 100 # Set a2 to 100 sw a2, 0(a0) # Store 100 back to var 7. Summary lw/sw: 32-bit word lh/sh: 16-bit half-word lb/sb: 8-bit byte lbu/lhu: load unsigned variant (no sign-extension) Choosing correct instruction ensures proper sign-extension and data width when transferring between memory and registers.\n3. Branching \u0026 Jump Instructions 1 Conditional Branches (SB-Format) Instruction Meaning beq rs1, rs2, label Branch if Equal bne rs1, rs2, label Branch if Not Equal blt rs1, rs2, label Branch if Less Than bge rs1, rs2, label Branch if Greater or Equal These instructions compare rs1 and rs2, and jump to the label if the condition is met.\nSB-Format encodes the target label using a 13-bit signed offset (from current PC). Offset is always 2-byte aligned, so encoded as offset / 2.\n2 Jump Instructions (UJ-Format \u0026 JAL) Instruction Purpose jal rd, label Jump and Link: set rd = PC + 4, then jump to label jalr rd, rs1, imm Jump and Link Register: PC = rs1 + imm, rd = PC + 4 The link part means saving the return address (i.e., where to come back) in rd.\nCommon pattern in function calls:\njal ra, func # Call function (store return address in ra) ... ret # Return (actually `jalr x0, ra, 0`) 3 Instruction Formats SB-Format (Branch) imm[12] | imm[10:5] | rs2 | rs1 | funct3 | imm[4:1] | imm[11] | opcode The 13-bit immediate is split across multiple fields. Must multiply by 2 to get actual byte offset. UJ-Format (jal) imm[20] | imm[10:1] | imm[11] | imm[19:12] | rd | opcode Immediate total 21 bits, signed. Also needs shift left by 1 (since all jumps are 2-byte aligned) I-Format (jalr) imm[11:0] | rs1 | funct3 | rd | opcode Same format as load instructions. Used in jalr for indirect jump (like function returns) 4 Assembly Example .globl _start _start: li t0, 0 # sum = 0 li t1, 10 # loop counter loop: add a0, a0, t0 # do something addi t0, t0, 1 blt t0, t1, loop # repeat if t0 \u003c t1 li a7, 10 ecall 5 Summary beq, bne, blt, bge are for condition-based control flow jal, jalr are used for function call/return Always use jalr for function returns Understand immediate encoding and format is crucial for ISA decoding Bitwise Operation Instructions Bitwise operations are commonly used for flag manipulation, masking, and low-level data manipulation.\n1 Register-to-Register Operations Instruction Description and rd, rs1, rs2 Bitwise AND or rd, rs1, rs2 Bitwise OR xor rd, rs1, rs2 Bitwise XOR These operations take two source registers and apply bitwise logic, storing the result in rd.\n2 Register-Immediate Operations Instruction Description andi rd, rs1, imm Bitwise AND with immediate ori rd, rs1, imm Bitwise OR with immediate xori rd, rs1, imm Bitwise XOR with immediate Immediate is usually used for masking specific bits, such as extracting the lower byte.\n3 Example: Masking Lower 8 Bits li t0, 0x1234 # Load a 16-bit value andi t1, t0, 0xFF # Mask and keep only the lower 8 bits # t1 = 0x34 This is a typical bitmask operation, often used in:\nExtracting specific byte from word Checking flag bits Performing low-level I/O operations 4 Summary and, or, xor operate on two registers andi, ori, xori combine register with constant Commonly used with masks like 0xFF, 0xF0, 0x0F No sign extension: bitwise logic applies bit-by-bit Arithmetic Instructions Arithmetic operations include basic add/subtract, multiplication/division, and immediate operations.\n1 Register-based Arithmetic Instruction Description add rd, rs1, rs2 Addition sub rd, rs1, rs2 Subtraction mul rd, rs1, rs2 Multiplication div rd, rs1, rs2 Division These use two register operands and return the result in rd.\n2 Immediate Arithmetic Instruction Description addi rd, rs1, imm Add with constant value Immediate must fit in 12-bit signed integer. Larger constants need to use lui.\n3 Example: Basic Arithmetic li t1, 10 li t2, 3 add t3, t1, t2 # t3 = 10 + 3 sub t4, t1, t2 # t4 = 10 - 3 mul t5, t1, t2 # t5 = 10 * 3 div t6, t1, t2 # t6 = 10 / 3 U-Type Format: Dealing with Large Immediates Sometimes, constants \u003e 12 bits are needed. I-Type only allows 12 bits.\nTo handle this, RISC-V defines U-Type (Upper Immediate) format.\n1 Instruction Format | imm[31:12] | rd | opcode | | 20 bits | 5 bits | 7 bits | 2 Supported Instructions Instruction Description lui Load Upper Immediate auipc Add Upper Immediate to PC They place a 20-bit value into the upper 20 bits of a register (imm \u003c\u003c 12), which can then be combined with addi.\n3 Example lui t0, 0x12345 # t0 = 0x12345000 addi t0, t0, 0x67 # t0 = 0x12345067 (final constant) This two-step process is how RISC-V constructs full 32-bit constants.\nSpecial Instruction nop: No Operation nop stands for “no operation”. When executed, it performs no effect on the program state. Implementation Detail In RISC-V, nop is a pseudo-instruction:\nnop # Equivalent to: addi x0, x0, 0 It uses register x0 (always 0), so it does nothing.\nCommon Use Cases Scenario Description Pipeline Padding Inserted to avoid hazards (especially in pipelined CPUs) Instruction Alignment Used to align instructions on memory boundaries Debugging/Breakpoints As placeholders when modifying instruction flow Delay Slots (legacy) In older architectures, sometimes used to fill delay slots nop is simple but often essential in low-level optimization and hardware debugging contexts.\n",
+  "wordCount" : "2107",
   "inLanguage": "en",
   "datePublished": "2025-03-31T00:00:00Z",
   "dateModified": "2025-03-31T00:00:00Z",
@@ -195,7 +195,7 @@ This avoids decoding complexity caused by variable field placement.">
     <h1 class="post-title entry-hint-parent">
       Instruction Set Architecture
     </h1>
-    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;692 words&nbsp;·&nbsp;Helia
+    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;10 min&nbsp;·&nbsp;2107 words&nbsp;·&nbsp;Helia
 
 </div>
   </header> 
@@ -346,6 +346,536 @@ UJ-Type:  [ imm[20], imm[10:1], imm[11], imm[19:12], rd, opcode ]
 </ul>
 <hr>
 <p>This block clearly illustrates how a real algorithm like Fibonacci can be implemented directly in RISC-V instructions, showing you the flow of control and data step-by-step.</p>
+<h1 id="shift-instructions--formats">Shift Instructions &amp; Formats<a hidden class="anchor" aria-hidden="true" href="#shift-instructions--formats">#</a></h1>
+<h2 id="1-shift-instructions">1. Shift Instructions<a hidden class="anchor" aria-hidden="true" href="#1-shift-instructions">#</a></h2>
+<h3 id="-instruction-format-summary">🧭 Instruction Format Summary<a hidden class="anchor" aria-hidden="true" href="#-instruction-format-summary">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>sll rd, rs1, rs2</code></td>
+          <td>Shift Left Logical: rd = rs1 &laquo; rs2</td>
+      </tr>
+      <tr>
+          <td><code>slli rd, rs1, imm</code></td>
+          <td>Shift Left Logical with immediate</td>
+      </tr>
+      <tr>
+          <td><code>srl rd, rs1, rs2</code></td>
+          <td>Shift Right Logical: rd = rs1 &raquo; rs2</td>
+      </tr>
+      <tr>
+          <td><code>srli rd, rs1, imm</code></td>
+          <td>Shift Right Logical with immediate</td>
+      </tr>
+      <tr>
+          <td><code>sra rd, rs1, rs2</code></td>
+          <td>Shift Right Arithmetic (sign-preserving)</td>
+      </tr>
+      <tr>
+          <td><code>srai rd, rs1, imm</code></td>
+          <td>Shift Right Arithmetic with immediate</td>
+      </tr>
+  </tbody>
+</table>
+<p>These instructions shift the bits in <code>rs1</code> and store the result in <code>rd</code>.</p>
+<hr>
+<h2 id="2-r-format-instruction-layout">2. R-Format Instruction Layout<a hidden class="anchor" aria-hidden="true" href="#2-r-format-instruction-layout">#</a></h2>
+<p>An R-type instruction is 32 bits wide and consists of the following fields:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Width (bits)</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>funct7</code></td>
+          <td>7</td>
+          <td>Operation modifier</td>
+      </tr>
+      <tr>
+          <td><code>rs2</code></td>
+          <td>5</td>
+          <td>Second source register</td>
+      </tr>
+      <tr>
+          <td><code>rs1</code></td>
+          <td>5</td>
+          <td>First source register</td>
+      </tr>
+      <tr>
+          <td><code>funct3</code></td>
+          <td>3</td>
+          <td>Operation selector</td>
+      </tr>
+      <tr>
+          <td><code>rd</code></td>
+          <td>5</td>
+          <td>Destination register</td>
+      </tr>
+      <tr>
+          <td><code>opcode</code></td>
+          <td>7</td>
+          <td>Operation category</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>31      25 24   20 19   15 14  12 11   7 6    0
+</span></span><span style="display:flex;"><span>[funct7][ rs2 ][ rs1 ][f3 ][ rd ][opcode]
+</span></span></code></pre></div><p>Note:</p>
+<ul>
+<li>All fields are <strong>unsigned integers</strong></li>
+<li>5-bit fields represent values 0–31 (suitable for register numbers)</li>
+<li><code>funct3</code> and <code>funct7</code> differentiate between similar instructions</li>
+</ul>
+<hr>
+<h2 id="3-i-format-instruction-layout-for-immediates">3. I-Format Instruction Layout (for immediates)<a hidden class="anchor" aria-hidden="true" href="#3-i-format-instruction-layout-for-immediates">#</a></h2>
+<p>When an instruction has an immediate (like <code>slli</code> or <code>srli</code>), it uses I-type format.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Width (bits)</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>imm[11:0]</code></td>
+          <td>12</td>
+          <td>Immediate value</td>
+      </tr>
+      <tr>
+          <td><code>rs1</code></td>
+          <td>5</td>
+          <td>Source register</td>
+      </tr>
+      <tr>
+          <td><code>funct3</code></td>
+          <td>3</td>
+          <td>Operation selector</td>
+      </tr>
+      <tr>
+          <td><code>rd</code></td>
+          <td>5</td>
+          <td>Destination register</td>
+      </tr>
+      <tr>
+          <td><code>opcode</code></td>
+          <td>7</td>
+          <td>Operation category</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>31        20 19   15 14  12 11   7 6    0
+</span></span><span style="display:flex;"><span>[ imm[11:0] ][ rs1 ][ f3 ][ rd ][opcode]
+</span></span></code></pre></div><h3 id="why-i-format">Why I-format?<a hidden class="anchor" aria-hidden="true" href="#why-i-format">#</a></h3>
+<ul>
+<li>12 bits for the immediate field allow larger constants</li>
+<li>Only one source register (rs1) and one destination register (rd)</li>
+<li>Preserves simplicity for hardware decoder</li>
+</ul>
+<hr>
+<p>This section gives a compact overview of how <strong>bitwise shift operations</strong> are encoded and how <strong>R/I format structures</strong> differ.</p>
+<h1 id="data-transfer-instructions">Data Transfer Instructions<a hidden class="anchor" aria-hidden="true" href="#data-transfer-instructions">#</a></h1>
+<h2 id="2-data-transfer-instructions">2. Data Transfer Instructions<a hidden class="anchor" aria-hidden="true" href="#2-data-transfer-instructions">#</a></h2>
+<h3 id="-format-memop-reg-offsetbase_reg">🧭 Format: <code>memop reg, offset(base_reg)</code><a hidden class="anchor" aria-hidden="true" href="#-format-memop-reg-offsetbase_reg">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>memop   = lw / sw / lb / sb / lh / sh / lbu / lhu
+</span></span><span style="display:flex;"><span>reg     = target register (for load) or source register (for store)
+</span></span><span style="display:flex;"><span>offset  = immediate value (in bytes)
+</span></span><span style="display:flex;"><span>base_reg = register holding the base address
+</span></span></code></pre></div><p>The effective memory address is computed as:</p>
+<pre tabindex="0"><code>effective_address = base_reg + offset
+</code></pre><hr>
+<h2 id="3-load-instructions">3. Load Instructions<a hidden class="anchor" aria-hidden="true" href="#3-load-instructions">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>lw rd, offset(rs1)</code></td>
+          <td>Load 32-bit word from memory into <code>rd</code></td>
+      </tr>
+      <tr>
+          <td><code>lb rd, offset(rs1)</code></td>
+          <td>Load 8-bit signed byte from memory into <code>rd</code></td>
+      </tr>
+      <tr>
+          <td><code>lbu rd, offset(rs1)</code></td>
+          <td>Load 8-bit <strong>unsigned</strong> byte into <code>rd</code></td>
+      </tr>
+      <tr>
+          <td><code>lh rd, offset(rs1)</code></td>
+          <td>Load 16-bit signed half-word</td>
+      </tr>
+      <tr>
+          <td><code>lhu rd, offset(rs1)</code></td>
+          <td>Load 16-bit unsigned half-word</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-store-instructions">4. Store Instructions<a hidden class="anchor" aria-hidden="true" href="#4-store-instructions">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>sw rs2, offset(rs1)</code></td>
+          <td>Store 32-bit word from <code>rs2</code> into memory</td>
+      </tr>
+      <tr>
+          <td><code>sb rs2, offset(rs1)</code></td>
+          <td>Store lower 8 bits of <code>rs2</code> into memory</td>
+      </tr>
+      <tr>
+          <td><code>sh rs2, offset(rs1)</code></td>
+          <td>Store lower 16 bits of <code>rs2</code> into memory</td>
+      </tr>
+  </tbody>
+</table>
+<p>Note: All load/store addresses must be <strong>aligned</strong> if required by platform (e.g. 32-bit aligned for <code>lw/sw</code>)</p>
+<hr>
+<h2 id="5-register-vs-memory">5. Register vs Memory<a hidden class="anchor" aria-hidden="true" href="#5-register-vs-memory">#</a></h2>
+<ul>
+<li>Memory accesses are <strong>slower</strong> than registers</li>
+<li>Use registers (<code>a0–a7</code> for arguments, <code>a0–a1</code> for return values) when possible</li>
+<li>Stack memory is managed using <code>sp</code> (stack pointer)</li>
+</ul>
+<hr>
+<h2 id="6-example-assembly">6. Example (Assembly)<a hidden class="anchor" aria-hidden="true" href="#6-example-assembly">#</a></h2>
+<pre tabindex="0"><code class="language-assembly" data-lang="assembly">.data
+var: .word 42
+
+.text
+.globl _start
+_start:
+    la a0, var        # Load address of var
+    lw a1, 0(a0)      # Load 32-bit value from var to a1 (should be 42)
+    li a2, 100        # Set a2 to 100
+    sw a2, 0(a0)      # Store 100 back to var
+</code></pre><hr>
+<h2 id="7-summary">7. Summary<a hidden class="anchor" aria-hidden="true" href="#7-summary">#</a></h2>
+<ul>
+<li><code>lw/sw</code>: 32-bit word</li>
+<li><code>lh/sh</code>: 16-bit half-word</li>
+<li><code>lb/sb</code>: 8-bit byte</li>
+<li><code>lbu/lhu</code>: load unsigned variant (no sign-extension)</li>
+</ul>
+<p>Choosing correct instruction ensures proper <strong>sign-extension</strong> and <strong>data width</strong> when transferring between memory and registers.</p>
+<h1 id="3-branching--jump-instructions">3. Branching &amp; Jump Instructions<a hidden class="anchor" aria-hidden="true" href="#3-branching--jump-instructions">#</a></h1>
+<h2 id="1-conditional-branches-sb-format">1 Conditional Branches (SB-Format)<a hidden class="anchor" aria-hidden="true" href="#1-conditional-branches-sb-format">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>beq rs1, rs2, label</code></td>
+          <td>Branch if Equal</td>
+      </tr>
+      <tr>
+          <td><code>bne rs1, rs2, label</code></td>
+          <td>Branch if Not Equal</td>
+      </tr>
+      <tr>
+          <td><code>blt rs1, rs2, label</code></td>
+          <td>Branch if Less Than</td>
+      </tr>
+      <tr>
+          <td><code>bge rs1, rs2, label</code></td>
+          <td>Branch if Greater or Equal</td>
+      </tr>
+  </tbody>
+</table>
+<p>These instructions compare <code>rs1</code> and <code>rs2</code>, and <strong>jump to the label</strong> if the condition is met.</p>
+<p>SB-Format encodes the target label using a <strong>13-bit signed offset</strong> (from current PC). Offset is always <strong>2-byte aligned</strong>, so encoded as offset / 2.</p>
+<hr>
+<h2 id="2-jump-instructions-uj-format--jal">2 Jump Instructions (UJ-Format &amp; JAL)<a hidden class="anchor" aria-hidden="true" href="#2-jump-instructions-uj-format--jal">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>jal rd, label</code></td>
+          <td>Jump and Link: set <code>rd = PC + 4</code>, then jump to label</td>
+      </tr>
+      <tr>
+          <td><code>jalr rd, rs1, imm</code></td>
+          <td>Jump and Link Register: <code>PC = rs1 + imm</code>, <code>rd = PC + 4</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>The <strong>link</strong> part means saving the return address (i.e., where to come back) in <code>rd</code>.</p>
+<p>Common pattern in function calls:</p>
+<pre tabindex="0"><code class="language-assembly" data-lang="assembly">jal ra, func     # Call function (store return address in ra)
+...
+ret              # Return (actually `jalr x0, ra, 0`)
+</code></pre><hr>
+<h2 id="3-instruction-formats">3 Instruction Formats<a hidden class="anchor" aria-hidden="true" href="#3-instruction-formats">#</a></h2>
+<h3 id="sb-format-branch">SB-Format (Branch)<a hidden class="anchor" aria-hidden="true" href="#sb-format-branch">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>imm[12] | imm[10:5] | rs2 | rs1 | funct3 | imm[4:1] | imm[11] | opcode
+</span></span></code></pre></div><ul>
+<li>The 13-bit immediate is split across multiple fields.</li>
+<li>Must multiply by 2 to get actual byte offset.</li>
+</ul>
+<h3 id="uj-format-jal">UJ-Format (jal)<a hidden class="anchor" aria-hidden="true" href="#uj-format-jal">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>imm[20] | imm[10:1] | imm[11] | imm[19:12] | rd | opcode
+</span></span></code></pre></div><ul>
+<li>Immediate total 21 bits, signed.</li>
+<li>Also needs shift left by 1 (since all jumps are 2-byte aligned)</li>
+</ul>
+<h3 id="i-format-jalr">I-Format (jalr)<a hidden class="anchor" aria-hidden="true" href="#i-format-jalr">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>imm[11:0] | rs1 | funct3 | rd | opcode
+</span></span></code></pre></div><ul>
+<li>Same format as load instructions.</li>
+<li>Used in <code>jalr</code> for indirect jump (like function returns)</li>
+</ul>
+<hr>
+<h2 id="4-assembly-example">4 Assembly Example<a hidden class="anchor" aria-hidden="true" href="#4-assembly-example">#</a></h2>
+<pre tabindex="0"><code class="language-assembly" data-lang="assembly">.globl _start
+_start:
+    li t0, 0         # sum = 0
+    li t1, 10        # loop counter
+
+loop:
+    add a0, a0, t0   # do something
+    addi t0, t0, 1
+    blt t0, t1, loop # repeat if t0 &lt; t1
+
+    li a7, 10
+    ecall
+</code></pre><hr>
+<h2 id="5-summary">5 Summary<a hidden class="anchor" aria-hidden="true" href="#5-summary">#</a></h2>
+<ul>
+<li><code>beq</code>, <code>bne</code>, <code>blt</code>, <code>bge</code> are for condition-based control flow</li>
+<li><code>jal</code>, <code>jalr</code> are used for function call/return</li>
+<li>Always use <code>jalr</code> for <strong>function returns</strong></li>
+<li>Understand immediate encoding and format is crucial for ISA decoding</li>
+</ul>
+<h1 id="bitwise-operation-instructions">Bitwise Operation Instructions<a hidden class="anchor" aria-hidden="true" href="#bitwise-operation-instructions">#</a></h1>
+<p>Bitwise operations are commonly used for <strong>flag manipulation</strong>, <strong>masking</strong>, and <strong>low-level data manipulation</strong>.</p>
+<h2 id="1-register-to-register-operations">1 Register-to-Register Operations<a hidden class="anchor" aria-hidden="true" href="#1-register-to-register-operations">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>and rd, rs1, rs2</code></td>
+          <td>Bitwise AND</td>
+      </tr>
+      <tr>
+          <td><code>or rd, rs1, rs2</code></td>
+          <td>Bitwise OR</td>
+      </tr>
+      <tr>
+          <td><code>xor rd, rs1, rs2</code></td>
+          <td>Bitwise XOR</td>
+      </tr>
+  </tbody>
+</table>
+<p>These operations take two source registers and apply bitwise logic, storing the result in <code>rd</code>.</p>
+<hr>
+<h2 id="2-register-immediate-operations">2 Register-Immediate Operations<a hidden class="anchor" aria-hidden="true" href="#2-register-immediate-operations">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>andi rd, rs1, imm</code></td>
+          <td>Bitwise AND with immediate</td>
+      </tr>
+      <tr>
+          <td><code>ori rd, rs1, imm</code></td>
+          <td>Bitwise OR with immediate</td>
+      </tr>
+      <tr>
+          <td><code>xori rd, rs1, imm</code></td>
+          <td>Bitwise XOR with immediate</td>
+      </tr>
+  </tbody>
+</table>
+<p>Immediate is usually used for <strong>masking specific bits</strong>, such as extracting the lower byte.</p>
+<hr>
+<h2 id="3-example-masking-lower-8-bits">3 Example: Masking Lower 8 Bits<a hidden class="anchor" aria-hidden="true" href="#3-example-masking-lower-8-bits">#</a></h2>
+<pre tabindex="0"><code class="language-assembly" data-lang="assembly">li t0, 0x1234        # Load a 16-bit value
+andi t1, t0, 0xFF    # Mask and keep only the lower 8 bits
+# t1 = 0x34
+</code></pre><p>This is a typical <strong>bitmask operation</strong>, often used in:</p>
+<ul>
+<li>Extracting specific byte from word</li>
+<li>Checking flag bits</li>
+<li>Performing low-level I/O operations</li>
+</ul>
+<hr>
+<h2 id="4-summary">4 Summary<a hidden class="anchor" aria-hidden="true" href="#4-summary">#</a></h2>
+<ul>
+<li><code>and</code>, <code>or</code>, <code>xor</code> operate on two registers</li>
+<li><code>andi</code>, <code>ori</code>, <code>xori</code> combine register with constant</li>
+<li>Commonly used with masks like <code>0xFF</code>, <code>0xF0</code>, <code>0x0F</code></li>
+<li>No sign extension: bitwise logic applies <strong>bit-by-bit</strong></li>
+</ul>
+<h1 id="arithmetic-instructions">Arithmetic Instructions<a hidden class="anchor" aria-hidden="true" href="#arithmetic-instructions">#</a></h1>
+<hr>
+<p>Arithmetic operations include basic add/subtract, multiplication/division, and immediate operations.</p>
+<h2 id="1-register-based-arithmetic">1 Register-based Arithmetic<a hidden class="anchor" aria-hidden="true" href="#1-register-based-arithmetic">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>add rd, rs1, rs2</code></td>
+          <td>Addition</td>
+      </tr>
+      <tr>
+          <td><code>sub rd, rs1, rs2</code></td>
+          <td>Subtraction</td>
+      </tr>
+      <tr>
+          <td><code>mul rd, rs1, rs2</code></td>
+          <td>Multiplication</td>
+      </tr>
+      <tr>
+          <td><code>div rd, rs1, rs2</code></td>
+          <td>Division</td>
+      </tr>
+  </tbody>
+</table>
+<p>These use two register operands and return the result in <code>rd</code>.</p>
+<hr>
+<h2 id="2-immediate-arithmetic">2 Immediate Arithmetic<a hidden class="anchor" aria-hidden="true" href="#2-immediate-arithmetic">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>addi rd, rs1, imm</code></td>
+          <td>Add with constant value</td>
+      </tr>
+  </tbody>
+</table>
+<p>Immediate must fit in <strong>12-bit signed integer</strong>. Larger constants need to use <code>lui</code>.</p>
+<hr>
+<h2 id="3-example-basic-arithmetic">3 Example: Basic Arithmetic<a hidden class="anchor" aria-hidden="true" href="#3-example-basic-arithmetic">#</a></h2>
+<pre tabindex="0"><code class="language-assembly" data-lang="assembly">li t1, 10
+li t2, 3
+
+add t3, t1, t2   # t3 = 10 + 3
+sub t4, t1, t2   # t4 = 10 - 3
+mul t5, t1, t2   # t5 = 10 * 3
+div t6, t1, t2   # t6 = 10 / 3
+</code></pre><hr>
+<h1 id="u-type-format-dealing-with-large-immediates">U-Type Format: Dealing with Large Immediates<a hidden class="anchor" aria-hidden="true" href="#u-type-format-dealing-with-large-immediates">#</a></h1>
+<hr>
+<p>Sometimes, constants &gt; 12 bits are needed. I-Type only allows 12 bits.</p>
+<p>To handle this, RISC-V defines <strong>U-Type</strong> (Upper Immediate) format.</p>
+<h2 id="1-instruction-format">1 Instruction Format<a hidden class="anchor" aria-hidden="true" href="#1-instruction-format">#</a></h2>
+<pre tabindex="0"><code>|  imm[31:12]  |   rd   | opcode |
+|   20 bits    | 5 bits | 7 bits |
+</code></pre><h2 id="2-supported-instructions">2 Supported Instructions<a hidden class="anchor" aria-hidden="true" href="#2-supported-instructions">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Instruction</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>lui</code></td>
+          <td>Load Upper Immediate</td>
+      </tr>
+      <tr>
+          <td><code>auipc</code></td>
+          <td>Add Upper Immediate to PC</td>
+      </tr>
+  </tbody>
+</table>
+<p>They place a 20-bit value into the upper 20 bits of a register (<code>imm &lt;&lt; 12</code>), which can then be combined with <code>addi</code>.</p>
+<hr>
+<h2 id="3-example">3 Example<a hidden class="anchor" aria-hidden="true" href="#3-example">#</a></h2>
+<pre tabindex="0"><code class="language-assembly" data-lang="assembly">lui t0, 0x12345       # t0 = 0x12345000
+addi t0, t0, 0x67     # t0 = 0x12345067 (final constant)
+</code></pre><p>This two-step process is how RISC-V constructs <strong>full 32-bit constants</strong>.</p>
+<h1 id="special-instruction">Special Instruction<a hidden class="anchor" aria-hidden="true" href="#special-instruction">#</a></h1>
+<hr>
+<h3 id="nop-no-operation"><code>nop</code>: No Operation<a hidden class="anchor" aria-hidden="true" href="#nop-no-operation">#</a></h3>
+<ul>
+<li><code>nop</code> stands for &ldquo;no operation&rdquo;.</li>
+<li>When executed, it performs <strong>no effect</strong> on the program state.</li>
+</ul>
+<h3 id="implementation-detail">Implementation Detail<a hidden class="anchor" aria-hidden="true" href="#implementation-detail">#</a></h3>
+<p>In RISC-V, <code>nop</code> is a <strong>pseudo-instruction</strong>:</p>
+<pre tabindex="0"><code class="language-assembly" data-lang="assembly">nop     # Equivalent to: addi x0, x0, 0
+</code></pre><p>It uses register x0 (always 0), so it does nothing.</p>
+<hr>
+<h3 id="common-use-cases">Common Use Cases<a hidden class="anchor" aria-hidden="true" href="#common-use-cases">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Scenario</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Pipeline Padding</td>
+          <td>Inserted to avoid hazards (especially in pipelined CPUs)</td>
+      </tr>
+      <tr>
+          <td>Instruction Alignment</td>
+          <td>Used to align instructions on memory boundaries</td>
+      </tr>
+      <tr>
+          <td>Debugging/Breakpoints</td>
+          <td>As placeholders when modifying instruction flow</td>
+      </tr>
+      <tr>
+          <td>Delay Slots (legacy)</td>
+          <td>In older architectures, sometimes used to fill delay slots</td>
+      </tr>
+  </tbody>
+</table>
+<p><code>nop</code> is simple but often essential in low-level optimization and hardware debugging contexts.</p>
 <pre tabindex="0"><code></code></pre>
 
   </div>
