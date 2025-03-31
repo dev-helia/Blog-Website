@@ -5,7 +5,7 @@ weight: 2
 tags: ["float", "ieee754", "CS61C", "encoding"]
 ---
 
-## 🔢 Floating Point Encoding: Single Precision
+## Floating Point Encoding: Single Precision
 
 - Use **normalized** base-2 scientific notation:  
   `+1.xxxxx... × 2^y`
@@ -18,7 +18,7 @@ tags: ["float", "ieee754", "CS61C", "encoding"]
 
 ---
 
-## 📌 Bit Breakdown (32-bit float layout)
+## Bit Breakdown (32-bit float layout)
 
 | Field | Size | Purpose |
 |-------|------|---------|
@@ -28,7 +28,7 @@ tags: ["float", "ieee754", "CS61C", "encoding"]
 
 ---
 
-## 🧠 Why Use Biased Notation for Exponent?
+## Why Use Biased Notation for Exponent?
 
 If exponent were stored directly (signed int), comparison & sorting would be more complex.  
 So IEEE 754 uses **bias notation**, shifting exponent range to all positive values.
@@ -51,7 +51,7 @@ Actual exponent = 129 – 127 = 2
 
 ---
 
-### 🧭 Exponent Value Table
+### Exponent Value Table
 
 | Actual Exponent | Biased (Stored) | Binary |
 |-----------------|------------------|--------|
@@ -60,12 +60,12 @@ Actual exponent = 129 – 127 = 2
 | –126 | 1   | 0000 0001 |
 | Special: ∞ / NaN | 255 | 1111 1111 |
 
-🌀 Negative exponents → closer to zero  
-🧊 Large biased values → ∞ or NaN
+Negative exponents → closer to zero  
+Large biased values → ∞ or NaN
 
 ---
 
-## 🆚 Single vs Double Precision
+## Single vs Double Precision
 
 | Type | Bit Length | Significand | Exponent | Bias |
 |------|------------|-------------|----------|------|
@@ -74,7 +74,7 @@ Actual exponent = 129 – 127 = 2
 
 ---
 
-## ⚠️ Special Encoding Cases (IEEE 754)
+## Special Encoding Cases (IEEE 754)
 
 | Case | Exponent | Significand | Meaning |
 |------|----------|-------------|---------|
@@ -86,7 +86,7 @@ Actual exponent = 129 – 127 = 2
 
 ---
 
-📌 **Note**:  
+ **Note**:  
 Special encodings allow representation of edge cases like NaN, ∞, zero and subnormal numbers (denorms).  
 
 You’ll need this logic later in `pipeline`, `FPU`, and `comparison instructions`.

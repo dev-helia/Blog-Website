@@ -13,7 +13,7 @@
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</guid>
-      <description>&lt;h2 id=&#34;-hexadecimal-and-bitbyte-relationship&#34;&gt;🔍 Hexadecimal and bit/byte Relationship&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;hexadecimal-and-bitbyte-relationship&#34;&gt;Hexadecimal and bit/byte Relationship&lt;/h2&gt;
 &lt;p&gt;Hexadecimal (Hex) is a base-16 system used to represent binary data. Its key relationships:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1 hex digit = 4 bits (also called a &lt;strong&gt;nibble&lt;/strong&gt;)&lt;/li&gt;
@@ -28,7 +28,7 @@
 &lt;li&gt;&lt;code&gt;1 double word&lt;/code&gt; = usually 8 bytes (64 bits)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-example-hex-vs-binary-table&#34;&gt;🌟 Example: Hex vs Binary Table&lt;/h2&gt;
+&lt;h2 id=&#34;example-hex-vs-binary-table&#34;&gt;Example: Hex vs Binary Table&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -61,14 +61,14 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-summary&#34;&gt;✅ Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;1 hex digit = 4 bits&lt;/li&gt;
 &lt;li&gt;2 hex digits = 1 byte (8 bits)&lt;/li&gt;
 &lt;li&gt;8 hex digits = 4 bytes = 1 word = 32 bits&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-offset-bits-and-block-size&#34;&gt;🧠 Offset Bits and Block Size&lt;/h2&gt;
+&lt;h2 id=&#34;offset-bits-and-block-size&#34;&gt;Offset Bits and Block Size&lt;/h2&gt;
 &lt;p&gt;The number of &lt;strong&gt;offset bits&lt;/strong&gt; depends on the &lt;strong&gt;block size&lt;/strong&gt;, using this formula:&lt;/p&gt;</description>
     </item>
   </channel>

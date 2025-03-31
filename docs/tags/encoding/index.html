@@ -107,13 +107,13 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>🔢 Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:
+    <p>Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:
 &#43;1.xxxxx... × 2^y IEEE 754 (32-bit float) splits into 3 fields: 1 bit: Sign (0 = positive, 1 = negative) 8 bits: Exponent (with bias) 23 bits: Significand / Mantissa Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)
-📌 Bit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) 🧠 Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison &amp; sorting would be more complex.
+Bit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison &amp; sorting would be more complex.
 So IEEE 754 uses bias notation, shifting exponent range to all positive values.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-07 00:00:00 +0000 UTC'>March 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;298 words&nbsp;·&nbsp;Helia</footer>
+  <footer class="entry-footer"><span title='2025-03-07 00:00:00 +0000 UTC'>March 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;289 words&nbsp;·&nbsp;Helia</footer>
   <a class="entry-link" aria-label="post link to Floating Point Encoding (IEEE 754)" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/"></a>
 </article>
     </main>

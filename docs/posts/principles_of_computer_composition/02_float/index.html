@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Floating Point Encoding (IEEE 754) | Helia&#39;s Tech-Blog</title>
 <meta name="keywords" content="float, ieee754, CS61C, encoding">
-<meta name="description" content="🔢 Floating Point Encoding: Single Precision
+<meta name="description" content="Floating Point Encoding: Single Precision
 
 Use normalized base-2 scientific notation:
 &#43;1.xxxxx... × 2^y
@@ -22,7 +22,7 @@ IEEE 754 (32-bit float) splits into 3 fields:
 
 Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)
 
-📌 Bit Breakdown (32-bit float layout)
+Bit Breakdown (32-bit float layout)
 
   
       
@@ -50,7 +50,7 @@ Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)
   
 
 
-🧠 Why Use Biased Notation for Exponent?
+Why Use Biased Notation for Exponent?
 If exponent were stored directly (signed int), comparison &amp; sorting would be more complex.
 So IEEE 754 uses bias notation, shifting exponent range to all positive values.">
 <meta name="author" content="Helia">
@@ -75,9 +75,9 @@ So IEEE 754 uses bias notation, shifting exponent range to all positive values."
 </noscript><meta property="og:url" content="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/">
   <meta property="og:site_name" content="Helia&#39;s Tech-Blog">
   <meta property="og:title" content="Floating Point Encoding (IEEE 754)">
-  <meta property="og:description" content="🔢 Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:
+  <meta property="og:description" content="Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:
 &#43;1.xxxxx... × 2^y IEEE 754 (32-bit float) splits into 3 fields: 1 bit: Sign (0 = positive, 1 = negative) 8 bits: Exponent (with bias) 23 bits: Significand / Mantissa Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)
-📌 Bit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) 🧠 Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison &amp; sorting would be more complex.
+Bit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison &amp; sorting would be more complex.
 So IEEE 754 uses bias notation, shifting exponent range to all positive values.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
@@ -90,7 +90,7 @@ So IEEE 754 uses bias notation, shifting exponent range to all positive values."
     <meta property="article:tag" content="Encoding">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Floating Point Encoding (IEEE 754)">
-<meta name="twitter:description" content="🔢 Floating Point Encoding: Single Precision
+<meta name="twitter:description" content="Floating Point Encoding: Single Precision
 
 Use normalized base-2 scientific notation:
 &#43;1.xxxxx... × 2^y
@@ -105,7 +105,7 @@ IEEE 754 (32-bit float) splits into 3 fields:
 
 Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)
 
-📌 Bit Breakdown (32-bit float layout)
+Bit Breakdown (32-bit float layout)
 
   
       
@@ -133,7 +133,7 @@ Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)
   
 
 
-🧠 Why Use Biased Notation for Exponent?
+Why Use Biased Notation for Exponent?
 If exponent were stored directly (signed int), comparison &amp; sorting would be more complex.
 So IEEE 754 uses bias notation, shifting exponent range to all positive values.">
 
@@ -170,12 +170,12 @@ So IEEE 754 uses bias notation, shifting exponent range to all positive values."
   "@type": "BlogPosting",
   "headline": "Floating Point Encoding (IEEE 754)",
   "name": "Floating Point Encoding (IEEE 754)",
-  "description": "🔢 Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:\n+1.xxxxx... × 2^y IEEE 754 (32-bit float) splits into 3 fields: 1 bit: Sign (0 = positive, 1 = negative) 8 bits: Exponent (with bias) 23 bits: Significand / Mantissa Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)\n📌 Bit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) 🧠 Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison \u0026amp; sorting would be more complex.\nSo IEEE 754 uses bias notation, shifting exponent range to all positive values.\n",
+  "description": "Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:\n+1.xxxxx... × 2^y IEEE 754 (32-bit float) splits into 3 fields: 1 bit: Sign (0 = positive, 1 = negative) 8 bits: Exponent (with bias) 23 bits: Significand / Mantissa Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)\nBit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison \u0026amp; sorting would be more complex.\nSo IEEE 754 uses bias notation, shifting exponent range to all positive values.\n",
   "keywords": [
     "float", "ieee754", "CS61C", "encoding"
   ],
-  "articleBody": "🔢 Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:\n+1.xxxxx... × 2^y IEEE 754 (32-bit float) splits into 3 fields: 1 bit: Sign (0 = positive, 1 = negative) 8 bits: Exponent (with bias) 23 bits: Significand / Mantissa Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)\n📌 Bit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) 🧠 Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison \u0026 sorting would be more complex.\nSo IEEE 754 uses bias notation, shifting exponent range to all positive values.\nBiased Formula: Actual exponent = Stored exponent – Bias Bias = 127 for float (32-bit) Bias = 1023 for double (64-bit) Example:\nStored exponent = 10000001₂ = 129 Actual exponent = 129 – 127 = 2 🧭 Exponent Value Table Actual Exponent Biased (Stored) Binary +127 254 1111 1110 0 127 0111 1111 –126 1 0000 0001 Special: ∞ / NaN 255 1111 1111 🌀 Negative exponents → closer to zero\n🧊 Large biased values → ∞ or NaN\n🆚 Single vs Double Precision Type Bit Length Significand Exponent Bias Float 32-bit 23 bits 8 bits 127 Double 64-bit 52 bits 11 bits 1023 ⚠️ Special Encoding Cases (IEEE 754) Case Exponent Significand Meaning Positive ∞ all 1s all 0s +∞ Negative ∞ all 1s all 0s –∞ NaN all 1s ≠ 0 Not a Number Zero all 0s all 0s +0 or –0 Denorm all 0s ≠ 0 Very small numbers (no leading 1) 📌 Note:\nSpecial encodings allow representation of edge cases like NaN, ∞, zero and subnormal numbers (denorms).\nYou’ll need this logic later in pipeline, FPU, and comparison instructions.\n",
-  "wordCount" : "298",
+  "articleBody": "Floating Point Encoding: Single Precision Use normalized base-2 scientific notation:\n+1.xxxxx... × 2^y IEEE 754 (32-bit float) splits into 3 fields: 1 bit: Sign (0 = positive, 1 = negative) 8 bits: Exponent (with bias) 23 bits: Significand / Mantissa Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)\nBit Breakdown (32-bit float layout) Field Size Purpose Sign 1 bit 1 = negative, 0 = positive Exponent 8 bits Biased exponent Significand 23 bits Fractional part (assumes leading 1) Why Use Biased Notation for Exponent? If exponent were stored directly (signed int), comparison \u0026 sorting would be more complex.\nSo IEEE 754 uses bias notation, shifting exponent range to all positive values.\nBiased Formula: Actual exponent = Stored exponent – Bias Bias = 127 for float (32-bit) Bias = 1023 for double (64-bit) Example:\nStored exponent = 10000001₂ = 129 Actual exponent = 129 – 127 = 2 Exponent Value Table Actual Exponent Biased (Stored) Binary +127 254 1111 1110 0 127 0111 1111 –126 1 0000 0001 Special: ∞ / NaN 255 1111 1111 Negative exponents → closer to zero\nLarge biased values → ∞ or NaN\nSingle vs Double Precision Type Bit Length Significand Exponent Bias Float 32-bit 23 bits 8 bits 127 Double 64-bit 52 bits 11 bits 1023 Special Encoding Cases (IEEE 754) Case Exponent Significand Meaning Positive ∞ all 1s all 0s +∞ Negative ∞ all 1s all 0s –∞ NaN all 1s ≠ 0 Not a Number Zero all 0s all 0s +0 or –0 Denorm all 0s ≠ 0 Very small numbers (no leading 1) Note:\nSpecial encodings allow representation of edge cases like NaN, ∞, zero and subnormal numbers (denorms).\nYou’ll need this logic later in pipeline, FPU, and comparison instructions.\n",
+  "wordCount" : "289",
   "inLanguage": "en",
   "datePublished": "2025-03-07T00:00:00Z",
   "dateModified": "2025-03-07T00:00:00Z",
@@ -261,11 +261,11 @@ So IEEE 754 uses bias notation, shifting exponent range to all positive values."
     <h1 class="post-title entry-hint-parent">
       Floating Point Encoding (IEEE 754)
     </h1>
-    <div class="post-meta"><span title='2025-03-07 00:00:00 +0000 UTC'>March 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;298 words&nbsp;·&nbsp;Helia
+    <div class="post-meta"><span title='2025-03-07 00:00:00 +0000 UTC'>March 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;289 words&nbsp;·&nbsp;Helia
 
 </div>
   </header> 
-  <div class="post-content"><h2 id="-floating-point-encoding-single-precision">🔢 Floating Point Encoding: Single Precision<a hidden class="anchor" aria-hidden="true" href="#-floating-point-encoding-single-precision">#</a></h2>
+  <div class="post-content"><h2 id="floating-point-encoding-single-precision">Floating Point Encoding: Single Precision<a hidden class="anchor" aria-hidden="true" href="#floating-point-encoding-single-precision">#</a></h2>
 <ul>
 <li>Use <strong>normalized</strong> base-2 scientific notation:<br>
 <code>+1.xxxxx... × 2^y</code></li>
@@ -280,7 +280,7 @@ So IEEE 754 uses bias notation, shifting exponent range to all positive values."
 <blockquote>
 <p>Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)</p></blockquote>
 <hr>
-<h2 id="-bit-breakdown-32-bit-float-layout">📌 Bit Breakdown (32-bit float layout)<a hidden class="anchor" aria-hidden="true" href="#-bit-breakdown-32-bit-float-layout">#</a></h2>
+<h2 id="bit-breakdown-32-bit-float-layout">Bit Breakdown (32-bit float layout)<a hidden class="anchor" aria-hidden="true" href="#bit-breakdown-32-bit-float-layout">#</a></h2>
 <table>
   <thead>
       <tr>
@@ -308,7 +308,7 @@ So IEEE 754 uses bias notation, shifting exponent range to all positive values."
   </tbody>
 </table>
 <hr>
-<h2 id="-why-use-biased-notation-for-exponent">🧠 Why Use Biased Notation for Exponent?<a hidden class="anchor" aria-hidden="true" href="#-why-use-biased-notation-for-exponent">#</a></h2>
+<h2 id="why-use-biased-notation-for-exponent">Why Use Biased Notation for Exponent?<a hidden class="anchor" aria-hidden="true" href="#why-use-biased-notation-for-exponent">#</a></h2>
 <p>If exponent were stored directly (signed int), comparison &amp; sorting would be more complex.<br>
 So IEEE 754 uses <strong>bias notation</strong>, shifting exponent range to all positive values.</p>
 <h3 id="biased-formula">Biased Formula:<a hidden class="anchor" aria-hidden="true" href="#biased-formula">#</a></h3>
@@ -321,7 +321,7 @@ So IEEE 754 uses <strong>bias notation</strong>, shifting exponent range to all 
 <pre tabindex="0"><code>Stored exponent = 10000001₂ = 129  
 Actual exponent = 129 – 127 = 2
 </code></pre><hr>
-<h3 id="-exponent-value-table">🧭 Exponent Value Table<a hidden class="anchor" aria-hidden="true" href="#-exponent-value-table">#</a></h3>
+<h3 id="exponent-value-table">Exponent Value Table<a hidden class="anchor" aria-hidden="true" href="#exponent-value-table">#</a></h3>
 <table>
   <thead>
       <tr>
@@ -353,10 +353,10 @@ Actual exponent = 129 – 127 = 2
       </tr>
   </tbody>
 </table>
-<p>🌀 Negative exponents → closer to zero<br>
-🧊 Large biased values → ∞ or NaN</p>
+<p>Negative exponents → closer to zero<br>
+Large biased values → ∞ or NaN</p>
 <hr>
-<h2 id="-single-vs-double-precision">🆚 Single vs Double Precision<a hidden class="anchor" aria-hidden="true" href="#-single-vs-double-precision">#</a></h2>
+<h2 id="single-vs-double-precision">Single vs Double Precision<a hidden class="anchor" aria-hidden="true" href="#single-vs-double-precision">#</a></h2>
 <table>
   <thead>
       <tr>
@@ -385,7 +385,7 @@ Actual exponent = 129 – 127 = 2
   </tbody>
 </table>
 <hr>
-<h2 id="-special-encoding-cases-ieee-754">⚠️ Special Encoding Cases (IEEE 754)<a hidden class="anchor" aria-hidden="true" href="#-special-encoding-cases-ieee-754">#</a></h2>
+<h2 id="special-encoding-cases-ieee-754">Special Encoding Cases (IEEE 754)<a hidden class="anchor" aria-hidden="true" href="#special-encoding-cases-ieee-754">#</a></h2>
 <table>
   <thead>
       <tr>
@@ -429,7 +429,7 @@ Actual exponent = 129 – 127 = 2
   </tbody>
 </table>
 <hr>
-<p>📌 <strong>Note</strong>:<br>
+<p><strong>Note</strong>:<br>
 Special encodings allow representation of edge cases like NaN, ∞, zero and subnormal numbers (denorms).</p>
 <p>You’ll need this logic later in <code>pipeline</code>, <code>FPU</code>, and <code>comparison instructions</code>.</p>
 <hr>

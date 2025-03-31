@@ -13,7 +13,7 @@
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/</guid>
-      <description>&lt;h2 id=&#34;-floating-point-encoding-single-precision&#34;&gt;🔢 Floating Point Encoding: Single Precision&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;floating-point-encoding-single-precision&#34;&gt;Floating Point Encoding: Single Precision&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Use &lt;strong&gt;normalized&lt;/strong&gt; base-2 scientific notation:&lt;br&gt;
 &lt;code&gt;+1.xxxxx... × 2^y&lt;/code&gt;&lt;/li&gt;
@@ -28,7 +28,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-bit-breakdown-32-bit-float-layout&#34;&gt;📌 Bit Breakdown (32-bit float layout)&lt;/h2&gt;
+&lt;h2 id=&#34;bit-breakdown-32-bit-float-layout&#34;&gt;Bit Breakdown (32-bit float layout)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -56,7 +56,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-why-use-biased-notation-for-exponent&#34;&gt;🧠 Why Use Biased Notation for Exponent?&lt;/h2&gt;
+&lt;h2 id=&#34;why-use-biased-notation-for-exponent&#34;&gt;Why Use Biased Notation for Exponent?&lt;/h2&gt;
 &lt;p&gt;If exponent were stored directly (signed int), comparison &amp;amp; sorting would be more complex.&lt;br&gt;
 So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent range to all positive values.&lt;/p&gt;</description>
     </item>

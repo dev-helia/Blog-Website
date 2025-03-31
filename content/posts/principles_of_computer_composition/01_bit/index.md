@@ -5,7 +5,7 @@ weight: 1
 tags: ["bit", "binary", "CS61C", "fundamentals"]
 ---
 
-## 🔍 Hexadecimal and bit/byte Relationship
+## Hexadecimal and bit/byte Relationship
 
 Hexadecimal (Hex) is a base-16 system used to represent binary data. Its key relationships:
 
@@ -22,7 +22,7 @@ In computer systems:
 
 ---
 
-## 🌟 Example: Hex vs Binary Table
+## Example: Hex vs Binary Table
 
 | Hex | Binary | Size |
 |-----|--------|------|
@@ -33,7 +33,7 @@ In computer systems:
 
 ---
 
-## ✅ Summary
+## Summary
 
 - 1 hex digit = 4 bits  
 - 2 hex digits = 1 byte (8 bits)  
@@ -41,7 +41,7 @@ In computer systems:
 
 ---
 
-## 🧠 Offset Bits and Block Size
+## Offset Bits and Block Size
 
 The number of **offset bits** depends on the **block size**, using this formula:
 
@@ -67,7 +67,7 @@ So 3 offset bits are needed to identify the exact byte inside the block:
 
 ---
 
-## 📎 Note
+## Note
 
 This concept is critical when dealing with cache addressing and memory hierarchy. Understanding how offset bits map into memory blocks helps later in cache tag/index/offset separation.
 
