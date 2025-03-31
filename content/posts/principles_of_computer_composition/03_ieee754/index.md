@@ -1,5 +1,5 @@
 ---
-title: "03_ieee754: Understanding IEEE 754 & Fraction Encoding"
+title: "Understanding IEEE 754 & Fraction Encoding"
 date: 2025-03-07
 weight: 3
 tags: ["ieee754", "floating point", "fractions", "CS61C"]

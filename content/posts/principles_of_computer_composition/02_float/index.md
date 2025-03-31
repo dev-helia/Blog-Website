@@ -1,5 +1,5 @@
 ---
-title: "02_float: Floating Point Encoding (IEEE 754)"
+title: "Floating Point Encoding (IEEE 754)"
 date: 2025-03-07
 weight: 2
 tags: ["float", "ieee754", "CS61C", "encoding"]

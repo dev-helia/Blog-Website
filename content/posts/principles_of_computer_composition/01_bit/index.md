@@ -1,5 +1,5 @@
 ---
-title: "01_bit: Hex & Binary Basics"
+title: "Hex & Binary Basics"
 date: 2025-03-09
 weight: 1
 tags: ["bit", "binary", "CS61C", "fundamentals"]
