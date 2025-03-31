@@ -10,9 +10,9 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/clock-cycle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clock Cycle and Instruction Stages</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</guid>
       <description>&lt;h2 id=&#34;clock-cycle&#34;&gt;Clock Cycle&lt;/h2&gt;
 &lt;p&gt;A &lt;strong&gt;single-cycle CPU&lt;/strong&gt; completes &lt;strong&gt;all stages&lt;/strong&gt; of an instruction within &lt;strong&gt;one long clock cycle&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Each instruction goes through the following five stages:&lt;/p&gt;

@@ -5,7 +5,6 @@ weight: 5
 tags: ["Registers", "RISC-V", "x0-x31", "Zero Register"]
 ---
 
-# 05_registers
 
 ## Registers File reg[]
 

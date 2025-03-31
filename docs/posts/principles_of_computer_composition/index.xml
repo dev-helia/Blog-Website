@@ -167,8 +167,7 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</guid>
-      <description>&lt;h1 id=&#34;05_registers&#34;&gt;05_registers&lt;/h1&gt;
-&lt;h2 id=&#34;registers-file-reg&#34;&gt;Registers File reg[]&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;registers-file-reg&#34;&gt;Registers File reg[]&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;1-how-many-registers-in-risc-v&#34;&gt;1. How Many Registers in RISC-V?&lt;/h3&gt;
 &lt;ul&gt;
@@ -228,9 +227,9 @@ Their role depends on how you use them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clock Cycle and Instruction Stages</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</guid>
       <description>&lt;h2 id=&#34;clock-cycle&#34;&gt;Clock Cycle&lt;/h2&gt;
 &lt;p&gt;A &lt;strong&gt;single-cycle CPU&lt;/strong&gt; completes &lt;strong&gt;all stages&lt;/strong&gt; of an instruction within &lt;strong&gt;one long clock cycle&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Each instruction goes through the following five stages:&lt;/p&gt;
@@ -287,9 +286,9 @@ Only &lt;code&gt;lw&lt;/code&gt; and &lt;code&gt;sw&lt;/code&gt; instructions go
     </item>
     <item>
       <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</guid>
       <description></description>
     </item>
     <item>
