@@ -142,7 +142,7 @@ idea → research → design → build → debug → write → deploy.
 And I’ll never forget this feeling.
 
 
-## 🎥 Demo + User Flow
+## Demo + User Flow
 ---
 I deployed it online (via [Vercel](https://promptllery.vercel.app/))  
 and recorded a short video to walk through the full user experience — from uploading prompts to sharing them.
@@ -152,7 +152,7 @@ and recorded a short video to walk through the full user experience — from upl
 ### 1. Homepage (Not Logged In)
 
 ![Homepage — Not Logged In](/promptllery/1.png)  
-🔒 Before logging in, the homepage shows a search bar and a reminder: users need to log in to upload or interact with prompts.
+Before logging in, the homepage shows a search bar and a reminder: users need to log in to upload or interact with prompts.
 
 
 ### 2. Homepage (With Public Prompts)
@@ -164,31 +164,31 @@ and recorded a short video to walk through the full user experience — from upl
 ### 3. Login Page
 
 ![Login Page](/promptllery/3.png)  
-🔐 Basic email + password login form using Supabase Auth. Authenticated users can upload and like prompts.
+Basic email + password login form using Supabase Auth. Authenticated users can upload and like prompts.
 
 ### 4. Upload Prompt Page
 
 ![Upload Prompt](/promptllery/4.png)  
-📝 Authenticated users can upload new prompts with detailed metadata — title, description, tags, examples, usage tips.
+Authenticated users can upload new prompts with detailed metadata — title, description, tags, examples, usage tips.
 
 
 ### 5. Prompt Ranking Page
 
 ![Prompt Ranking Page](/promptllery/5.png)  
-🏆 Shows the most liked or latest prompts. Each entry shows the prompt title and like count.
+Shows the most liked or latest prompts. Each entry shows the prompt title and like count.
 
 ---
 
 ### 6. Register Page
 
 ![Register Page](/promptllery/6.png)  
-🆕 Simple registration form for new users. Supabase handles user creation and secure password storage.
+Simple registration form for new users. Supabase handles user creation and secure password storage.
 
 
 ### 7. Prompt Details + Inline Testing
 
 ![Prompt Detail + Test Input](/promptllery/7.png)  
-💡 On the prompt detail page, users can:
+On the prompt detail page, users can:
 - View full prompt text  
 - Choose GPT model (default is GPT-3.5)  
 - Enter custom input  
@@ -198,28 +198,28 @@ and recorded a short video to walk through the full user experience — from upl
 ### 8. Prompt Detail + QR Sharing
 
 ![Prompt QR Sharing](/promptllery/8.png)  
-📲 Every prompt has a shareable QR code and a “Copy” feature, making it easy to send prompts to friends or open in another device.
+Every prompt has a shareable QR code and a “Copy” feature, making it easy to send prompts to friends or open in another device.
 
 
 ### 9. Prompt Test Result
 
 ![Prompt Test Result](/promptllery/9.png)  
-🧠 After clicking “Run Prompt”, the GPT-3.5 model returns a live result in the frontend. This allows users to preview how a prompt performs before using it in their own tools.
+After clicking “Run Prompt”, the GPT-3.5 model returns a live result in the frontend. This allows users to preview how a prompt performs before using it in their own tools.
 
 
 ### 🎬 Full Demo Video
 
-🎥 [Watch full demo video](/promptllery/demo.mp4)
+[Watch full demo video](/promptllery/demo.mp4)
 
 
 
-## 🔮 What's Next?
+## What's Next?
 ---
 - **From solo to social**  
   Add user accounts, profiles, and public prompt collections.  
   Let users follow others, comment, and build a prompt culture.
 
-- 🗃️ **From gallery to ecosystem**  
+- **From gallery to ecosystem**  
   Add categories, remixable prompt templates, and custom tags.  
   Build a real prompt *library*, not just a showcase.
 
