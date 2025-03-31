@@ -1,5 +1,5 @@
-baseURL: "https://dev-helia.github.io/Blog-Website/"
-title: "Helia's Blog"
+baseURL: "https://dev-helia.github.io/Tech-Blog-Website/"
+title: "Helia's Tech-Blog"  # 这里更新为新名字
 theme: "PaperMod"
 
 paginate: 6
@@ -23,7 +23,7 @@ params:
   disableThemeToggle: false
 
   homeInfoParams:
-    Title: "👋 Welcome to Helia's Blog"
+    Title: "👋 Welcome to Helia's Tech-Blog"  # 修改欢迎标题
     Content: |
       Hi, I'm Helia.  
       Welcome to my little corner of the internet 🧠✨  
@@ -39,7 +39,7 @@ params:
     - name: email
       url: "mailto:hetaoo.c@gmail.com"
     - name: rss
-      url: "https://dev-helia.github.io/Blog-Website/index.xml"
+      url: "https://dev-helia.github.io/Tech-Blog-Website/index.xml"  # 修改 rss 的链接
 
 menu:
   main:
