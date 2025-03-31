@@ -2,7 +2,9 @@ baseURL: "https://dev-helia.github.io/Tech-Blog-Website/"
 title: "Helia's Tech-Blog"  # 这里更新为新名字
 theme: "PaperMod"
 
-paginate: 6
+pagination:
+  pagerSize: 6
+
 languageCode: "en-us"
 defaultContentLanguage: "en"
 enableRobotsTXT: true
@@ -26,12 +28,7 @@ params:
     Title: "👋 Welcome to Helia's Tech-Blog"  # 修改欢迎标题
     Content: |
       Hi, I'm Helia.  
-      Welcome to my little corner of the internet 🧠✨  
-      I write about:
-      - 🌸 My favorite AI prompts  
-      - 🖋️ Technical notes  
-      - 🌿 Learnings & experiments  
-      Stay curious, stay creative 💡💘
+      Welcome to my little corner.
 
   socialIcons:
     - name: github

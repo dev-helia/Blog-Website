@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dev-helia.github.io/Blog-Website/posts/building-my-prompt-library/</loc>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/building-my-prompt-library/</loc>
   </url><url>
-    <loc>https://dev-helia.github.io/Blog-Website/categories/</loc>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/categories/</loc>
   </url><url>
-    <loc>https://dev-helia.github.io/Blog-Website/</loc>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/</loc>
   </url><url>
-    <loc>https://dev-helia.github.io/Blog-Website/posts/</loc>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/</loc>
   </url><url>
-    <loc>https://dev-helia.github.io/Blog-Website/tags/</loc>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/</loc>
   </url>
 </urlset>
