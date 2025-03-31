@@ -4,7 +4,6 @@ date: 2025-03-30
 tags: ["prompt", "fullstack", "supabase", "react"]
 ---
 
-# My first full-stack project -- promptllery
 
 ## Why I Decided to Build a Full-Stack Project
 
