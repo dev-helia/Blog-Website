@@ -6,7 +6,7 @@
     <description>Recent content in Principles of Computer Composition on Helia&#39;s Tech-Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hex &amp; Binary Basics</title>
@@ -144,11 +144,23 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
 &lt;code&gt;2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
+      <title>Instruction Set Architecture</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/04_isa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/04_isa/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;instruction-formats-overview&#34;&gt;Instruction Formats Overview&lt;/h1&gt;
+&lt;h2 id=&#34;1-what-is-an-instruction-format&#34;&gt;1. What is an Instruction Format?&lt;/h2&gt;
+&lt;p&gt;In most mainstream instruction set architectures (ISAs), an instruction is parsed from &lt;strong&gt;right to left&lt;/strong&gt; in execution.&lt;/p&gt;
+&lt;p&gt;For example, after an instruction like:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ecall
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It simply ends execution. But most other instructions contain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rd&lt;/code&gt;: destination register&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rs1&lt;/code&gt;, &lt;code&gt;rs2&lt;/code&gt;: source registers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In &lt;strong&gt;RISC-V&lt;/strong&gt;, instruction format &lt;strong&gt;strictly requires&lt;/strong&gt; &lt;code&gt;rs1&lt;/code&gt; and &lt;code&gt;rs2&lt;/code&gt; to be placed at fixed bit positions in the 32-bit instruction word.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This avoids decoding complexity caused by variable field placement.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>

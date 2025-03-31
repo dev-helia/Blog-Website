@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ISA on Helia&#39;s Tech-Blog</title>
+    <link>https://dev-helia.github.io/Tech-Blog-Website/tags/isa/</link>
+    <description>Recent content in ISA on Helia&#39;s Tech-Blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/isa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Instruction Set Architecture</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/04_isa/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/04_isa/</guid>
+      <description>&lt;h1 id=&#34;instruction-formats-overview&#34;&gt;Instruction Formats Overview&lt;/h1&gt;
+&lt;h2 id=&#34;1-what-is-an-instruction-format&#34;&gt;1. What is an Instruction Format?&lt;/h2&gt;
+&lt;p&gt;In most mainstream instruction set architectures (ISAs), an instruction is parsed from &lt;strong&gt;right to left&lt;/strong&gt; in execution.&lt;/p&gt;
+&lt;p&gt;For example, after an instruction like:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ecall
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It simply ends execution. But most other instructions contain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rd&lt;/code&gt;: destination register&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rs1&lt;/code&gt;, &lt;code&gt;rs2&lt;/code&gt;: source registers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In &lt;strong&gt;RISC-V&lt;/strong&gt;, instruction format &lt;strong&gt;strictly requires&lt;/strong&gt; &lt;code&gt;rs1&lt;/code&gt; and &lt;code&gt;rs2&lt;/code&gt; to be placed at fixed bit positions in the 32-bit instruction word.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This avoids decoding complexity caused by variable field placement.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
