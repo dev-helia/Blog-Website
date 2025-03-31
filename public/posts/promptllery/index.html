@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/Tech-Blog-Website/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Tech-Blog-Website/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>My First Full-Stack Project — Promptllery | Helia&#39;s Tech-Blog</title>
+<meta name="keywords" content="prompt, fullstack, supabase, react">
+<meta name="description" content="Why I Decided to Build a Full-Stack Project
+Honestly, the motivation wasn&rsquo;t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.
+So I forced myself to make something that looks like a full-stack product.
+On the first day I broke down:
+What is JSX? What’s the deal between Vite and React? Why am I getting @babel/preset-react errors in testing? What&rsquo;s the difference between Supabase and Node.js?">
+<meta name="author" content="Helia">
+<link rel="canonical" href="http://localhost:1313/Tech-Blog-Website/posts/promptllery/">
+<link crossorigin="anonymous" href="/Tech-Blog-Website/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/Tech-Blog-Website/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/Tech-Blog-Website/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/Tech-Blog-Website/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/Tech-Blog-Website/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/Tech-Blog-Website/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/Tech-Blog-Website/posts/promptllery/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/Tech-Blog-Website/posts/promptllery/">
+  <meta property="og:site_name" content="Helia&#39;s Tech-Blog">
+  <meta property="og:title" content="My First Full-Stack Project — Promptllery">
+  <meta property="og:description" content="Why I Decided to Build a Full-Stack Project Honestly, the motivation wasn’t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.
+So I forced myself to make something that looks like a full-stack product.
+On the first day I broke down:
+What is JSX? What’s the deal between Vite and React? Why am I getting @babel/preset-react errors in testing? What’s the difference between Supabase and Node.js?">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-30T00:00:00+00:00">
+    <meta property="article:tag" content="Prompt">
+    <meta property="article:tag" content="Fullstack">
+    <meta property="article:tag" content="Supabase">
+    <meta property="article:tag" content="React">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My First Full-Stack Project — Promptllery">
+<meta name="twitter:description" content="Why I Decided to Build a Full-Stack Project
+Honestly, the motivation wasn&rsquo;t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.
+So I forced myself to make something that looks like a full-stack product.
+On the first day I broke down:
+What is JSX? What’s the deal between Vite and React? Why am I getting @babel/preset-react errors in testing? What&rsquo;s the difference between Supabase and Node.js?">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/Tech-Blog-Website/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "My First Full-Stack Project — Promptllery",
+      "item": "http://localhost:1313/Tech-Blog-Website/posts/promptllery/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My First Full-Stack Project — Promptllery",
+  "name": "My First Full-Stack Project — Promptllery",
+  "description": "Why I Decided to Build a Full-Stack Project Honestly, the motivation wasn\u0026rsquo;t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.\nSo I forced myself to make something that looks like a full-stack product.\nOn the first day I broke down:\nWhat is JSX? What’s the deal between Vite and React? Why am I getting @babel/preset-react errors in testing? What\u0026rsquo;s the difference between Supabase and Node.js?\n",
+  "keywords": [
+    "prompt", "fullstack", "supabase", "react"
+  ],
+  "articleBody": "Why I Decided to Build a Full-Stack Project Honestly, the motivation wasn’t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.\nSo I forced myself to make something that looks like a full-stack product.\nOn the first day I broke down:\nWhat is JSX? What’s the deal between Vite and React? Why am I getting @babel/preset-react errors in testing? What’s the difference between Supabase and Node.js?\nI knew nothing — but I still started.\nThat’s why I decided to document every clueless moment. Even if it’s not useful to others, it’s proof that: I really walked this path.\nWhy This Project? While working on another project (Herthspace), I came across several prompt-sharing sites like PromptHero and Prompt Playground.\nIt hit me:\n“If they can build such fun AI content platforms… why can’t I make one too?”\nBut what truly pushed me was seeing friends with end-to-end projects — frontend + backend + login + database — all fully connected. I wanted one too. I was jealous. 👀\nInstead of copying, I started comparing what those sites actually do:\nSite What inspired me PromptHero Prompt categorization + gallery → I want “Like” and “Save” PromptLand Prompt testing + model preview → I want “built-in model test” Pinterest Card-style UI → I want an aesthetic, fun, social-ish experience A lot of prompt sites look good, but feel passive. I wanted a site people actually want to save prompts from.\nSo Promptllery was born:\nA fun little prompt playground where:\nGood prompts can be saved Liked ones can be liked and shared Users can test prompts inline No GPT-4? Use share links and QR so no tokens are wasted! Thinking Backwards from Features to Stack At this point, I worked backwards to choose my stack:\nI want gallery-style layout → React + Tailwind I want to store prompts → Supabase I want interactivity (like/save) → useState/useEffect + Supabase I want prompt testing → OpenAI API (GPT-3.5 only) I want to save token costs → shareable links Eventually Promptllery became my playground — not to show off tech skills, but to practice product thinking.\nWhy This Tech Stack? I didn’t choose the stack intentionally — I just followed what others were using.\nBut I slowly realized: this is the perfect beginner-friendly “frontend-led” stack.\nTech What it is Why it fits Promptllery React JS library for UI Each prompt is a component; like/save = reactive state JSX HTML inside JS Makes component building fast \u0026 intuitive Tailwind CSS Utility-first CSS Perfect for rapid design and layout Vite Build tool Super fast dev server, built for modern frameworks Supabase Backend-as-a-service No backend code needed, but still have DB \u0026 Auth Jest + RTL Testing framework + helpers For ensuring component logic works as expected Vercel One-click deployment Perfect for student / solo projects Why not MERN? Because I want to focus on product logic and user experience, not API/infra.\nStack MERN (Mongo + Express) My stack (React + Supabase) Backend Dev You write everything Built-in API, no backend needed Database NoSQL (MongoDB) SQL (PostgreSQL, stable) Who it’s for Backend-focused devs MVP builders, frontend-heavy people What I Actually Built I started from zero — literally.\nModule Description Implementation Details Prompt Card Gallery List prompts with titles, tags, author PromptCard component + Tailwind layout Upload Form Create new prompts with title, desc, tags Controlled form → onSubmit sends to Supabase Like + Favorite Users can react to prompts Toggle useState + update Supabase row Search \u0026 Filter By keyword or tag Input + .filter() over prompt list Test Prompt Inline Run prompt with GPT Call OpenAI API and display result in frontend Share Tools Copy prompt, share QR navigator.clipboard.writeText, QR from lib Supabase Management Store/query prompt info, manage likes supabase.from(...).insert() or .update() Lessons from the Struggle I thought this was just a “temporary practice project”,\nBut it became proof of something deeper:\nThis was the first product I really built from scratch.\nProblem The Struggle How I Solved It Jest not reading JSX “Unexpected token” with Installed @babel/preset-react + created .babel.config.js Node version mismatch Packages required Node 18+ Used --force first, switched later Tailwind too verbose className chains were overwhelming Started using clsx() and layout planning Upload form bugged Wrong data or no state update Used controlled inputs + useEffect properly Vercel config confusion Didn’t know about Git linking or builds Learned .env, Git setup, and build settings Final Takeaways Before this project, I only admired what others had built.\nNow I know:\nPrompt sites can be built solo Supabase is beginner-friendly Testing is annoying but necessary Debugging is a superpower There’s a huge gap between “using” and “understanding” I can decide what a product looks like — not just follow others This isn’t a show-off piece. It’s my first real tech journey from: idea → research → design → build → debug → write → deploy.\nAnd I’ll never forget this feeling.\nDemo + User Flow I deployed it online (via Vercel)\nand recorded a short video to walk through the full user experience — from uploading prompts to sharing them.\n1. Homepage (Not Logged In) Before logging in, the homepage shows a search bar and a reminder: users need to log in to upload or interact with prompts.\n2. Homepage (With Public Prompts) ✨ Once logged in, prompts are displayed as cards with title, tags, and quick actions like “Copy”, “Like”, and “Test”.\n3. Login Page Basic email + password login form using Supabase Auth. Authenticated users can upload and like prompts.\n4. Upload Prompt Page Authenticated users can upload new prompts with detailed metadata — title, description, tags, examples, usage tips.\n5. Prompt Ranking Page Shows the most liked or latest prompts. Each entry shows the prompt title and like count.\n6. Register Page Simple registration form for new users. Supabase handles user creation and secure password storage.\n7. Prompt Details + Inline Testing On the prompt detail page, users can:\nView full prompt text Choose GPT model (default is GPT-3.5) Enter custom input Click “Run Prompt” to test directly 8. Prompt Detail + QR Sharing Every prompt has a shareable QR code and a “Copy” feature, making it easy to send prompts to friends or open in another device.\n9. Prompt Test Result After clicking “Run Prompt”, the GPT-3.5 model returns a live result in the frontend. This allows users to preview how a prompt performs before using it in their own tools.\n🎬 Full Demo Video Watch full demo video\nWhat’s Next? From solo to social\nAdd user accounts, profiles, and public prompt collections.\nLet users follow others, comment, and build a prompt culture.\nFrom gallery to ecosystem\nAdd categories, remixable prompt templates, and custom tags.\nBuild a real prompt library, not just a showcase.\nFrom testing to co-creation\nLet users build prompts together:\none writes the setup, another refines the wording, a third gives sample outputs.\nFrom passive use to community-driven feedback\nWeekly prompt picks, upvoting systems, feedback for creators.\nTurn prompts into a living dialogue, not static text.\nFrom student project to long-term playground\nEventually, maybe even invite contributors.\nOpen source parts, build an API, explore monetization for top creators?\nPromptllery is not just a website — it’s my first step into building something others might actually use.\nHope it becomes something meaningful and fun, even if it started out of jealousy.\n",
+  "wordCount" : "1240",
+  "inLanguage": "en",
+  "datePublished": "2025-03-30T00:00:00Z",
+  "dateModified": "2025-03-30T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Helia"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/Tech-Blog-Website/posts/promptllery/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Helia's Tech-Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/Tech-Blog-Website/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/Tech-Blog-Website/" accesskey="h" title="Helia&#39;s Tech-Blog (Alt + H)">Helia&#39;s Tech-Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/Tech-Blog-Website/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/Tech-Blog-Website/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/Tech-Blog-Website/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/Tech-Blog-Website/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/Tech-Blog-Website/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      My First Full-Stack Project — Promptllery
+    </h1>
+    <div class="post-meta"><span title='2025-03-30 00:00:00 +0000 UTC'>March 30, 2025</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1240 words&nbsp;·&nbsp;Helia
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="why-i-decided-to-build-a-full-stack-project">Why I Decided to Build a Full-Stack Project<a hidden class="anchor" aria-hidden="true" href="#why-i-decided-to-build-a-full-stack-project">#</a></h2>
+<p>Honestly, the motivation wasn&rsquo;t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.</p>
+<p>So I forced myself to make something that <em>looks</em> like a full-stack product.</p>
+<p>On the first day I broke down:<br>
+What is JSX? What’s the deal between Vite and React? Why am I getting <code>@babel/preset-react</code> errors in testing? What&rsquo;s the difference between Supabase and Node.js?</p>
+<p><strong>I knew nothing — but I still started.</strong></p>
+<p>That’s why I decided to document every clueless moment. Even if it’s not useful to others, it’s proof that: <em>I really walked this path</em>.</p>
+<h2 id="why-this-project">Why This Project?<a hidden class="anchor" aria-hidden="true" href="#why-this-project">#</a></h2>
+<hr>
+<p>While working on another project (Herthspace), I came across several prompt-sharing sites like <a href="https://prompthero.com/">PromptHero</a> and Prompt Playground.</p>
+<p>It hit me:</p>
+<blockquote>
+<p>“If they can build such fun AI content platforms&hellip; why can’t I make one too?”</p></blockquote>
+<p>But what truly pushed me was seeing friends with end-to-end projects — frontend + backend + login + database — all fully connected. I wanted one too. I was <em>jealous</em>. 👀</p>
+<p>Instead of copying, I started comparing what those sites actually do:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Site</th>
+          <th>What inspired me</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>PromptHero</td>
+          <td>Prompt categorization + gallery → I want &ldquo;Like&rdquo; and &ldquo;Save&rdquo;</td>
+      </tr>
+      <tr>
+          <td>PromptLand</td>
+          <td>Prompt testing + model preview → I want &ldquo;built-in model test&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Pinterest</td>
+          <td>Card-style UI → I want an aesthetic, fun, social-ish experience</td>
+      </tr>
+  </tbody>
+</table>
+<p>A lot of prompt sites look good, but feel passive. I wanted a site people <em>actually want to save prompts from</em>.</p>
+<p>So Promptllery was born:<br>
+A fun little prompt playground where:</p>
+<ul>
+<li>Good prompts can be <strong>saved</strong></li>
+<li>Liked ones can be <strong>liked</strong> and shared</li>
+<li>Users can <strong>test</strong> prompts inline</li>
+<li>No GPT-4? Use <strong>share links and QR</strong> so no tokens are wasted!</li>
+</ul>
+<h2 id="thinking-backwards-from-features-to-stack">Thinking <em>Backwards</em> from Features to Stack<a hidden class="anchor" aria-hidden="true" href="#thinking-backwards-from-features-to-stack">#</a></h2>
+<hr>
+<p>At this point, I worked <em>backwards</em> to choose my stack:</p>
+<ul>
+<li>I want gallery-style layout → <strong>React + Tailwind</strong></li>
+<li>I want to store prompts → <strong>Supabase</strong></li>
+<li>I want interactivity (like/save) → <strong>useState/useEffect + Supabase</strong></li>
+<li>I want prompt testing → <strong>OpenAI API (GPT-3.5 only)</strong></li>
+<li>I want to save token costs → <strong>shareable links</strong></li>
+</ul>
+<p>Eventually Promptllery became my playground — not to show off tech skills, but to practice product thinking.</p>
+<h2 id="why-this-tech-stack">Why This Tech Stack?<a hidden class="anchor" aria-hidden="true" href="#why-this-tech-stack">#</a></h2>
+<hr>
+<p>I didn’t choose the stack intentionally — I just followed what others were using.<br>
+But I slowly realized: this is the <strong>perfect beginner-friendly &ldquo;frontend-led&rdquo; stack</strong>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Tech</th>
+          <th>What it is</th>
+          <th>Why it fits Promptllery</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>React</strong></td>
+          <td>JS library for UI</td>
+          <td>Each prompt is a component; like/save = reactive state</td>
+      </tr>
+      <tr>
+          <td><strong>JSX</strong></td>
+          <td>HTML inside JS</td>
+          <td>Makes component building fast &amp; intuitive</td>
+      </tr>
+      <tr>
+          <td><strong>Tailwind CSS</strong></td>
+          <td>Utility-first CSS</td>
+          <td>Perfect for rapid design and layout</td>
+      </tr>
+      <tr>
+          <td><strong>Vite</strong></td>
+          <td>Build tool</td>
+          <td>Super fast dev server, built for modern frameworks</td>
+      </tr>
+      <tr>
+          <td><strong>Supabase</strong></td>
+          <td>Backend-as-a-service</td>
+          <td>No backend code needed, but still have DB &amp; Auth</td>
+      </tr>
+      <tr>
+          <td><strong>Jest + RTL</strong></td>
+          <td>Testing framework + helpers</td>
+          <td>For ensuring component logic works as expected</td>
+      </tr>
+      <tr>
+          <td><strong>Vercel</strong></td>
+          <td>One-click deployment</td>
+          <td>Perfect for student / solo projects</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="why-not-mern">Why not MERN?<a hidden class="anchor" aria-hidden="true" href="#why-not-mern">#</a></h3>
+<p>Because I want to focus on <strong>product logic and user experience</strong>, not API/infra.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Stack</th>
+          <th>MERN (Mongo + Express)</th>
+          <th>My stack (React + Supabase)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Backend Dev</td>
+          <td>You write everything</td>
+          <td>Built-in API, no backend needed</td>
+      </tr>
+      <tr>
+          <td>Database</td>
+          <td>NoSQL (MongoDB)</td>
+          <td>SQL (PostgreSQL, stable)</td>
+      </tr>
+      <tr>
+          <td>Who it&rsquo;s for</td>
+          <td>Backend-focused devs</td>
+          <td>MVP builders, frontend-heavy people</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="what-i-actually-built">What I Actually Built<a hidden class="anchor" aria-hidden="true" href="#what-i-actually-built">#</a></h2>
+<hr>
+<p>I started from zero — literally.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Module</th>
+          <th>Description</th>
+          <th>Implementation Details</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Prompt Card Gallery</td>
+          <td>List prompts with titles, tags, author</td>
+          <td><code>PromptCard</code> component + Tailwind layout</td>
+      </tr>
+      <tr>
+          <td>Upload Form</td>
+          <td>Create new prompts with title, desc, tags</td>
+          <td>Controlled form → <code>onSubmit</code> sends to Supabase</td>
+      </tr>
+      <tr>
+          <td>Like + Favorite</td>
+          <td>Users can react to prompts</td>
+          <td>Toggle <code>useState</code> + update Supabase row</td>
+      </tr>
+      <tr>
+          <td>Search &amp; Filter</td>
+          <td>By keyword or tag</td>
+          <td>Input + <code>.filter()</code> over prompt list</td>
+      </tr>
+      <tr>
+          <td>Test Prompt Inline</td>
+          <td>Run prompt with GPT</td>
+          <td>Call OpenAI API and display result in frontend</td>
+      </tr>
+      <tr>
+          <td>Share Tools</td>
+          <td>Copy prompt, share QR</td>
+          <td><code>navigator.clipboard.writeText</code>, QR from lib</td>
+      </tr>
+      <tr>
+          <td>Supabase Management</td>
+          <td>Store/query prompt info, manage likes</td>
+          <td><code>supabase.from(...).insert()</code> or <code>.update()</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="lessons-from-the-struggle">Lessons from the Struggle<a hidden class="anchor" aria-hidden="true" href="#lessons-from-the-struggle">#</a></h2>
+<hr>
+<p>I thought this was just a “temporary practice project”,<br>
+But it became proof of something deeper:</p>
+<blockquote>
+<p><strong>This was the first product I really built from scratch.</strong></p></blockquote>
+<table>
+  <thead>
+      <tr>
+          <th>Problem</th>
+          <th>The Struggle</th>
+          <th>How I Solved It</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Jest not reading JSX</td>
+          <td>“Unexpected token” with <code>&lt;App /&gt;</code></td>
+          <td>Installed <code>@babel/preset-react</code> + created <code>.babel.config.js</code></td>
+      </tr>
+      <tr>
+          <td>Node version mismatch</td>
+          <td>Packages required Node 18+</td>
+          <td>Used <code>--force</code> first, switched later</td>
+      </tr>
+      <tr>
+          <td>Tailwind too verbose</td>
+          <td><code>className</code> chains were overwhelming</td>
+          <td>Started using <code>clsx()</code> and layout planning</td>
+      </tr>
+      <tr>
+          <td>Upload form bugged</td>
+          <td>Wrong data or no state update</td>
+          <td>Used controlled inputs + <code>useEffect</code> properly</td>
+      </tr>
+      <tr>
+          <td>Vercel config confusion</td>
+          <td>Didn’t know about Git linking or builds</td>
+          <td>Learned <code>.env</code>, Git setup, and build settings</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="final-takeaways">Final Takeaways<a hidden class="anchor" aria-hidden="true" href="#final-takeaways">#</a></h2>
+<hr>
+<p>Before this project, I only admired what others had built.<br>
+Now I know:</p>
+<ul>
+<li>Prompt sites can be built solo</li>
+<li>Supabase is beginner-friendly</li>
+<li>Testing is annoying but necessary</li>
+<li>Debugging is a superpower</li>
+<li>There’s a huge gap between “using” and “understanding”</li>
+<li>I can decide what a product looks like — not just follow others</li>
+</ul>
+<p>This isn’t a show-off piece. It’s my <strong>first real tech journey</strong> from:
+idea → research → design → build → debug → write → deploy.</p>
+<p>And I’ll never forget this feeling.</p>
+<h2 id="demo--user-flow">Demo + User Flow<a hidden class="anchor" aria-hidden="true" href="#demo--user-flow">#</a></h2>
+<hr>
+<p>I deployed it online (via <a href="https://promptllery.vercel.app/">Vercel</a>)<br>
+and recorded a short video to walk through the full user experience — from uploading prompts to sharing them.</p>
+<h3 id="1-homepage-not-logged-in">1. Homepage (Not Logged In)<a hidden class="anchor" aria-hidden="true" href="#1-homepage-not-logged-in">#</a></h3>
+<p><img alt="Homepage — Not Logged In" loading="lazy" src="../promptllery/1.png"><br>
+Before logging in, the homepage shows a search bar and a reminder: users need to log in to upload or interact with prompts.</p>
+<h3 id="2-homepage-with-public-prompts">2. Homepage (With Public Prompts)<a hidden class="anchor" aria-hidden="true" href="#2-homepage-with-public-prompts">#</a></h3>
+<p><img alt="Homepage with Public Prompts" loading="lazy" src="../promptllery/2.png"><br>
+✨ Once logged in, prompts are displayed as cards with title, tags, and quick actions like &ldquo;Copy&rdquo;, &ldquo;Like&rdquo;, and &ldquo;Test&rdquo;.</p>
+<h3 id="3-login-page">3. Login Page<a hidden class="anchor" aria-hidden="true" href="#3-login-page">#</a></h3>
+<p><img alt="Login Page" loading="lazy" src="/promptllery/3.png"><br>
+Basic email + password login form using Supabase Auth. Authenticated users can upload and like prompts.</p>
+<h3 id="4-upload-prompt-page">4. Upload Prompt Page<a hidden class="anchor" aria-hidden="true" href="#4-upload-prompt-page">#</a></h3>
+<p><img alt="Upload Prompt" loading="lazy" src="../promptllery/4.png"><br>
+Authenticated users can upload new prompts with detailed metadata — title, description, tags, examples, usage tips.</p>
+<h3 id="5-prompt-ranking-page">5. Prompt Ranking Page<a hidden class="anchor" aria-hidden="true" href="#5-prompt-ranking-page">#</a></h3>
+<p><img alt="Prompt Ranking Page" loading="lazy" src="../promptllery/5.png"><br>
+Shows the most liked or latest prompts. Each entry shows the prompt title and like count.</p>
+<hr>
+<h3 id="6-register-page">6. Register Page<a hidden class="anchor" aria-hidden="true" href="#6-register-page">#</a></h3>
+<p><img alt="Register Page" loading="lazy" src="../promptllery/6.png"><br>
+Simple registration form for new users. Supabase handles user creation and secure password storage.</p>
+<h3 id="7-prompt-details--inline-testing">7. Prompt Details + Inline Testing<a hidden class="anchor" aria-hidden="true" href="#7-prompt-details--inline-testing">#</a></h3>
+<p><img alt="Prompt Detail + Test Input" loading="lazy" src="../promptllery/7.png"><br>
+On the prompt detail page, users can:</p>
+<ul>
+<li>View full prompt text</li>
+<li>Choose GPT model (default is GPT-3.5)</li>
+<li>Enter custom input</li>
+<li>Click &ldquo;Run Prompt&rdquo; to test directly</li>
+</ul>
+<h3 id="8-prompt-detail--qr-sharing">8. Prompt Detail + QR Sharing<a hidden class="anchor" aria-hidden="true" href="#8-prompt-detail--qr-sharing">#</a></h3>
+<p><img alt="Prompt QR Sharing" loading="lazy" src="../promptllery/8.png"><br>
+Every prompt has a shareable QR code and a “Copy” feature, making it easy to send prompts to friends or open in another device.</p>
+<h3 id="9-prompt-test-result">9. Prompt Test Result<a hidden class="anchor" aria-hidden="true" href="#9-prompt-test-result">#</a></h3>
+<p><img alt="Prompt Test Result" loading="lazy" src="../promptllery/9.png"><br>
+After clicking “Run Prompt”, the GPT-3.5 model returns a live result in the frontend. This allows users to preview how a prompt performs before using it in their own tools.</p>
+<h3 id="-full-demo-video">🎬 Full Demo Video<a hidden class="anchor" aria-hidden="true" href="#-full-demo-video">#</a></h3>
+<p><a href="../promptllery/demo.mp4">Watch full demo video</a></p>
+<h2 id="whats-next">What&rsquo;s Next?<a hidden class="anchor" aria-hidden="true" href="#whats-next">#</a></h2>
+<hr>
+<ul>
+<li>
+<p><strong>From solo to social</strong><br>
+Add user accounts, profiles, and public prompt collections.<br>
+Let users follow others, comment, and build a prompt culture.</p>
+</li>
+<li>
+<p><strong>From gallery to ecosystem</strong><br>
+Add categories, remixable prompt templates, and custom tags.<br>
+Build a real prompt <em>library</em>, not just a showcase.</p>
+</li>
+<li>
+<p><strong>From testing to co-creation</strong><br>
+Let users <em>build prompts together</em>:<br>
+one writes the setup, another refines the wording, a third gives sample outputs.</p>
+</li>
+<li>
+<p><strong>From passive use to community-driven feedback</strong><br>
+Weekly prompt picks, upvoting systems, feedback for creators.<br>
+Turn prompts into a living dialogue, not static text.</p>
+</li>
+<li>
+<p><strong>From student project to long-term playground</strong><br>
+Eventually, maybe even invite contributors.<br>
+Open source parts, build an API, explore monetization for top creators?</p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>Promptllery is not just a website — it’s my first step into building something <em>others might actually use</em>.<br>
+Hope it becomes something meaningful and fun, even if it started out of jealousy.</p></blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/Tech-Blog-Website/tags/prompt/">Prompt</a></li>
+      <li><a href="http://localhost:1313/Tech-Blog-Website/tags/fullstack/">Fullstack</a></li>
+      <li><a href="http://localhost:1313/Tech-Blog-Website/tags/supabase/">Supabase</a></li>
+      <li><a href="http://localhost:1313/Tech-Blog-Website/tags/react/">React</a></li>
+    </ul>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share My First Full-Stack Project — Promptllery on x"
+            href="https://x.com/intent/tweet/?text=My%20First%20Full-Stack%20Project%20%e2%80%94%20Promptllery&amp;url=http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f&amp;hashtags=prompt%2cfullstack%2csupabase%2creact">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share My First Full-Stack Project — Promptllery on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f&amp;title=My%20First%20Full-Stack%20Project%20%e2%80%94%20Promptllery&amp;summary=My%20First%20Full-Stack%20Project%20%e2%80%94%20Promptllery&amp;source=http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share My First Full-Stack Project — Promptllery on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f&title=My%20First%20Full-Stack%20Project%20%e2%80%94%20Promptllery">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share My First Full-Stack Project — Promptllery on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share My First Full-Stack Project — Promptllery on whatsapp"
+            href="https://api.whatsapp.com/send?text=My%20First%20Full-Stack%20Project%20%e2%80%94%20Promptllery%20-%20http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share My First Full-Stack Project — Promptllery on telegram"
+            href="https://telegram.me/share/url?text=My%20First%20Full-Stack%20Project%20%e2%80%94%20Promptllery&amp;url=http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share My First Full-Stack Project — Promptllery on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=My%20First%20Full-Stack%20Project%20%e2%80%94%20Promptllery&u=http%3a%2f%2flocalhost%3a1313%2fTech-Blog-Website%2fposts%2fpromptllery%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/Tech-Blog-Website/">Helia&#39;s Tech-Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
