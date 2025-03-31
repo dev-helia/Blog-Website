@@ -7,8 +7,8 @@
 <meta name="robots" content="index, follow">
 <title>Understanding IEEE 754 &amp; Fraction Encoding | Helia&#39;s Tech-Blog</title>
 <meta name="keywords" content="ieee754, floating point, fractions, CS61C">
-<meta name="description" content="🧮 Representing Fractions (Binary Point)
-💡 Key Idea: Fixed Binary Point
+<meta name="description" content="Representing Fractions (Binary Point)
+Key Idea: Fixed Binary Point
 Use a fixed binary point to separate negative and non-negative powers:
 
 Example: 0b xx.xxxx (6-bit format)
@@ -18,7 +18,7 @@ Each position represents:
 
 Example:
 10.101 = 1×2^1 &#43; 0×2^0 &#43; 1×2^-1 &#43; 0×2^-2 &#43; 1×2^-3 = 2.625
-📌 Scientific Notation
+Scientific Notation
 Use base-10 or base-2 scientific form:
 2.625 = 2 × 10^0 &#43; 6 × 10^-1 &#43; 2 × 10^-2 &#43; 5 × 10^-3">
 <meta name="author" content="Helia">
@@ -43,11 +43,11 @@ Use base-10 or base-2 scientific form:
 </noscript><meta property="og:url" content="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/">
   <meta property="og:site_name" content="Helia&#39;s Tech-Blog">
   <meta property="og:title" content="Understanding IEEE 754 & Fraction Encoding">
-  <meta property="og:description" content="🧮 Representing Fractions (Binary Point) 💡 Key Idea: Fixed Binary Point Use a fixed binary point to separate negative and non-negative powers:
+  <meta property="og:description" content="Representing Fractions (Binary Point) Key Idea: Fixed Binary Point Use a fixed binary point to separate negative and non-negative powers:
 Example: 0b xx.xxxx (6-bit format) Each position represents:
 2^1 | 2^0 | . | 2^-1 | 2^-2 | ... Example:
 10.101 = 1×2^1 &#43; 0×2^0 &#43; 1×2^-1 &#43; 0×2^-2 &#43; 1×2^-3 = 2.625
-📌 Scientific Notation Use base-10 or base-2 scientific form:
+Scientific Notation Use base-10 or base-2 scientific form:
 2.625 = 2 × 10^0 &#43; 6 × 10^-1 &#43; 2 × 10^-2 &#43; 5 × 10^-3">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
@@ -60,8 +60,8 @@ Example: 0b xx.xxxx (6-bit format) Each position represents:
     <meta property="article:tag" content="CS61C">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Understanding IEEE 754 &amp; Fraction Encoding">
-<meta name="twitter:description" content="🧮 Representing Fractions (Binary Point)
-💡 Key Idea: Fixed Binary Point
+<meta name="twitter:description" content="Representing Fractions (Binary Point)
+Key Idea: Fixed Binary Point
 Use a fixed binary point to separate negative and non-negative powers:
 
 Example: 0b xx.xxxx (6-bit format)
@@ -71,7 +71,7 @@ Each position represents:
 
 Example:
 10.101 = 1×2^1 &#43; 0×2^0 &#43; 1×2^-1 &#43; 0×2^-2 &#43; 1×2^-3 = 2.625
-📌 Scientific Notation
+Scientific Notation
 Use base-10 or base-2 scientific form:
 2.625 = 2 × 10^0 &#43; 6 × 10^-1 &#43; 2 × 10^-2 &#43; 5 × 10^-3">
 
@@ -108,12 +108,12 @@ Use base-10 or base-2 scientific form:
   "@type": "BlogPosting",
   "headline": "Understanding IEEE 754 \u0026 Fraction Encoding",
   "name": "Understanding IEEE 754 \u0026 Fraction Encoding",
-  "description": "🧮 Representing Fractions (Binary Point) 💡 Key Idea: Fixed Binary Point Use a fixed binary point to separate negative and non-negative powers:\nExample: 0b xx.xxxx (6-bit format) Each position represents:\n2^1 | 2^0 | . | 2^-1 | 2^-2 | ... Example:\n10.101 = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3 = 2.625\n📌 Scientific Notation Use base-10 or base-2 scientific form:\n2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3\n",
+  "description": "Representing Fractions (Binary Point) Key Idea: Fixed Binary Point Use a fixed binary point to separate negative and non-negative powers:\nExample: 0b xx.xxxx (6-bit format) Each position represents:\n2^1 | 2^0 | . | 2^-1 | 2^-2 | ... Example:\n10.101 = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3 = 2.625\nScientific Notation Use base-10 or base-2 scientific form:\n2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3\n",
   "keywords": [
     "ieee754", "floating point", "fractions", "CS61C"
   ],
-  "articleBody": "🧮 Representing Fractions (Binary Point) 💡 Key Idea: Fixed Binary Point Use a fixed binary point to separate negative and non-negative powers:\nExample: 0b xx.xxxx (6-bit format) Each position represents:\n2^1 | 2^0 | . | 2^-1 | 2^-2 | ... Example:\n10.101 = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3 = 2.625\n📌 Scientific Notation Use base-10 or base-2 scientific form:\n2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3\nSo in binary:\n2.625 = 10.101 = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3\n🧠 Why IEEE 754 Is So Important? All CPUs, GPUs, and AI accelerators rely on floating-point math, especially IEEE 754:\nUsed in languages: float / double in C, C++, Java, Python, Rust… Widely applied in physics, graphics, AI, simulations… 🆕 IEEE 754 Updates 2008: Added Half-Precision (16-bit) Extended to Quad Precision (128-bit) Focus on more flexible and accurate representations 🔍 IEEE 754 Design Goals (1) Precision at Scale ✅ Accuracy matters for compounding operations\nIEEE 754 supports both 32-bit and 64-bit FP Results are deterministic and portable (for AI/ML) (2) Handling Floating-Point Errors ✅ Robust error cases:\nNaN (Not a Number): like 0.0 / 0.0 Overflow: exceeds max range Underflow: value too small to represent +0 and -0: IEEE allows signed zero for special edge cases These enhance numerical stability and prevent hidden bugs!\n(3) Compatibility with Two’s Complement ✅ IEEE 754 works in harmony with integer arithmetic:\n+0 in IEEE 754 is binary 000...0, same as integer +0 Ensures compatibility across int/float transitions Helps CPUs optimize under mixed integer/float workloads\n🧠 Summary:\nIEEE 754 isn’t just a spec—it’s a global standard for reliable math, powering everything from Pixar rendering to neural nets to finance tools.\nNext up, we’ll dive into instruction sets and how these formats are loaded into registers!\n",
-  "wordCount" : "308",
+  "articleBody": "Representing Fractions (Binary Point) Key Idea: Fixed Binary Point Use a fixed binary point to separate negative and non-negative powers:\nExample: 0b xx.xxxx (6-bit format) Each position represents:\n2^1 | 2^0 | . | 2^-1 | 2^-2 | ... Example:\n10.101 = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3 = 2.625\nScientific Notation Use base-10 or base-2 scientific form:\n2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3\nSo in binary:\n2.625 = 10.101 = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3\nWhy IEEE 754 Is So Important? All CPUs, GPUs, and AI accelerators rely on floating-point math, especially IEEE 754:\nUsed in languages: float / double in C, C++, Java, Python, Rust… Widely applied in physics, graphics, AI, simulations… IEEE 754 Updates 2008: Added Half-Precision (16-bit) Extended to Quad Precision (128-bit) Focus on more flexible and accurate representations IEEE 754 Design Goals (1) Precision at Scale Accuracy matters for compounding operations\nIEEE 754 supports both 32-bit and 64-bit FP Results are deterministic and portable (for AI/ML) (2) Handling Floating-Point Errors Robust error cases:\nNaN (Not a Number): like 0.0 / 0.0 Overflow: exceeds max range Underflow: value too small to represent +0 and -0: IEEE allows signed zero for special edge cases These enhance numerical stability and prevent hidden bugs!\n(3) Compatibility with Two’s Complement IEEE 754 works in harmony with integer arithmetic:\n+0 in IEEE 754 is binary 000...0, same as integer +0 Ensures compatibility across int/float transitions Helps CPUs optimize under mixed integer/float workloads\nSummary:\nIEEE 754 isn’t just a spec—it’s a global standard for reliable math, powering everything from Pixar rendering to neural nets to finance tools.\nNext up, we’ll dive into instruction sets and how these formats are loaded into registers!\n",
+  "wordCount" : "298",
   "inLanguage": "en",
   "datePublished": "2025-03-07T00:00:00Z",
   "dateModified": "2025-03-07T00:00:00Z",
@@ -199,12 +199,12 @@ Use base-10 or base-2 scientific form:
     <h1 class="post-title entry-hint-parent">
       Understanding IEEE 754 &amp; Fraction Encoding
     </h1>
-    <div class="post-meta"><span title='2025-03-07 00:00:00 +0000 UTC'>March 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;308 words&nbsp;·&nbsp;Helia
+    <div class="post-meta"><span title='2025-03-07 00:00:00 +0000 UTC'>March 7, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;298 words&nbsp;·&nbsp;Helia
 
 </div>
   </header> 
-  <div class="post-content"><h2 id="-representing-fractions-binary-point">🧮 Representing Fractions (Binary Point)<a hidden class="anchor" aria-hidden="true" href="#-representing-fractions-binary-point">#</a></h2>
-<h3 id="-key-idea-fixed-binary-point">💡 Key Idea: Fixed Binary Point<a hidden class="anchor" aria-hidden="true" href="#-key-idea-fixed-binary-point">#</a></h3>
+  <div class="post-content"><h2 id="representing-fractions-binary-point">Representing Fractions (Binary Point)<a hidden class="anchor" aria-hidden="true" href="#representing-fractions-binary-point">#</a></h2>
+<h3 id="key-idea-fixed-binary-point">Key Idea: Fixed Binary Point<a hidden class="anchor" aria-hidden="true" href="#key-idea-fixed-binary-point">#</a></h3>
 <p>Use a fixed binary point to separate <strong>negative</strong> and <strong>non-negative powers</strong>:</p>
 <ul>
 <li>Example: <code>0b xx.xxxx</code> (6-bit format)</li>
@@ -214,35 +214,35 @@ Use base-10 or base-2 scientific form:
 <blockquote>
 <p>Example:<br>
 <code>10.101</code> = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3 = <code>2.625</code></p></blockquote>
-<h3 id="-scientific-notation">📌 Scientific Notation<a hidden class="anchor" aria-hidden="true" href="#-scientific-notation">#</a></h3>
+<h3 id="scientific-notation">Scientific Notation<a hidden class="anchor" aria-hidden="true" href="#scientific-notation">#</a></h3>
 <p>Use base-10 or base-2 scientific form:<br>
 <code>2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3</code></p>
 <p>So in binary:<br>
 <code>2.625 = 10.101 = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3</code></p>
 <hr>
-<h2 id="-why-ieee-754-is-so-important">🧠 Why IEEE 754 Is So Important?<a hidden class="anchor" aria-hidden="true" href="#-why-ieee-754-is-so-important">#</a></h2>
+<h2 id="why-ieee-754-is-so-important">Why IEEE 754 Is So Important?<a hidden class="anchor" aria-hidden="true" href="#why-ieee-754-is-so-important">#</a></h2>
 <p>All CPUs, GPUs, and AI accelerators rely on <strong>floating-point math</strong>, especially IEEE 754:</p>
 <ul>
 <li>Used in languages: <code>float</code> / <code>double</code> in C, C++, Java, Python, Rust&hellip;</li>
 <li>Widely applied in physics, graphics, AI, simulations&hellip;</li>
 </ul>
-<h3 id="-ieee-754-updates">🆕 IEEE 754 Updates<a hidden class="anchor" aria-hidden="true" href="#-ieee-754-updates">#</a></h3>
+<h3 id="ieee-754-updates">IEEE 754 Updates<a hidden class="anchor" aria-hidden="true" href="#ieee-754-updates">#</a></h3>
 <ul>
 <li>2008: Added <strong>Half-Precision (16-bit)</strong></li>
 <li>Extended to <strong>Quad Precision (128-bit)</strong></li>
 <li>Focus on more flexible and accurate representations</li>
 </ul>
 <hr>
-<h2 id="-ieee-754-design-goals">🔍 IEEE 754 Design Goals<a hidden class="anchor" aria-hidden="true" href="#-ieee-754-design-goals">#</a></h2>
+<h2 id="ieee-754-design-goals">IEEE 754 Design Goals<a hidden class="anchor" aria-hidden="true" href="#ieee-754-design-goals">#</a></h2>
 <h3 id="1-precision-at-scale">(1) Precision at Scale<a hidden class="anchor" aria-hidden="true" href="#1-precision-at-scale">#</a></h3>
-<p>✅ Accuracy matters for compounding operations</p>
+<p>Accuracy matters for compounding operations</p>
 <ul>
 <li>IEEE 754 supports both 32-bit and 64-bit FP</li>
 <li>Results are deterministic and portable (for AI/ML)</li>
 </ul>
 <hr>
 <h3 id="2-handling-floating-point-errors">(2) Handling Floating-Point Errors<a hidden class="anchor" aria-hidden="true" href="#2-handling-floating-point-errors">#</a></h3>
-<p>✅ Robust error cases:</p>
+<p>Robust error cases:</p>
 <ul>
 <li><strong>NaN (Not a Number)</strong>: like 0.0 / 0.0</li>
 <li><strong>Overflow</strong>: exceeds max range</li>
@@ -253,7 +253,7 @@ Use base-10 or base-2 scientific form:
 <p>These enhance <strong>numerical stability</strong> and prevent hidden bugs!</p></blockquote>
 <hr>
 <h3 id="3-compatibility-with-twos-complement">(3) Compatibility with Two’s Complement<a hidden class="anchor" aria-hidden="true" href="#3-compatibility-with-twos-complement">#</a></h3>
-<p>✅ IEEE 754 works <em>in harmony</em> with integer arithmetic:</p>
+<p>IEEE 754 works <em>in harmony</em> with integer arithmetic:</p>
 <ul>
 <li>+0 in IEEE 754 is binary <code>000...0</code>, same as integer +0</li>
 <li>Ensures compatibility across int/float transitions</li>
@@ -261,7 +261,7 @@ Use base-10 or base-2 scientific form:
 <blockquote>
 <p>Helps CPUs optimize under mixed integer/float workloads</p></blockquote>
 <hr>
-<p>🧠 Summary:<br>
+<p>Summary:<br>
 IEEE 754 isn’t just a spec—it’s a <strong>global standard for reliable math</strong>, powering everything from Pixar rendering to neural nets to finance tools.</p>
 <p>Next up, we’ll dive into instruction sets and how these formats are loaded into registers!</p>
 <hr>

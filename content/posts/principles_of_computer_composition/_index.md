@@ -5,13 +5,13 @@ date: 2025-03-12
 type: "posts"
 ---
 
-## 🧭 Whole Picture
+## Whole Picture
 
 ![Computer Architecture: Whole Picture](whole_structure.jpg)
 
 ---
 
-## 🧠 Suggested Learning Path
+## Suggested Learning Path
 
 | Step | Topics | Why |
 |------|--------|-----|
@@ -22,7 +22,7 @@ type: "posts"
 
 ---
 
-## 🧠 Ultimate Comparison: Architecture vs OS
+## Ultimate Comparison: Architecture vs OS
 
 
 | Category | Computer Architecture | Operating System |
@@ -34,6 +34,6 @@ type: "posts"
 ---
 
 
-## 🎓 Extra Reference: CS61C Slides
+## Extra Reference: CS61C Slides
 
 ![CS61C Diagram Summary](cs61c_diagram.jpg)
