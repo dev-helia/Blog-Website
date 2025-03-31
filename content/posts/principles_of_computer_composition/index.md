@@ -1,7 +1,8 @@
 ---
-title: "00_My Master Overview"
+title: "Principles of Computer Composition"
 weight: 0
 date: 2025-03-12
+type: "posts"
 ---
 
 ## 🧭 Whole Picture
