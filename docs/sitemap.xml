@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</loc>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/fullstack/</loc>
     <lastmod>2025-03-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -28,6 +37,49 @@
   </url><url>
     <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/binary/</loc>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/bit/</loc>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/</loc>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/fundamentals/</loc>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/encoding/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/float/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/floating-point/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/fractions/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/tags/ieee754/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/04_isa/</loc>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</loc>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</loc>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</loc>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/08_datapath/</loc>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</loc>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</loc>
+  </url><url>
+    <loc>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</loc>
   </url><url>
     <loc>https://dev-helia.github.io/Tech-Blog-Website/categories/</loc>
   </url>

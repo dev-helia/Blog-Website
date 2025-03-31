@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fractions on Helia&#39;s Tech-Blog</title>
+    <link>https://dev-helia.github.io/Tech-Blog-Website/tags/fractions/</link>
+    <description>Recent content in Fractions on Helia&#39;s Tech-Blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/fractions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>03_ieee754: Understanding IEEE 754 &amp; Fraction Encoding</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/</guid>
+      <description>&lt;h2 id=&#34;-representing-fractions-binary-point&#34;&gt;🧮 Representing Fractions (Binary Point)&lt;/h2&gt;
+&lt;h3 id=&#34;-key-idea-fixed-binary-point&#34;&gt;💡 Key Idea: Fixed Binary Point&lt;/h3&gt;
+&lt;p&gt;Use a fixed binary point to separate &lt;strong&gt;negative&lt;/strong&gt; and &lt;strong&gt;non-negative powers&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example: &lt;code&gt;0b xx.xxxx&lt;/code&gt; (6-bit format)&lt;/li&gt;
+&lt;li&gt;Each position represents:&lt;br&gt;
+&lt;code&gt;2^1 | 2^0 | . | 2^-1 | 2^-2 | ...&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Example:&lt;br&gt;
+&lt;code&gt;10.101&lt;/code&gt; = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3 = &lt;code&gt;2.625&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;-scientific-notation&#34;&gt;📌 Scientific Notation&lt;/h3&gt;
+&lt;p&gt;Use base-10 or base-2 scientific form:&lt;br&gt;
+&lt;code&gt;2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bit on Helia&#39;s Tech-Blog</title>
+    <link>https://dev-helia.github.io/Tech-Blog-Website/tags/bit/</link>
+    <description>Recent content in Bit on Helia&#39;s Tech-Blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/bit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01_bit: Hex &amp; Binary Basics</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</guid>
+      <description>&lt;h2 id=&#34;-hexadecimal-and-bitbyte-relationship&#34;&gt;🔍 Hexadecimal and bit/byte Relationship&lt;/h2&gt;
+&lt;p&gt;Hexadecimal (Hex) is a base-16 system used to represent binary data. Its key relationships:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 hex digit = 4 bits (also called a &lt;strong&gt;nibble&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;2 hex digits = 1 byte (8 bits)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In computer systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 bit&lt;/code&gt; = smallest binary unit, can be 0 or 1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 byte&lt;/code&gt; = 8 bits&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 nibble&lt;/code&gt; = 4 bits&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 word&lt;/code&gt; = usually 4 bytes (32 bits)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 double word&lt;/code&gt; = usually 8 bytes (64 bits)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-hex-vs-binary-table&#34;&gt;🌟 Example: Hex vs Binary Table&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Hex&lt;/th&gt;
+          &lt;th&gt;Binary&lt;/th&gt;
+          &lt;th&gt;Size&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;A&lt;/td&gt;
+          &lt;td&gt;1010&lt;/td&gt;
+          &lt;td&gt;4 bits (1 nibble)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3F&lt;/td&gt;
+          &lt;td&gt;0011 1111&lt;/td&gt;
+          &lt;td&gt;8 bits (1 byte)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7E2A&lt;/td&gt;
+          &lt;td&gt;0111 1110 0010 1010&lt;/td&gt;
+          &lt;td&gt;16 bits (2 bytes)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FF AA 01&lt;/td&gt;
+          &lt;td&gt;1111 1111 1010 1010 0000 0001&lt;/td&gt;
+          &lt;td&gt;24 bits (3 bytes)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary&#34;&gt;✅ Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1 hex digit = 4 bits&lt;/li&gt;
+&lt;li&gt;2 hex digits = 1 byte (8 bits)&lt;/li&gt;
+&lt;li&gt;8 hex digits = 4 bytes = 1 word = 32 bits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-offset-bits-and-block-size&#34;&gt;🧠 Offset Bits and Block Size&lt;/h2&gt;
+&lt;p&gt;The number of &lt;strong&gt;offset bits&lt;/strong&gt; depends on the &lt;strong&gt;block size&lt;/strong&gt;, using this formula:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

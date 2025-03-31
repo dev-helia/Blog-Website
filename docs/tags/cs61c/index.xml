@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Helia&#39;s Tech-Blog</title>
-    <link>https://dev-helia.github.io/Tech-Blog-Website/</link>
-    <description>Recent content on Helia&#39;s Tech-Blog</description>
+    <title>CS61C on Helia&#39;s Tech-Blog</title>
+    <link>https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/</link>
+    <description>Recent content in CS61C on Helia&#39;s Tech-Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01_bit: Hex &amp; Binary Basics</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</link>
@@ -142,73 +142,6 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
 &lt;h3 id=&#34;-scientific-notation&#34;&gt;📌 Scientific Notation&lt;/h3&gt;
 &lt;p&gt;Use base-10 or base-2 scientific form:&lt;br&gt;
 &lt;code&gt;2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3&lt;/code&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My First Full-Stack Project — Promptllery</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/promptllery/</link>
-      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/promptllery/</guid>
-      <description>&lt;h2 id=&#34;why-i-decided-to-build-a-full-stack-project&#34;&gt;Why I Decided to Build a Full-Stack Project&lt;/h2&gt;
-&lt;p&gt;Honestly, the motivation wasn&amp;rsquo;t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.&lt;/p&gt;
-&lt;p&gt;So I forced myself to make something that &lt;em&gt;looks&lt;/em&gt; like a full-stack product.&lt;/p&gt;
-&lt;p&gt;On the first day I broke down:&lt;br&gt;
-What is JSX? What’s the deal between Vite and React? Why am I getting &lt;code&gt;@babel/preset-react&lt;/code&gt; errors in testing? What&amp;rsquo;s the difference between Supabase and Node.js?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/04_isa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/04_isa/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/08_datapath/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/08_datapath/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
