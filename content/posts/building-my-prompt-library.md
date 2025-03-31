@@ -1,3 +1,0 @@
-# Building My Prompt Library
-
-This is the summary of my journey building a prompt collection website...

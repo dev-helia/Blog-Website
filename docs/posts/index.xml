@@ -9,11 +9,17 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/building-my-prompt-library/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/promptllery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/building-my-prompt-library/</guid>
-      <description>&lt;h1 id=&#34;building-my-prompt-library&#34;&gt;Building My Prompt Library&lt;/h1&gt;
-&lt;p&gt;This is the summary of my journey building a prompt collection website&amp;hellip;&lt;/p&gt;</description>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/promptllery/</guid>
+      <description>&lt;h1 id=&#34;my-first-full-stack-project--promptllery&#34;&gt;My first full-stack project &amp;ndash; promptllery&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tags-prompt-fullstack-supabase-react&#34;&gt;title: &amp;ldquo;My First Full-Stack Project — Promptllery&amp;rdquo;
+date: 2025-03-30
+tags: [&amp;ldquo;prompt&amp;rdquo;, &amp;ldquo;fullstack&amp;rdquo;, &amp;ldquo;supabase&amp;rdquo;, &amp;ldquo;react&amp;rdquo;]&lt;/h2&gt;
+&lt;h2 id=&#34;why-i-decided-to-build-a-full-stack-project&#34;&gt;Why I Decided to Build a Full-Stack Project&lt;/h2&gt;
+&lt;p&gt;Honestly, the motivation wasn&amp;rsquo;t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.&lt;/p&gt;
+&lt;p&gt;So I forced myself to make something that &lt;em&gt;looks&lt;/em&gt; like a full-stack product.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
