@@ -8,70 +8,8 @@
 <title>Principles of Computer Composition | Helia&#39;s Tech-Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="Whole Picture
-
-
-Suggested Learning Path
-
-  
-      
-          Step
-          Topics
-          Why
-      
-  
-  
-      
-          Step 1
-          Bit &amp; Float
-          Build foundational understanding of binary data
-      
-      
-          Step 2
-          ISA &amp; Registers
-          Understand how instructions talk to hardware
-      
-      
-          Step 3
-          CPU Clock &amp; Datapath
-          Dive into the core computing pipeline
-      
-      
-          Step 4
-          Pipeline &amp; Memory &amp; Cache
-          Learn about performance optimization
-      
-  
-
-
-Ultimate Comparison: Architecture vs OS
-
-  
-      
-          Category
-          Computer Architecture
-          Operating System
-      
-  
-  
-      
-          Focus
-          Logic gates, hardware execution
-          Process abstraction, resource mgmt
-      
-      
-          Input/Output
-          ALU, cache, control lines
-          Process, syscall, kernel I/O
-      
-      
-          Optimization
-          Clock, pipelining, memory latency
-          Page fault, interrupt handling
-      
-  
-
-
-Extra Reference: CS61C Slides
+Hi! This is my Computer Architecture notebook, created while studying UC Berkeley’s CS61C online course. It&rsquo;s truly an amazing course! After reviewing all the lecture notes, I tried to connect all the concepts together to grasp the full picture of how a computer system works.
+Below is a mind map illustrating my understanding of the overall structure of a computer system and some aspects of Operating Systems:
 ">
 <meta name="author" content="Helia">
 <link rel="canonical" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/">
@@ -96,7 +34,8 @@ Extra Reference: CS61C Slides
 </noscript><meta property="og:url" content="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/">
   <meta property="og:site_name" content="Helia&#39;s Tech-Blog">
   <meta property="og:title" content="Principles of Computer Composition">
-  <meta property="og:description" content="Whole Picture Suggested Learning Path Step Topics Why Step 1 Bit &amp; Float Build foundational understanding of binary data Step 2 ISA &amp; Registers Understand how instructions talk to hardware Step 3 CPU Clock &amp; Datapath Dive into the core computing pipeline Step 4 Pipeline &amp; Memory &amp; Cache Learn about performance optimization Ultimate Comparison: Architecture vs OS Category Computer Architecture Operating System Focus Logic gates, hardware execution Process abstraction, resource mgmt Input/Output ALU, cache, control lines Process, syscall, kernel I/O Optimization Clock, pipelining, memory latency Page fault, interrupt handling Extra Reference: CS61C Slides ">
+  <meta property="og:description" content="Whole Picture Hi! This is my Computer Architecture notebook, created while studying UC Berkeley’s CS61C online course. It’s truly an amazing course! After reviewing all the lecture notes, I tried to connect all the concepts together to grasp the full picture of how a computer system works.
+Below is a mind map illustrating my understanding of the overall structure of a computer system and some aspects of Operating Systems:">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
@@ -187,70 +126,123 @@ Extra Reference: CS61C Slides
   </h1>
 </header>
 <div class="post-content"><h2 id="whole-picture">Whole Picture<a hidden class="anchor" aria-hidden="true" href="#whole-picture">#</a></h2>
+<p>Hi! This is my Computer Architecture notebook, created while studying UC Berkeley’s CS61C online course. It&rsquo;s truly an amazing course! After reviewing all the lecture notes, I tried to connect all the concepts together to grasp the full picture of how a computer system works.</p>
+<p>Below is a mind map illustrating my understanding of the overall structure of a computer system and some aspects of Operating Systems:</p>
 <p><img alt="Computer Architecture: Whole Picture" loading="lazy" src="/Tech-Blog-Website/posts/principles_of_computer_composition/whole_structure.jpg"></p>
 <hr>
 <h2 id="suggested-learning-path">Suggested Learning Path<a hidden class="anchor" aria-hidden="true" href="#suggested-learning-path">#</a></h2>
+<p>This blog is structured intentionally according to the following learning path. I believe it is essential to first understand bits, as they form the fundamental building blocks. Then, comprehending the Instruction Set Architecture (ISA) becomes important for understanding how hardware communicates. Once we grasp ISA, we can explore the CPU and data paths. Finally, memory concepts and cache mechanisms help bridge our understanding towards Operating System operations.</p>
+<p><img alt="Learning Path" loading="lazy" src="/Tech-Blog-Website/posts/principles_of_computer_composition/image.png"></p>
 <table>
   <thead>
       <tr>
           <th>Step</th>
           <th>Topics</th>
-          <th>Why</th>
+          <th>Reasoning</th>
       </tr>
   </thead>
   <tbody>
       <tr>
           <td>Step 1</td>
-          <td>Bit &amp; Float</td>
-          <td>Build foundational understanding of binary data</td>
+          <td>Bits &amp; Floating Points</td>
+          <td>Build foundational understanding of binary data and representation</td>
       </tr>
       <tr>
           <td>Step 2</td>
           <td>ISA &amp; Registers</td>
-          <td>Understand how instructions talk to hardware</td>
+          <td>Understand how software instructions communicate with hardware components</td>
       </tr>
       <tr>
           <td>Step 3</td>
-          <td>CPU Clock &amp; Datapath</td>
-          <td>Dive into the core computing pipeline</td>
+          <td>CPU &amp; Datapath</td>
+          <td>Deepen our knowledge of the core computing pipeline</td>
       </tr>
       <tr>
           <td>Step 4</td>
-          <td>Pipeline &amp; Memory &amp; Cache</td>
-          <td>Learn about performance optimization</td>
+          <td>Pipeline, Memory &amp; Cache</td>
+          <td>Learn about performance optimization techniques and system efficiency</td>
       </tr>
   </tbody>
 </table>
 <hr>
-<h2 id="ultimate-comparison-architecture-vs-os">Ultimate Comparison: Architecture vs OS<a hidden class="anchor" aria-hidden="true" href="#ultimate-comparison-architecture-vs-os">#</a></h2>
+<h2 id="ultimate-comparison-computer-organization-vs-operating-systems">Ultimate Comparison: Computer Organization vs. Operating Systems<a hidden class="anchor" aria-hidden="true" href="#ultimate-comparison-computer-organization-vs-operating-systems">#</a></h2>
+<p>While studying CS61C, I often found the distinction between computer organization and operating systems confusing. Here is my attempt at clarifying these two distinct yet closely related fields:</p>
+<h3 id="computer-organization-vs-operating-systems">Computer Organization vs. Operating Systems<a hidden class="anchor" aria-hidden="true" href="#computer-organization-vs-operating-systems">#</a></h3>
 <table>
   <thead>
       <tr>
           <th>Category</th>
-          <th>Computer Architecture</th>
-          <th>Operating System</th>
+          <th>Computer Organization (Hardware)</th>
+          <th>Operating System (OS)</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Focus</td>
-          <td>Logic gates, hardware execution</td>
-          <td>Process abstraction, resource mgmt</td>
+          <td>Research Goal</td>
+          <td>Structural design at the hardware level, such as CPU, registers, and memory interactions</td>
+          <td>Resource management at the software level, such as CPU scheduling, memory allocation, and process management</td>
       </tr>
       <tr>
-          <td>Input/Output</td>
-          <td>ALU, cache, control lines</td>
-          <td>Process, syscall, kernel I/O</td>
+          <td>Hierarchical Position</td>
+          <td>Closer to hardware, emphasizing logic circuits and data pathways</td>
+          <td>Closer to user applications, acting as an intermediary</td>
       </tr>
       <tr>
-          <td>Optimization</td>
-          <td>Clock, pipelining, memory latency</td>
-          <td>Page fault, interrupt handling</td>
+          <td>Components</td>
+          <td>ALU, Control Unit, Cache, ISA, Data Path</td>
+          <td>Process management, Virtual memory, File system, System calls</td>
+      </tr>
+      <tr>
+          <td>Key Techniques</td>
+          <td>Binary arithmetic, Instruction formats, Register files, Pipelining</td>
+          <td>Multithreading, Memory paging, Inter-process communication</td>
+      </tr>
+      <tr>
+          <td>Common Misunderstandings</td>
+          <td>Also covers memory hierarchies but focuses on structural design principles</td>
+          <td>Also addresses memory (e.g., virtual memory, paging) but focuses on policy and management decisions</td>
+      </tr>
+      <tr>
+          <td>Analogy</td>
+          <td>Structural engineers building a physical structure</td>
+          <td>Management companies operating and managing the structure</td>
       </tr>
   </tbody>
 </table>
 <hr>
-<h2 id="extra-reference-cs61c-slides">Extra Reference: CS61C Slides<a hidden class="anchor" aria-hidden="true" href="#extra-reference-cs61c-slides">#</a></h2>
+<h2 id="an-illustrative-example">An Illustrative Example<a hidden class="anchor" aria-hidden="true" href="#an-illustrative-example">#</a></h2>
+<p>Consider executing the following line of code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> b <span style="color:#f92672">+</span> c;
+</span></span></code></pre></div><h3 id="concerns-from-the-computer-organization-perspective">Concerns from the Computer Organization Perspective:<a hidden class="anchor" aria-hidden="true" href="#concerns-from-the-computer-organization-perspective">#</a></h3>
+<ul>
+<li>How does this instruction get translated into machine code?</li>
+<li>How is data stored and accessed in registers?</li>
+<li>How does the ALU execute this addition operation?</li>
+<li>How does data flow inside the CPU to execute this operation?</li>
+</ul>
+<h3 id="concerns-from-the-operating-system-perspective">Concerns from the Operating System Perspective:<a hidden class="anchor" aria-hidden="true" href="#concerns-from-the-operating-system-perspective">#</a></h3>
+<ul>
+<li>Which process is responsible for executing this instruction?</li>
+<li>How should the OS schedule CPU resources to execute it?</li>
+<li>On which page in virtual memory does variable <code>a</code> reside?</li>
+<li>Does this code execution require disk access?</li>
+</ul>
+<hr>
+<h2 id="why-are-these-concepts-easily-confused">Why Are These Concepts Easily Confused?<a hidden class="anchor" aria-hidden="true" href="#why-are-these-concepts-easily-confused">#</a></h2>
+<p>Concepts such as virtual memory, page tables, and address translation mechanisms are commonly addressed in both Operating Systems and Computer Organization, albeit from different perspectives:</p>
+<ul>
+<li>
+<p><strong>Computer Organization Perspective:</strong><br>
+Focuses on the physical and structural implementation of address translation mechanisms, such as TLBs and caches.</p>
+</li>
+<li>
+<p><strong>Operating System Perspective:</strong><br>
+Emphasizes using these mechanisms for policy management and resource allocation decisions, like paging strategies, process isolation, and handling page faults.</p>
+</li>
+</ul>
+<hr>
+<h2 id="additional-reference-cs61c-slides">Additional Reference: CS61C Slides<a hidden class="anchor" aria-hidden="true" href="#additional-reference-cs61c-slides">#</a></h2>
+<p>The diagrams included in these notes are from UC Berkeley&rsquo;s CS61C (Spring 2022). A special thanks to the course instructors and teaching staff for the excellent materials. This blog is strictly for educational and non-commercial use.</p>
 <p><img alt="CS61C Diagram Summary" loading="lazy" src="/Tech-Blog-Website/posts/principles_of_computer_composition/cs61c_diagram.jpg"></p>
 
 
