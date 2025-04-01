@@ -10,7 +10,7 @@ weight: 8
 ![alt text](image-2.png)
 ![alt text](image-1.png)
 **Graph:**  
-*(Insert current datapath diagram here)*
+*From cs61c*
 
 ---
 

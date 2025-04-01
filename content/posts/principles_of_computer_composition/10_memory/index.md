@@ -1,5 +1,5 @@
 ---
-title: "Memory Hierarchy & Locality"
+title: "Memory"
 date: 2025-03-31
 tags: ["CS61C", "Computer Architecture", "Cache", "Memory"]
 categories: ["Computer Science", "CS61C"]

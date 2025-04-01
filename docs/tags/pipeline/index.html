@@ -107,13 +107,14 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.
+    <p>Clock Cycle Graph:
+From cs61c A single-cycle CPU completes all stages of an instruction within one long clock cycle.
 Each instruction goes through the following five stages:
 All stages of an instruction completed within one long clock cycle
 Clock cycle sufficiently long to allow each instruction to complete all stages without interruption 1. Instruction Fetch → 2. Decode/Register Read → 3. Execute → 4. Memory → 5. Reg. Write Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;538 words&nbsp;·&nbsp;Helia</footer>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;541 words&nbsp;·&nbsp;Helia</footer>
   <a class="entry-link" aria-label="post link to CPU" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/"></a>
 </article>
 
@@ -123,11 +124,13 @@ Clock cycle sufficiently long to allow each instruction to complete all stages w
     </h2>
   </header>
   <div class="entry-content">
-    <p>Pipeline What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
-Five-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB This diagram shows the five classic stages in a RISC-V pipelined processor:
-Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. ...</p>
+    <p>What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
+Five-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB Graph:
+From cs61c This diagram shows the five classic stages in a RISC-V pipelined processor:
+Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. Multicycle → Pipelining Five Classic Pipeline Stages in RISC-V Stage Name Description IF Instruction Fetch Fetch instruction from memory ID Instruction Decode / Register Read Decode instruction and read registers EX Execute / Address Calculation Perform ALU operations or address compute MEM Memory Access Access memory (read/write) WB Write Back Write result back to registers How do multiple instructions run in parallel? Each instruction enters the pipeline and advances one stage per cycle.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1394 words&nbsp;·&nbsp;Helia</footer>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1396 words&nbsp;·&nbsp;Helia</footer>
   <a class="entry-link" aria-label="post link to Pipeline" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/"></a>
 </article>
     </main>

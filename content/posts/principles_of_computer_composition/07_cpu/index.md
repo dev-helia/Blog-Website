@@ -7,6 +7,8 @@ tags: ["Clock Cycle", "Pipeline", "CPU", "Instruction Stages", "RISC-V"]
 
 ## Clock Cycle
 ![alt text](image.png)
+**Graph:**  
+*From cs61c*
 A **single-cycle CPU** completes **all stages** of an instruction within **one long clock cycle**.
 
 Each instruction goes through the following five stages:
@@ -45,8 +47,9 @@ Each instruction goes through the following five stages:
 > Every instruction passes through **IF, ID, EX, WB**.  
 > Only `lw` and `sw` instructions go through the **MEM** stage.
 
+---
 
-## processor:
+## Processor:
 
 ### Design Principles
 

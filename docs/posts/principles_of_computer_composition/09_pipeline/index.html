@@ -7,8 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Pipeline | Helia&#39;s Tech-Blog</title>
 <meta name="keywords" content="CS61C, RISC-V, Pipeline, Computer Architecture">
-<meta name="description" content="Pipeline
-What is a pipeline?
+<meta name="description" content="What is a pipeline?
 Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
 Five-stage pipeline structure (RISC-V)
 
@@ -16,6 +15,8 @@ IF ➝ ID ➝ EX ➝ MEM ➝ WB
 
 
 
+Graph:
+From cs61c
 This diagram shows the five classic stages in a RISC-V pipelined processor:
 
 Instruction Fetch (IF) – Fetch instruction from memory.
@@ -24,7 +25,48 @@ Execute / Address Calculation (EX) – Perform ALU operations or calculate addre
 Memory Access (MEM) – Read/write data from/to memory.
 Write Back (WB) – Write result back to register file.
 
-">
+
+Multicycle → Pipelining
+Five Classic Pipeline Stages in RISC-V
+
+  
+      
+          Stage
+          Name
+          Description
+      
+  
+  
+      
+          IF
+          Instruction Fetch
+          Fetch instruction from memory
+      
+      
+          ID
+          Instruction Decode / Register Read
+          Decode instruction and read registers
+      
+      
+          EX
+          Execute / Address Calculation
+          Perform ALU operations or address compute
+      
+      
+          MEM
+          Memory Access
+          Access memory (read/write)
+      
+      
+          WB
+          Write Back
+          Write result back to registers
+      
+  
+
+
+How do multiple instructions run in parallel?
+Each instruction enters the pipeline and advances one stage per cycle.">
 <meta name="author" content="Helia">
 <link rel="canonical" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/">
 <link crossorigin="anonymous" href="/Tech-Blog-Website/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -47,9 +89,10 @@ Write Back (WB) – Write result back to register file.
 </noscript><meta property="og:url" content="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/">
   <meta property="og:site_name" content="Helia&#39;s Tech-Blog">
   <meta property="og:title" content="Pipeline">
-  <meta property="og:description" content="Pipeline What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
-Five-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB This diagram shows the five classic stages in a RISC-V pipelined processor:
-Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. ">
+  <meta property="og:description" content="What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
+Five-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB Graph:
+From cs61c This diagram shows the five classic stages in a RISC-V pipelined processor:
+Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. Multicycle → Pipelining Five Classic Pipeline Stages in RISC-V Stage Name Description IF Instruction Fetch Fetch instruction from memory ID Instruction Decode / Register Read Decode instruction and read registers EX Execute / Address Calculation Perform ALU operations or address compute MEM Memory Access Access memory (read/write) WB Write Back Write result back to registers How do multiple instructions run in parallel? Each instruction enters the pipeline and advances one stage per cycle.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -61,8 +104,7 @@ Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / R
     <meta property="article:tag" content="Computer Architecture">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pipeline">
-<meta name="twitter:description" content="Pipeline
-What is a pipeline?
+<meta name="twitter:description" content="What is a pipeline?
 Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
 Five-stage pipeline structure (RISC-V)
 
@@ -70,6 +112,8 @@ IF ➝ ID ➝ EX ➝ MEM ➝ WB
 
 
 
+Graph:
+From cs61c
 This diagram shows the five classic stages in a RISC-V pipelined processor:
 
 Instruction Fetch (IF) – Fetch instruction from memory.
@@ -78,7 +122,48 @@ Execute / Address Calculation (EX) – Perform ALU operations or calculate addre
 Memory Access (MEM) – Read/write data from/to memory.
 Write Back (WB) – Write result back to register file.
 
-">
+
+Multicycle → Pipelining
+Five Classic Pipeline Stages in RISC-V
+
+  
+      
+          Stage
+          Name
+          Description
+      
+  
+  
+      
+          IF
+          Instruction Fetch
+          Fetch instruction from memory
+      
+      
+          ID
+          Instruction Decode / Register Read
+          Decode instruction and read registers
+      
+      
+          EX
+          Execute / Address Calculation
+          Perform ALU operations or address compute
+      
+      
+          MEM
+          Memory Access
+          Access memory (read/write)
+      
+      
+          WB
+          Write Back
+          Write result back to registers
+      
+  
+
+
+How do multiple instructions run in parallel?
+Each instruction enters the pipeline and advances one stage per cycle.">
 
 
 <script type="application/ld+json">
@@ -113,12 +198,12 @@ Write Back (WB) – Write result back to register file.
   "@type": "BlogPosting",
   "headline": "Pipeline",
   "name": "Pipeline",
-  "description": "Pipeline What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.\nFive-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB This diagram shows the five classic stages in a RISC-V pipelined processor:\nInstruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. ",
+  "description": "What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.\nFive-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB Graph:\nFrom cs61c This diagram shows the five classic stages in a RISC-V pipelined processor:\nInstruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. Multicycle → Pipelining Five Classic Pipeline Stages in RISC-V Stage Name Description IF Instruction Fetch Fetch instruction from memory ID Instruction Decode / Register Read Decode instruction and read registers EX Execute / Address Calculation Perform ALU operations or address compute MEM Memory Access Access memory (read/write) WB Write Back Write result back to registers How do multiple instructions run in parallel? Each instruction enters the pipeline and advances one stage per cycle.\n",
   "keywords": [
     "CS61C", "RISC-V", "Pipeline", "Computer Architecture"
   ],
-  "articleBody": "Pipeline What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.\nFive-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB This diagram shows the five classic stages in a RISC-V pipelined processor:\nInstruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. Multicycle → Pipelining Five Classic Pipeline Stages in RISC-V Stage Name Description IF Instruction Fetch Fetch instruction from memory ID Instruction Decode / Register Read Decode instruction and read registers EX Execute / Address Calculation Perform ALU operations or address compute MEM Memory Access Access memory (read/write) WB Write Back Write result back to registers How do multiple instructions run in parallel? Each instruction enters the pipeline and advances one stage per cycle.\nCycle IF ID EX MEM WB Cycle 1 A Cycle 2 B A Cycle 3 C B A Cycle 4 D C B A Cycle 5 E D C B A Pipeline Registers Register Role IF/ID Stores the instruction address and content from the IF stage ID/EX Stores decoded register values, immediate values, control signals EX/MEM Stores ALU results, target addresses, data to be written MEM/WB Stores memory output or ALU result, ready to be written back Data Hazard A data hazard occurs when an instruction depends on the result of a previous instruction that hasn’t completed its write-back yet.\nSolutions: Forwarding: Fetch the result early from the EX/MEM or MEM/WB pipeline stage Stall: Pause the instruction for one or two cycles until the data is ready Comparison of Solutions: Method Mechanism Example Cycles Notes Stall Pause the pipeline until data is ready add x1, x2, x3sub x4, x1, x5 +1 ~ 2 Simple but slows performance Forwarding Forward results from EX/MEM or MEM/WB stage Same as above 0 High performance, no stall Example: add x1, x2, x3 // result written to x1 sub x4, x1, x5 // needs x1 → Data hazard! With Stall: sub must wait until add finishes WB stage With Forwarding: sub can grab x1 early from EX/MEM → No stall! Timeline when Forwarding works Cycle | add x1,x2,x3 | sub x4,x1,x5 | nop | ------|--------------|--------------|-----| C1 | IF | | | C2 | ID | IF | | C3 | EX | ID | | C4 | MEM | EX [Forward] | | C5 | WB | MEM | | C6 | | WB | | At Cycle 4:\nadd is in MEM stage, x1 result stored in EX/MEM sub is in EX stage, needs x1 Forwarding module detects it, grabs x1 from EX/MEM What if there’s no Forwarding? Cycle | add x1,x2,x3 | nop | sub x4,x1,x5 | ------|--------------|-----|--------------| C1 | IF | | | C2 | ID | IF | | C3 | EX | ID | | C4 | MEM | NOP | IF | C5 | WB | | ID | C6 | | | EX | You’ll have to insert a nop to stall the sub instruction!\nControl Hazard A control hazard occurs when a branch or jump instruction (e.g., beq) is encountered, and the next instruction to execute is uncertain.\nSolutions: Branch prediction: Predict the next instruction path Insert NOP (bubble): Stall until the branch decision is known What is a Control Hazard? When we encounter conditional branch instructions (e.g., beq, bne, jalr):\nWe don’t know which instruction to execute next — it depends on whether the branch is taken.\nThe condition is only known in the EX stage,\nBut we’ve already fetched the next instruction in the IF stage.\n→ This may lead to executing the wrong path.\nThe Most Conservative Fix: Insert a Bubble Example: beq x1, x2, label // branch instruction add x3, x4, x5 // possibly wrong instruction If the beq is taken, the add is incorrect and must be flushed.\nSo we insert a NOP (bubble) to wait for the result of beq.\nCycle | beq | add ------|-----------|----------- C1 | IF | C2 | ID | IF C3 | EX | ID (wait) C4 | MEM | EX C5 | WB | MEM Is Bubble Too Conservative? Use Branch Prediction What is Branch Prediction? Before knowing whether to take the branch, the CPU guesses:\nPredict taken → fetch the target instruction Predict not taken → continue sequentially If the guess is correct, pipelining continues\nIf the guess is wrong, the pipeline is flushed and restarted\nStatic Branch Prediction (Simplest) Rule Meaning Predict Not Taken Assume all branches are not taken Predict Taken Assume all branches are taken Advantage: Simple logic Disadvantage: Easy to mispredict Dynamic Branch Prediction Let the CPU learn from past branch behavior and make smarter predictions.\n1-bit Predictor Each branch instruction maintains a 1-bit flag:\n0 means “not taken last time”, so predict not taken 1 means “taken last time”, so predict taken Actual Outcome New Predictor State Taken vs Not Taken Change to 1 Not Taken vs Taken Change to 0 Disadvantage: Flips too often in alternating branch cases, like at loop boundaries.\n2-bit Predictor (Common and Effective) Improved predictor with 2-bit state machine:\nState Meaning Transition Rule 00 Strongly Not Taken Stay if correct, else → 01 01 Weakly Not Taken Wrong once → 10 10 Weakly Taken Wrong once → 01 11 Strongly Taken Stay if correct, else → 10 Overall structure: A branch predictor with memory that reduces fluctuation.\nFull Logic Overview (Text Version) IF: Fetch instruction (with prediction) → ID: Decode → EX: Evaluate branch condition ↑ If prediction is wrong → flush following stages Structural Hazard A structural hazard occurs when multiple pipeline stages compete for the same hardware resource (e.g., trying to access memory simultaneously).\nSolutions: Split instruction memory and data memory (Harvard Architecture) Add more hardware resources (more costly) Suppose we only have one memory block, which is responsible for both:\nInstruction Memory (fetch instructions) Data Memory (load/store data) Then we run these two instructions:\nlw x1, 0(x2) // Requires access to data memory (MEM stage) add x3, x4, x5 // Normal execution (instruction fetched in IF stage) In a certain cycle:\nlw is in MEM stage accessing data memory add is in IF stage fetching instruction → But instruction memory and data memory are the same module!\nResult: These two stages compete for memory, causing a structural hazard.\nComparison of Solutions Method Principle Example Pros and Cons Add hardware resources Separate instruction and data memory (Harvard) Two separate memories High efficiency, but costly Insert bubble Delay the conflicting stage nop or stall Simple but hurts performance Pipeline scheduling Avoid simultaneous access Smart instruction reordering Complex but effective Memory Stall A memory stall is one of the most common performance bottlenecks in pipelining.\nWhat is a Memory Stall? A memory stall occurs when the CPU or pipeline is forced to wait for a memory access to complete. During this wait, the CPU becomes stalled and stops progressing.\nIn Other Words: When you are executing a pipelined program, and the five stages are flowing smoothly…\nSuddenly, at the Memory (MEM) stage, one instruction says:\n“I haven’t received the data yet… You all go ahead without me!”\nThis causes the entire pipeline to stall, just like lag in a video game.\nCommon Scenarios Causing Memory Stall Scenario Description Example Load/Store instructions access memory Load or store takes too long lw, sw with slow memory Cache Miss Data not in cache, must fetch from main memory Cache miss ➝ DRAM access (100+ cycles) Multiple stages accessing memory Not enough ports for concurrent memory access IF and MEM both accessing instruction memory A Very Simple Example Suppose we execute:\nlw t0, 0(t1) And the address pointed to by t1 happens to be in memory, but causes a cache miss…\nThen we must fetch from DRAM, which may take hundreds of cycles.\nThe next pipeline instruction cannot proceed, because t0 is not ready yet.\nSo the pipeline becomes stalled, waiting for memory response.\nHow to Reduce Memory Stalls Method Principle Increase Cache Hit Rate Leverage locality, preload data Add Write Buffer Allow non-blocking writes Optimize Memory Hierarchy Use L1/L2/L3 cache to reduce DRAM dependency Pipeline Forwarding + Stall Slot Avoid data-related hazards ",
-  "wordCount" : "1394",
+  "articleBody": "What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.\nFive-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB Graph:\nFrom cs61c This diagram shows the five classic stages in a RISC-V pipelined processor:\nInstruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. Multicycle → Pipelining Five Classic Pipeline Stages in RISC-V Stage Name Description IF Instruction Fetch Fetch instruction from memory ID Instruction Decode / Register Read Decode instruction and read registers EX Execute / Address Calculation Perform ALU operations or address compute MEM Memory Access Access memory (read/write) WB Write Back Write result back to registers How do multiple instructions run in parallel? Each instruction enters the pipeline and advances one stage per cycle.\nCycle IF ID EX MEM WB Cycle 1 A Cycle 2 B A Cycle 3 C B A Cycle 4 D C B A Cycle 5 E D C B A Pipeline Registers Register Role IF/ID Stores the instruction address and content from the IF stage ID/EX Stores decoded register values, immediate values, control signals EX/MEM Stores ALU results, target addresses, data to be written MEM/WB Stores memory output or ALU result, ready to be written back Data Hazard A data hazard occurs when an instruction depends on the result of a previous instruction that hasn’t completed its write-back yet.\nSolutions: Forwarding: Fetch the result early from the EX/MEM or MEM/WB pipeline stage Stall: Pause the instruction for one or two cycles until the data is ready Comparison of Solutions: Method Mechanism Example Cycles Notes Stall Pause the pipeline until data is ready add x1, x2, x3sub x4, x1, x5 +1 ~ 2 Simple but slows performance Forwarding Forward results from EX/MEM or MEM/WB stage Same as above 0 High performance, no stall Example: add x1, x2, x3 // result written to x1 sub x4, x1, x5 // needs x1 → Data hazard! With Stall: sub must wait until add finishes WB stage With Forwarding: sub can grab x1 early from EX/MEM → No stall! Timeline when Forwarding works Cycle | add x1,x2,x3 | sub x4,x1,x5 | nop | ------|--------------|--------------|-----| C1 | IF | | | C2 | ID | IF | | C3 | EX | ID | | C4 | MEM | EX [Forward] | | C5 | WB | MEM | | C6 | | WB | | At Cycle 4:\nadd is in MEM stage, x1 result stored in EX/MEM sub is in EX stage, needs x1 Forwarding module detects it, grabs x1 from EX/MEM What if there’s no Forwarding? Cycle | add x1,x2,x3 | nop | sub x4,x1,x5 | ------|--------------|-----|--------------| C1 | IF | | | C2 | ID | IF | | C3 | EX | ID | | C4 | MEM | NOP | IF | C5 | WB | | ID | C6 | | | EX | You’ll have to insert a nop to stall the sub instruction!\nControl Hazard A control hazard occurs when a branch or jump instruction (e.g., beq) is encountered, and the next instruction to execute is uncertain.\nSolutions: Branch prediction: Predict the next instruction path Insert NOP (bubble): Stall until the branch decision is known What is a Control Hazard? When we encounter conditional branch instructions (e.g., beq, bne, jalr):\nWe don’t know which instruction to execute next — it depends on whether the branch is taken.\nThe condition is only known in the EX stage,\nBut we’ve already fetched the next instruction in the IF stage.\n→ This may lead to executing the wrong path.\nThe Most Conservative Fix: Insert a Bubble Example: beq x1, x2, label // branch instruction add x3, x4, x5 // possibly wrong instruction If the beq is taken, the add is incorrect and must be flushed.\nSo we insert a NOP (bubble) to wait for the result of beq.\nCycle | beq | add ------|-----------|----------- C1 | IF | C2 | ID | IF C3 | EX | ID (wait) C4 | MEM | EX C5 | WB | MEM Is Bubble Too Conservative? Use Branch Prediction What is Branch Prediction? Before knowing whether to take the branch, the CPU guesses:\nPredict taken → fetch the target instruction Predict not taken → continue sequentially If the guess is correct, pipelining continues\nIf the guess is wrong, the pipeline is flushed and restarted\nStatic Branch Prediction (Simplest) Rule Meaning Predict Not Taken Assume all branches are not taken Predict Taken Assume all branches are taken Advantage: Simple logic Disadvantage: Easy to mispredict Dynamic Branch Prediction Let the CPU learn from past branch behavior and make smarter predictions.\n1-bit Predictor Each branch instruction maintains a 1-bit flag:\n0 means “not taken last time”, so predict not taken 1 means “taken last time”, so predict taken Actual Outcome New Predictor State Taken vs Not Taken Change to 1 Not Taken vs Taken Change to 0 Disadvantage: Flips too often in alternating branch cases, like at loop boundaries.\n2-bit Predictor (Common and Effective) Improved predictor with 2-bit state machine:\nState Meaning Transition Rule 00 Strongly Not Taken Stay if correct, else → 01 01 Weakly Not Taken Wrong once → 10 10 Weakly Taken Wrong once → 01 11 Strongly Taken Stay if correct, else → 10 Overall structure: A branch predictor with memory that reduces fluctuation.\nFull Logic Overview (Text Version) IF: Fetch instruction (with prediction) → ID: Decode → EX: Evaluate branch condition ↑ If prediction is wrong → flush following stages Structural Hazard A structural hazard occurs when multiple pipeline stages compete for the same hardware resource (e.g., trying to access memory simultaneously).\nSolutions: Split instruction memory and data memory (Harvard Architecture) Add more hardware resources (more costly) Suppose we only have one memory block, which is responsible for both:\nInstruction Memory (fetch instructions) Data Memory (load/store data) Then we run these two instructions:\nlw x1, 0(x2) // Requires access to data memory (MEM stage) add x3, x4, x5 // Normal execution (instruction fetched in IF stage) In a certain cycle:\nlw is in MEM stage accessing data memory add is in IF stage fetching instruction → But instruction memory and data memory are the same module!\nResult: These two stages compete for memory, causing a structural hazard.\nComparison of Solutions Method Principle Example Pros and Cons Add hardware resources Separate instruction and data memory (Harvard) Two separate memories High efficiency, but costly Insert bubble Delay the conflicting stage nop or stall Simple but hurts performance Pipeline scheduling Avoid simultaneous access Smart instruction reordering Complex but effective Memory Stall A memory stall is one of the most common performance bottlenecks in pipelining.\nWhat is a Memory Stall? A memory stall occurs when the CPU or pipeline is forced to wait for a memory access to complete. During this wait, the CPU becomes stalled and stops progressing.\nIn Other Words: When you are executing a pipelined program, and the five stages are flowing smoothly…\nSuddenly, at the Memory (MEM) stage, one instruction says:\n“I haven’t received the data yet… You all go ahead without me!”\nThis causes the entire pipeline to stall, just like lag in a video game.\nCommon Scenarios Causing Memory Stall Scenario Description Example Load/Store instructions access memory Load or store takes too long lw, sw with slow memory Cache Miss Data not in cache, must fetch from main memory Cache miss ➝ DRAM access (100+ cycles) Multiple stages accessing memory Not enough ports for concurrent memory access IF and MEM both accessing instruction memory A Very Simple Example Suppose we execute:\nlw t0, 0(t1) And the address pointed to by t1 happens to be in memory, but causes a cache miss…\nThen we must fetch from DRAM, which may take hundreds of cycles.\nThe next pipeline instruction cannot proceed, because t0 is not ready yet.\nSo the pipeline becomes stalled, waiting for memory response.\nHow to Reduce Memory Stalls Method Principle Increase Cache Hit Rate Leverage locality, preload data Add Write Buffer Allow non-blocking writes Optimize Memory Hierarchy Use L1/L2/L3 cache to reduce DRAM dependency Pipeline Forwarding + Stall Slot Avoid data-related hazards ",
+  "wordCount" : "1396",
   "inLanguage": "en",
   "datePublished": "2025-03-31T00:00:00Z",
   "dateModified": "2025-03-31T00:00:00Z",
@@ -204,12 +289,11 @@ Write Back (WB) – Write result back to register file.
     <h1 class="post-title entry-hint-parent">
       Pipeline
     </h1>
-    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1394 words&nbsp;·&nbsp;Helia
+    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1396 words&nbsp;·&nbsp;Helia
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="pipeline">Pipeline<a hidden class="anchor" aria-hidden="true" href="#pipeline">#</a></h1>
-<h2 id="what-is-a-pipeline">What is a pipeline?<a hidden class="anchor" aria-hidden="true" href="#what-is-a-pipeline">#</a></h2>
+  <div class="post-content"><h2 id="what-is-a-pipeline">What is a pipeline?<a hidden class="anchor" aria-hidden="true" href="#what-is-a-pipeline">#</a></h2>
 <p>Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU <strong>throughput</strong>.</p>
 <h2 id="five-stage-pipeline-structure-risc-v">Five-stage pipeline structure (RISC-V)<a hidden class="anchor" aria-hidden="true" href="#five-stage-pipeline-structure-risc-v">#</a></h2>
 <ul>
@@ -217,6 +301,8 @@ Write Back (WB) – Write result back to register file.
 </ul>
 <p><img alt="alt text" loading="lazy" src="/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image.png">
 <img alt="alt text" loading="lazy" src="/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image-1.png">
+<strong>Graph:</strong><br>
+<em>From cs61c</em>
 This diagram shows the five classic stages in a RISC-V pipelined processor:</p>
 <ol>
 <li><strong>Instruction Fetch (IF)</strong> – Fetch instruction from memory.</li>
@@ -225,7 +311,6 @@ This diagram shows the five classic stages in a RISC-V pipelined processor:</p>
 <li><strong>Memory Access (MEM)</strong> – Read/write data from/to memory.</li>
 <li><strong>Write Back (WB)</strong> – Write result back to register file.</li>
 </ol>
-<p><img alt="Pipelining with RISC-V Detailed" loading="lazy" src="/images/pipeline_diagram_detailed.png"></p>
 <hr>
 <h2 id="multicycle--pipelining">Multicycle → Pipelining<a hidden class="anchor" aria-hidden="true" href="#multicycle--pipelining">#</a></h2>
 <h3 id="five-classic-pipeline-stages-in-risc-v">Five Classic Pipeline Stages in RISC-V<a hidden class="anchor" aria-hidden="true" href="#five-classic-pipeline-stages-in-risc-v">#</a></h3>
@@ -701,7 +786,7 @@ If the guess is wrong, the pipeline is flushed and restarted</p>
   <a class="prev" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/">
     <span class="title">« Prev</span>
     <br>
-    <span>Memory Hierarchy &amp; Locality</span>
+    <span>Memory</span>
   </a>
   <a class="next" href="https://dev-helia.github.io/Tech-Blog-Website/posts/promptllery/">
     <span class="title">Next »</span>

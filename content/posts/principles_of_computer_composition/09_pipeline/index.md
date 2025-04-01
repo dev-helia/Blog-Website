@@ -6,8 +6,6 @@ categories: ["Computer Science", "CS61C"]
 draft: false
 ---
 
-# Pipeline
-
 ## What is a pipeline?
 
 Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU **throughput**.
@@ -18,6 +16,8 @@ Pipelining refers to processing different parts of multiple instructions simulta
 
 ![alt text](image.png)
 ![alt text](image-1.png)
+**Graph:**  
+*From cs61c*
 This diagram shows the five classic stages in a RISC-V pipelined processor:
 1. **Instruction Fetch (IF)** – Fetch instruction from memory.
 2. **Instruction Decode / Register Read (ID)** – Decode the instruction and read source registers.
@@ -25,7 +25,6 @@ This diagram shows the five classic stages in a RISC-V pipelined processor:
 4. **Memory Access (MEM)** – Read/write data from/to memory.
 5. **Write Back (WB)** – Write result back to register file.
 
-![Pipelining with RISC-V Detailed](/images/pipeline_diagram_detailed.png)
 
 ---
 

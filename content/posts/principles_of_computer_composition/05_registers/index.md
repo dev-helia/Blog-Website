@@ -6,9 +6,6 @@ tags: ["Registers", "RISC-V", "x0-x31", "Zero Register"]
 ---
 
 
-## Registers File reg[]
-
----
 
 ### 1. How Many Registers in RISC-V?
 

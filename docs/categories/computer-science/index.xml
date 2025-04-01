@@ -51,7 +51,7 @@
 &lt;p&gt;When the CPU sends a memory request:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Memory Hierarchy &amp; Locality</title>
+      <title>Memory</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</guid>
@@ -119,8 +119,7 @@
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</guid>
-      <description>&lt;h1 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h1&gt;
-&lt;h2 id=&#34;what-is-a-pipeline&#34;&gt;What is a pipeline?&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;what-is-a-pipeline&#34;&gt;What is a pipeline?&lt;/h2&gt;
 &lt;p&gt;Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU &lt;strong&gt;throughput&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;five-stage-pipeline-structure-risc-v&#34;&gt;Five-stage pipeline structure (RISC-V)&lt;/h2&gt;
 &lt;ul&gt;
@@ -128,6 +127,8 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image.png&#34;&gt;
 &lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image-1.png&#34;&gt;
+&lt;strong&gt;Graph:&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;From cs61c&lt;/em&gt;
 This diagram shows the five classic stages in a RISC-V pipelined processor:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Instruction Fetch (IF)&lt;/strong&gt; – Fetch instruction from memory.&lt;/li&gt;
@@ -136,7 +137,48 @@ This diagram shows the five classic stages in a RISC-V pipelined processor:&lt;/
 &lt;li&gt;&lt;strong&gt;Memory Access (MEM)&lt;/strong&gt; – Read/write data from/to memory.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Write Back (WB)&lt;/strong&gt; – Write result back to register file.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;Pipelining with RISC-V Detailed&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/images/pipeline_diagram_detailed.png&#34;&gt;&lt;/p&gt;</description>
+&lt;hr&gt;
+&lt;h2 id=&#34;multicycle--pipelining&#34;&gt;Multicycle → Pipelining&lt;/h2&gt;
+&lt;h3 id=&#34;five-classic-pipeline-stages-in-risc-v&#34;&gt;Five Classic Pipeline Stages in RISC-V&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Stage&lt;/th&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;IF&lt;/td&gt;
+          &lt;td&gt;Instruction Fetch&lt;/td&gt;
+          &lt;td&gt;Fetch instruction from memory&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ID&lt;/td&gt;
+          &lt;td&gt;Instruction Decode / Register Read&lt;/td&gt;
+          &lt;td&gt;Decode instruction and read registers&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EX&lt;/td&gt;
+          &lt;td&gt;Execute / Address Calculation&lt;/td&gt;
+          &lt;td&gt;Perform ALU operations or address compute&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MEM&lt;/td&gt;
+          &lt;td&gt;Memory Access&lt;/td&gt;
+          &lt;td&gt;Access memory (read/write)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WB&lt;/td&gt;
+          &lt;td&gt;Write Back&lt;/td&gt;
+          &lt;td&gt;Write result back to registers&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;how-do-multiple-instructions-run-in-parallel&#34;&gt;How do multiple instructions run in parallel?&lt;/h3&gt;
+&lt;p&gt;Each instruction enters the pipeline and advances one stage per cycle.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

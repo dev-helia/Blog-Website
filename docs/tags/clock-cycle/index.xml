@@ -15,6 +15,8 @@
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/</guid>
       <description>&lt;h2 id=&#34;clock-cycle&#34;&gt;Clock Cycle&lt;/h2&gt;
 &lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/image.png&#34;&gt;
+&lt;strong&gt;Graph:&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;From cs61c&lt;/em&gt;
 A &lt;strong&gt;single-cycle CPU&lt;/strong&gt; completes &lt;strong&gt;all stages&lt;/strong&gt; of an instruction within &lt;strong&gt;one long clock cycle&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Each instruction goes through the following five stages:&lt;/p&gt;
 &lt;blockquote&gt;

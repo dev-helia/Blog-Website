@@ -7,9 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Registers File reg[] | Helia&#39;s Tech-Blog</title>
 <meta name="keywords" content="Registers, RISC-V, x0-x31, Zero Register">
-<meta name="description" content="Registers File reg[]
-
-1. How Many Registers in RISC-V?
+<meta name="description" content="1. How Many Registers in RISC-V?
 
 
 RISC-V defines 32 general-purpose registers:
@@ -86,7 +84,7 @@ Their role depends on how you use them.">
 </noscript><meta property="og:url" content="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/">
   <meta property="og:site_name" content="Helia&#39;s Tech-Blog">
   <meta property="og:title" content="Registers File reg[]">
-  <meta property="og:description" content="Registers File reg[] 1. How Many Registers in RISC-V? RISC-V defines 32 general-purpose registers:
+  <meta property="og:description" content="1. How Many Registers in RISC-V? RISC-V defines 32 general-purpose registers:
 x0 ~ x31 (each 32-bit, holds a word)
 Trade-off:
 More registers = more variables can be stored But → harder to access quickly → slower hardware 2. Register Classification Type Alias Range Usage Hint Saved regs s0~s1 x8~x9 Values preserved across function calls s2~s11 x18~x27 Temp regs t0~t2 x5~x7 Temporary variables t3~t6 x28~x31 Note: Registers have no inherent type, unlike variables in C.
@@ -102,9 +100,7 @@ Their role depends on how you use them.">
     <meta property="article:tag" content="Zero Register">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Registers File reg[]">
-<meta name="twitter:description" content="Registers File reg[]
-
-1. How Many Registers in RISC-V?
+<meta name="twitter:description" content="1. How Many Registers in RISC-V?
 
 
 RISC-V defines 32 general-purpose registers:
@@ -193,12 +189,12 @@ Their role depends on how you use them.">
   "@type": "BlogPosting",
   "headline": "Registers File reg[]",
   "name": "Registers File reg[]",
-  "description": "Registers File reg[] 1. How Many Registers in RISC-V? RISC-V defines 32 general-purpose registers:\nx0 ~ x31 (each 32-bit, holds a word)\nTrade-off:\nMore registers = more variables can be stored But → harder to access quickly → slower hardware 2. Register Classification Type Alias Range Usage Hint Saved regs s0~s1 x8~x9 Values preserved across function calls s2~s11 x18~x27 Temp regs t0~t2 x5~x7 Temporary variables t3~t6 x28~x31 Note: Registers have no inherent type, unlike variables in C.\nTheir role depends on how you use them.\n",
+  "description": "1. How Many Registers in RISC-V? RISC-V defines 32 general-purpose registers:\nx0 ~ x31 (each 32-bit, holds a word)\nTrade-off:\nMore registers = more variables can be stored But → harder to access quickly → slower hardware 2. Register Classification Type Alias Range Usage Hint Saved regs s0~s1 x8~x9 Values preserved across function calls s2~s11 x18~x27 Temp regs t0~t2 x5~x7 Temporary variables t3~t6 x28~x31 Note: Registers have no inherent type, unlike variables in C.\nTheir role depends on how you use them.\n",
   "keywords": [
     "Registers", "RISC-V", "x0-x31", "Zero Register"
   ],
-  "articleBody": "Registers File reg[] 1. How Many Registers in RISC-V? RISC-V defines 32 general-purpose registers:\nx0 ~ x31 (each 32-bit, holds a word)\nTrade-off:\nMore registers = more variables can be stored But → harder to access quickly → slower hardware 2. Register Classification Type Alias Range Usage Hint Saved regs s0~s1 x8~x9 Values preserved across function calls s2~s11 x18~x27 Temp regs t0~t2 x5~x7 Temporary variables t3~t6 x28~x31 Note: Registers have no inherent type, unlike variables in C.\nTheir role depends on how you use them.\n3. Special Register: x0 (Zero Register) x0 is hardwired to 0\nAlways contains 0 Any attempt to write → has no effect Why useful?\nUsed in constant comparisons, clearing values, etc. Saves instruction space by avoiding explicit constants Summary Total: 32 registers (x0 to x31) Key takeaway: understand naming convention + classification + behavior ",
-  "wordCount" : "139",
+  "articleBody": "1. How Many Registers in RISC-V? RISC-V defines 32 general-purpose registers:\nx0 ~ x31 (each 32-bit, holds a word)\nTrade-off:\nMore registers = more variables can be stored But → harder to access quickly → slower hardware 2. Register Classification Type Alias Range Usage Hint Saved regs s0~s1 x8~x9 Values preserved across function calls s2~s11 x18~x27 Temp regs t0~t2 x5~x7 Temporary variables t3~t6 x28~x31 Note: Registers have no inherent type, unlike variables in C.\nTheir role depends on how you use them.\n3. Special Register: x0 (Zero Register) x0 is hardwired to 0\nAlways contains 0 Any attempt to write → has no effect Why useful?\nUsed in constant comparisons, clearing values, etc. Saves instruction space by avoiding explicit constants Summary Total: 32 registers (x0 to x31) Key takeaway: understand naming convention + classification + behavior ",
+  "wordCount" : "136",
   "inLanguage": "en",
   "datePublished": "2025-03-31T00:00:00Z",
   "dateModified": "2025-03-31T00:00:00Z",
@@ -284,13 +280,11 @@ Their role depends on how you use them.">
     <h1 class="post-title entry-hint-parent">
       Registers File reg[]
     </h1>
-    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;139 words&nbsp;·&nbsp;Helia
+    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;136 words&nbsp;·&nbsp;Helia
 
 </div>
   </header> 
-  <div class="post-content"><h2 id="registers-file-reg">Registers File reg[]<a hidden class="anchor" aria-hidden="true" href="#registers-file-reg">#</a></h2>
-<hr>
-<h3 id="1-how-many-registers-in-risc-v">1. How Many Registers in RISC-V?<a hidden class="anchor" aria-hidden="true" href="#1-how-many-registers-in-risc-v">#</a></h3>
+  <div class="post-content"><h3 id="1-how-many-registers-in-risc-v">1. How Many Registers in RISC-V?<a hidden class="anchor" aria-hidden="true" href="#1-how-many-registers-in-risc-v">#</a></h3>
 <ul>
 <li>
 <p>RISC-V defines <strong>32 general-purpose registers</strong>:<br>

@@ -1,5 +1,5 @@
 ---
-title: "Switches in Circuits"
+title: "Circuits"
 date: 2025-03-06
 weight: 6
 tags: ["Circuits", "Switch", "Logic"]

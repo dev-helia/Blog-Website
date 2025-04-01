@@ -5,8 +5,6 @@ weight: 1
 tags: ["bit", "binary", "CS61C", "fundamentals"]
 ---
 
-## Hexadecimal and bit/byte Relationship
-
 Hexadecimal (Hex) is a base-16 system used to represent binary data. Its key relationships:
 
 - 1 hex digit = 4 bits (also called a **nibble**)  
