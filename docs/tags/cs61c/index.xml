@@ -144,7 +144,7 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
 &lt;code&gt;2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>09_Pipeline</title>
+      <title>Pipeline</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</guid>

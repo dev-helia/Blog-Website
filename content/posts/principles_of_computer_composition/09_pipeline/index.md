@@ -1,5 +1,5 @@
 ---
-title: "09_Pipeline"
+title: "Pipeline"
 date: 2025-03-31
 tags: ["CS61C", "RISC-V", "Pipeline", "Computer Architecture"]
 categories: ["Computer Science", "CS61C"]

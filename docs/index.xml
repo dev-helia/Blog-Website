@@ -521,7 +521,7 @@ A &lt;strong&gt;single-cycle CPU&lt;/strong&gt; completes &lt;strong&gt;all stag
 &lt;p&gt;&lt;em&gt;(Insert single-cycle datapath diagram here)&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>09_Pipeline</title>
+      <title>Pipeline</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</guid>
