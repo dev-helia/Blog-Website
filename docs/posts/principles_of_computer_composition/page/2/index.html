@@ -287,6 +287,21 @@ Limited by how much time needed to get correct Next State to Register (t_setup c
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Cache Structure &amp; Strategies
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Cache Structure: Tag | Index | Offset | Data A memory address is divided into:
+Tag: Identifies which block the data belongs to. Index: Points to a specific cache line (set). Offset: Locates the exact byte inside a block. Data: The actual value stored. For example, in a 4KB Direct-Mapped Cache with 64B block size:
+Tag Index Offset Data Block (64B) 0x1A3 010 000000 64 bytes of data 0x2B4 101 000000 64 bytes of data Cache Lookup Process When the CPU sends a memory request:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;974 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Cache Structure & Strategies" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Memory Hierarchy &amp; Locality
     </h2>
   </header>
@@ -311,18 +326,6 @@ Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / R
   </div>
   <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1394 words&nbsp;·&nbsp;Helia</footer>
   <a class="entry-link" aria-label="post link to Pipeline" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer">0 min&nbsp;·&nbsp;0 words&nbsp;·&nbsp;Helia</footer>
-  <a class="entry-link" aria-label="post link to " href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

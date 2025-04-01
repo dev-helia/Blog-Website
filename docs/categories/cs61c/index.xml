@@ -9,6 +9,48 @@
     <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/categories/cs61c/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Cache Structure &amp; Strategies</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</guid>
+      <description>&lt;h1 id=&#34;cache-structure-tag--index--offset--data&#34;&gt;Cache Structure: Tag | Index | Offset | Data&lt;/h1&gt;
+&lt;p&gt;A memory address is divided into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tag&lt;/strong&gt;: Identifies which block the data belongs to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Index&lt;/strong&gt;: Points to a specific cache line (set).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offset&lt;/strong&gt;: Locates the exact byte inside a block.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: The actual value stored.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, in a &lt;strong&gt;4KB Direct-Mapped Cache&lt;/strong&gt; with &lt;strong&gt;64B block size&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Tag&lt;/th&gt;
+          &lt;th&gt;Index&lt;/th&gt;
+          &lt;th&gt;Offset&lt;/th&gt;
+          &lt;th&gt;Data Block (64B)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0x1A3&lt;/td&gt;
+          &lt;td&gt;010&lt;/td&gt;
+          &lt;td&gt;000000&lt;/td&gt;
+          &lt;td&gt;64 bytes of data&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0x2B4&lt;/td&gt;
+          &lt;td&gt;101&lt;/td&gt;
+          &lt;td&gt;000000&lt;/td&gt;
+          &lt;td&gt;64 bytes of data&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;cache-lookup-process&#34;&gt;Cache Lookup Process&lt;/h1&gt;
+&lt;p&gt;When the CPU sends a memory request:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Memory Hierarchy &amp; Locality</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
