@@ -1,5 +1,5 @@
 ---
-title: "Clock Cycle and Instruction Stages"
+title: "CPU"
 date: 2025-03-31
 weight: 6
 tags: ["Clock Cycle", "Pipeline", "CPU", "Instruction Stages", "RISC-V"]
