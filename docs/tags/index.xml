@@ -16,10 +16,45 @@
       <description></description>
     </item>
     <item>
+      <title>Computer Architecture</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/computer-architecture/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/computer-architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Control Signals</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/control-signals/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/control-signals/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>CPU</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/tags/cpu/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/cpu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS61C</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Datapath</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/datapath/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/datapath/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FSM</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/fsm/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/fsm/</guid>
       <description></description>
     </item>
     <item>
@@ -44,6 +79,13 @@
       <description></description>
     </item>
     <item>
+      <title>Multicycle</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/multicycle/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/multicycle/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Pipeline</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/tags/pipeline/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
@@ -62,6 +104,13 @@
       <link>https://dev-helia.github.io/Tech-Blog-Website/tags/risc-v/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/risc-v/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Single-Cycle</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/single-cycle/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/single-cycle/</guid>
       <description></description>
     </item>
     <item>
@@ -121,13 +170,6 @@
       <description></description>
     </item>
     <item>
-      <title>CS61C</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/</link>
-      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Fundamentals</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/tags/fundamentals/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
@@ -167,6 +209,27 @@
       <link>https://dev-helia.github.io/Tech-Blog-Website/tags/ieee754/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/ieee754/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Circuits</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/circuits/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/circuits/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logic</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/logic/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/logic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Switch</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/tags/switch/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/tags/switch/</guid>
       <description></description>
     </item>
   </channel>

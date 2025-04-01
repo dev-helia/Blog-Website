@@ -258,38 +258,45 @@ Extra Reference: CS61C Slides
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">
+    <h2 class="entry-hint-parent">Switches in Circuits
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>Switches The basic element of physical implementations Convention: if input is a 1, the switch is asserted A Z o——o 💡 | | === === Open switch if A is 0 (unasserted) and turn OFF light bulb (Z) Close switch if A is 1 (asserted) and turn ON light bulb (Z) Maximum Clock Frequency What is the max frequency of this circuit?
+Limited by how much time needed to get correct Next State to Register (t_setup constraint) Equation:
+...</p>
   </div>
-  <footer class="entry-footer">0 min&nbsp;·&nbsp;0 words&nbsp;·&nbsp;Helia</footer>
-  <a class="entry-link" aria-label="post link to " href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/"></a>
+  <footer class="entry-footer"><span title='2025-03-06 00:00:00 +0000 UTC'>March 6, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;181 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Switches in Circuits" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">
+    <h2 class="entry-hint-parent">Data Path
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>1. Current Datapath Graph:
+(Insert current datapath diagram here)
+2. Component Table Abbreviation Full Name Function IMEM Instruction Memory Stores instruction codes, used for fetch Reg[] Register File Register file containing 32 registers (x0 ~ x31) Imm.Gen Immediate Generator Extracts immediate from instruction inst Instruction Current instruction fetched from IMEM rs1 Register Source 1 First input operand from Reg[] rs2 Register Source 2 Second input operand from Reg[] DMEM Data Memory Used in lw/sw instructions ImmSel Immediate Select Selects immediate type (I, S, B, U, J) BSel B Operand Select Selects between rs2 or imm as second operand ALUSel ALU Operation Select ALU operation selector (add, sub, logic, etc.) MemRW Memory Read/Write Controls memory read/write (lw or sw) DataR Data Read Data read from DMEM Addr Address Address sent to DMEM Mem Memory Memory module WB Write Back Controls whether to write back ALU or memory result to Reg[] 3. IMEM vs DMEM Storage Function Content IMEM Instruction Memory Instruction codes DMEM Data Memory Data accessed by lw/sw 4. rs1 vs rs2 vs rd Field Meaning Example (add x1, x2, x3) rs1 First source operand x2 rs2 Second source operand x3 rd Destination register x1 5. Immediate Generator (Imm.Gen) Instruction Example Extracted Immediate addi x1, x2, 10 10 sw x1, 100(x2) 100 beq x1, x2, -8 -8 6. ALUSel &amp; BSel Signal Function Options ALUSel Selects ALU operation add, sub, AND, OR, XOR, shift BSel Selects second operand rs2 or imm 7. MemRW (Memory Read/Write) Signal Meaning 0 Read (lw) 1 Write (sw) 8. WB (Write Back) Signal Meaning 0 Write back ALU result 1 Write back memory data from DMEM 9. Single-Cycle RISC-V RV32I Datapath (Insert single-cycle datapath diagram here)
+...</p>
   </div>
-  <footer class="entry-footer">0 min&nbsp;·&nbsp;0 words&nbsp;·&nbsp;Helia</footer>
-  <a class="entry-link" aria-label="post link to " href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/08_datapath/"></a>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;934 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Data Path" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/08_datapath/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">
+    <h2 class="entry-hint-parent">09_Pipeline
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p> title: “09_Pipeline” date: 2025-03-31 tags: [“RISC-V”, “Pipeline”, “Computer Architecture”, “CS61C”] categories: [“CS61C Notes”] Pipeline What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
+Five-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB This diagram shows the five classic stages in a RISC-V pipelined processor:
+Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. ...</p>
   </div>
-  <footer class="entry-footer">0 min&nbsp;·&nbsp;0 words&nbsp;·&nbsp;Helia</footer>
-  <a class="entry-link" aria-label="post link to " href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/"></a>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1407 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to 09_Pipeline" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/"></a>
 </article>
 
 <article class="post-entry"> 

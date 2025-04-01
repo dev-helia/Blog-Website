@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CS61C on Helia&#39;s Tech-Blog</title>
+    <link>https://dev-helia.github.io/Tech-Blog-Website/categories/cs61c/</link>
+    <description>Recent content in CS61C on Helia&#39;s Tech-Blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/categories/cs61c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>09_Pipeline</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;categories-cs61c-notes&#34;&gt;title: &amp;ldquo;09_Pipeline&amp;rdquo;
+date: 2025-03-31
+tags: [&amp;ldquo;RISC-V&amp;rdquo;, &amp;ldquo;Pipeline&amp;rdquo;, &amp;ldquo;Computer Architecture&amp;rdquo;, &amp;ldquo;CS61C&amp;rdquo;]
+categories: [&amp;ldquo;CS61C Notes&amp;rdquo;]&lt;/h2&gt;
+&lt;h1 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h1&gt;
+&lt;h2 id=&#34;what-is-a-pipeline&#34;&gt;What is a pipeline?&lt;/h2&gt;
+&lt;p&gt;Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU &lt;strong&gt;throughput&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;five-stage-pipeline-structure-risc-v&#34;&gt;Five-stage pipeline structure (RISC-V)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;IF ➝ ID ➝ EX ➝ MEM ➝ WB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image.png&#34;&gt;
+&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image-1.png&#34;&gt;
+This diagram shows the five classic stages in a RISC-V pipelined processor:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Instruction Fetch (IF)&lt;/strong&gt; – Fetch instruction from memory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Instruction Decode / Register Read (ID)&lt;/strong&gt; – Decode the instruction and read source registers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute / Address Calculation (EX)&lt;/strong&gt; – Perform ALU operations or calculate addresses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Memory Access (MEM)&lt;/strong&gt; – Read/write data from/to memory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write Back (WB)&lt;/strong&gt; – Write result back to register file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;Pipelining with RISC-V Detailed&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/images/pipeline_diagram_detailed.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

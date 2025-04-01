@@ -6,6 +6,21 @@
     <description>Recent content in Categories on Helia&#39;s Tech-Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computer Science</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/categories/computer-science/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/categories/computer-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS61C</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/categories/cs61c/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/categories/cs61c/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

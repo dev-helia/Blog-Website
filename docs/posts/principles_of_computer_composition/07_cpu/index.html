@@ -8,8 +8,19 @@
 <title>Clock Cycle and Instruction Stages | Helia&#39;s Tech-Blog</title>
 <meta name="keywords" content="Clock Cycle, Pipeline, CPU, Instruction Stages, RISC-V">
 <meta name="description" content="Clock Cycle
+
 A single-cycle CPU completes all stages of an instruction within one long clock cycle.
 Each instruction goes through the following five stages:
+
+All stages of an instruction completed within one long clock cycle
+
+Clock cycle sufficiently long to allow each instruction to complete all stages without interruption
+
+1. Instruction Fetch 
+→ 2. Decode/Register Read 
+→ 3. Execute 
+→ 4. Memory 
+→ 5. Reg. Write
 
 Instruction Fetch
 Decode / Register Read
@@ -18,48 +29,7 @@ Memory Access
 Register Write Back
 
 
-The clock cycle is long enough to complete all these stages without interruption.
-
-Instruction Execution Stages (RISC-V)
-
-  
-      
-          Stage
-          Name
-          Description
-      
-  
-  
-      
-          IF
-          Instruction Fetch
-          Fetch the instruction from IMEM, increment PC &#43;= 4
-      
-      
-          ID
-          Instruction Decode
-          Decode the instruction, read rs1 and rs2
-      
-      
-          EX
-          Execute
-          Perform computation via ALU (arithmetic or address calculation)
-      
-      
-          MEM
-          Memory Access
-          lw: read from memory; sw: write to memory
-      
-      
-          WB
-          Write Back
-          Write result to rd
-      
-  
-
-
-Every instruction passes through IF, ID, EX, WB.
-Only lw and sw instructions go through the MEM stage.">
+The clock cycle is long enough to complete all these stages without interruption.">
 <meta name="author" content="Helia">
 <link rel="canonical" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/">
 <link crossorigin="anonymous" href="/Tech-Blog-Website/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -84,9 +54,8 @@ Only lw and sw instructions go through the MEM stage.">
   <meta property="og:title" content="Clock Cycle and Instruction Stages">
   <meta property="og:description" content="Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.
 Each instruction goes through the following five stages:
-Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.
-Instruction Execution Stages (RISC-V) Stage Name Description IF Instruction Fetch Fetch the instruction from IMEM, increment PC &#43;= 4 ID Instruction Decode Decode the instruction, read rs1 and rs2 EX Execute Perform computation via ALU (arithmetic or address calculation) MEM Memory Access lw: read from memory; sw: write to memory WB Write Back Write result to rd Every instruction passes through IF, ID, EX, WB.
-Only lw and sw instructions go through the MEM stage.">
+All stages of an instruction completed within one long clock cycle
+Clock cycle sufficiently long to allow each instruction to complete all stages without interruption 1. Instruction Fetch → 2. Decode/Register Read → 3. Execute → 4. Memory → 5. Reg. Write Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -100,8 +69,19 @@ Only lw and sw instructions go through the MEM stage.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Clock Cycle and Instruction Stages">
 <meta name="twitter:description" content="Clock Cycle
+
 A single-cycle CPU completes all stages of an instruction within one long clock cycle.
 Each instruction goes through the following five stages:
+
+All stages of an instruction completed within one long clock cycle
+
+Clock cycle sufficiently long to allow each instruction to complete all stages without interruption
+
+1. Instruction Fetch 
+→ 2. Decode/Register Read 
+→ 3. Execute 
+→ 4. Memory 
+→ 5. Reg. Write
 
 Instruction Fetch
 Decode / Register Read
@@ -110,48 +90,7 @@ Memory Access
 Register Write Back
 
 
-The clock cycle is long enough to complete all these stages without interruption.
-
-Instruction Execution Stages (RISC-V)
-
-  
-      
-          Stage
-          Name
-          Description
-      
-  
-  
-      
-          IF
-          Instruction Fetch
-          Fetch the instruction from IMEM, increment PC &#43;= 4
-      
-      
-          ID
-          Instruction Decode
-          Decode the instruction, read rs1 and rs2
-      
-      
-          EX
-          Execute
-          Perform computation via ALU (arithmetic or address calculation)
-      
-      
-          MEM
-          Memory Access
-          lw: read from memory; sw: write to memory
-      
-      
-          WB
-          Write Back
-          Write result to rd
-      
-  
-
-
-Every instruction passes through IF, ID, EX, WB.
-Only lw and sw instructions go through the MEM stage.">
+The clock cycle is long enough to complete all these stages without interruption.">
 
 
 <script type="application/ld+json">
@@ -186,12 +125,12 @@ Only lw and sw instructions go through the MEM stage.">
   "@type": "BlogPosting",
   "headline": "Clock Cycle and Instruction Stages",
   "name": "Clock Cycle and Instruction Stages",
-  "description": "Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.\nEach instruction goes through the following five stages:\nInstruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.\nInstruction Execution Stages (RISC-V) Stage Name Description IF Instruction Fetch Fetch the instruction from IMEM, increment PC += 4 ID Instruction Decode Decode the instruction, read rs1 and rs2 EX Execute Perform computation via ALU (arithmetic or address calculation) MEM Memory Access lw: read from memory; sw: write to memory WB Write Back Write result to rd Every instruction passes through IF, ID, EX, WB.\nOnly lw and sw instructions go through the MEM stage.\n",
+  "description": "Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.\nEach instruction goes through the following five stages:\nAll stages of an instruction completed within one long clock cycle\nClock cycle sufficiently long to allow each instruction to complete all stages without interruption 1. Instruction Fetch → 2. Decode/Register Read → 3. Execute → 4. Memory → 5. Reg. Write Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.\n",
   "keywords": [
     "Clock Cycle", "Pipeline", "CPU", "Instruction Stages", "RISC-V"
   ],
-  "articleBody": "Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.\nEach instruction goes through the following five stages:\nInstruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.\nInstruction Execution Stages (RISC-V) Stage Name Description IF Instruction Fetch Fetch the instruction from IMEM, increment PC += 4 ID Instruction Decode Decode the instruction, read rs1 and rs2 EX Execute Perform computation via ALU (arithmetic or address calculation) MEM Memory Access lw: read from memory; sw: write to memory WB Write Back Write result to rd Every instruction passes through IF, ID, EX, WB.\nOnly lw and sw instructions go through the MEM stage.\n",
-  "wordCount" : "124",
+  "articleBody": "Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.\nEach instruction goes through the following five stages:\nAll stages of an instruction completed within one long clock cycle\nClock cycle sufficiently long to allow each instruction to complete all stages without interruption 1. Instruction Fetch → 2. Decode/Register Read → 3. Execute → 4. Memory → 5. Reg. Write Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.\nInstruction Execution Stages (RISC-V) Stage Name Description IF Instruction Fetch Fetch the instruction from IMEM, increment PC += 4 ID Instruction Decode Decode the instruction, read rs1 and rs2 EX Execute Perform computation via ALU (arithmetic or address calculation) MEM Memory Access lw: read from memory; sw: write to memory WB Write Back Write result to rd Every instruction passes through IF, ID, EX, WB.\nOnly lw and sw instructions go through the MEM stage.\nprocessor: Design Principles 5 Steps to Design a Processor:\nAnalyze instruction set → datapath requirements Select set of datapath components \u0026 establish clock methodology Assemble datapath meeting the requirements Analyze implementation of each instruction to determine setting of control points that affect register transfer Assemble the control logic Formulate Logic Equations Design Circuits Control logic determines how the CPU executes each instruction\nDetermining control signals Any time a datapath element has an input that changes behavior, it requires a control signal e.g., ALU operation, read/write signal Use a MUX when multiple sources decide the same destination Different instructions → different control signals Your control signals will change based on your datapath Your datapath will change based on your ISA The “Iron Law” of Processor Performance Time / Program = (Instructions / Program) × (Cycles / Instruction) × (Time / Cycle) This formula breaks down execution time into three key components:\n1. Instructions / Program How many instructions are executed in a program? Affected by: compiler, algorithm, and ISA design Examples: CISC (Complex Instruction Set Computer) Fewer instructions needed to do more work RISC (Reduced Instruction Set Computer) Simpler instructions, but more of them may be needed 2. CPI (Cycles / Instruction) How many clock cycles does each instruction take? Affected by: instruction type, pipeline structure, data hazards Examples: RISC-V aims for CPI ≈ 1 (1 instruction per cycle) Complex instructions (e.g., DIV) may take multiple cycles 3. Time / Cycle How long is each clock cycle? Affected by: technology node, clock frequency, and fabrication Examples: Time per cycle = 1 / frequency 2GHz → 0.5 nanoseconds per cycle Energy per Program Energy / Program = (Instructions / Program) × (Energy / Instruction) Alternative form:\nEnergy / Program ∝ (Instructions / Program) × C × V² Where:\nC = capacitance, depends on design and number of cores V = supply voltage Energy “Iron Law” Performance = Power × Energy Efficiency = (Joules / Second) × (Tasks / Joule) = Tasks / Second Key Implications Energy efficiency (e.g., instructions per Joule) is a critical metric For power-constrained systems (e.g., data centers): Need higher energy efficiency to deliver more performance per watt For energy-constrained systems (e.g., phones): Need better energy efficiency to extend battery life ",
+  "wordCount" : "538",
   "inLanguage": "en",
   "datePublished": "2025-03-31T00:00:00Z",
   "dateModified": "2025-03-31T00:00:00Z",
@@ -277,14 +216,25 @@ Only lw and sw instructions go through the MEM stage.">
     <h1 class="post-title entry-hint-parent">
       Clock Cycle and Instruction Stages
     </h1>
-    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;124 words&nbsp;·&nbsp;Helia
+    <div class="post-meta"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;538 words&nbsp;·&nbsp;Helia
 
 </div>
   </header> 
   <div class="post-content"><h2 id="clock-cycle">Clock Cycle<a hidden class="anchor" aria-hidden="true" href="#clock-cycle">#</a></h2>
-<p>A <strong>single-cycle CPU</strong> completes <strong>all stages</strong> of an instruction within <strong>one long clock cycle</strong>.</p>
+<p><img alt="alt text" loading="lazy" src="/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/image.png">
+A <strong>single-cycle CPU</strong> completes <strong>all stages</strong> of an instruction within <strong>one long clock cycle</strong>.</p>
 <p>Each instruction goes through the following five stages:</p>
-<ol>
+<blockquote>
+<p>All stages of an instruction completed <strong>within one long clock cycle</strong></p></blockquote>
+<ul>
+<li>Clock cycle sufficiently long to allow each instruction to complete <strong>all stages without interruption</strong></li>
+</ul>
+<pre tabindex="0"><code>1. Instruction Fetch 
+→ 2. Decode/Register Read 
+→ 3. Execute 
+→ 4. Memory 
+→ 5. Reg. Write
+</code></pre><ol>
 <li><strong>Instruction Fetch</strong></li>
 <li><strong>Decode / Register Read</strong></li>
 <li><strong>Execute</strong></li>
@@ -334,6 +284,116 @@ Only lw and sw instructions go through the MEM stage.">
 <blockquote>
 <p>Every instruction passes through <strong>IF, ID, EX, WB</strong>.<br>
 Only <code>lw</code> and <code>sw</code> instructions go through the <strong>MEM</strong> stage.</p></blockquote>
+<h2 id="processor">processor:<a hidden class="anchor" aria-hidden="true" href="#processor">#</a></h2>
+<h3 id="design-principles">Design Principles<a hidden class="anchor" aria-hidden="true" href="#design-principles">#</a></h3>
+<p>5 Steps to Design a Processor:</p>
+<ol>
+<li>Analyze instruction set → datapath requirements</li>
+<li>Select set of datapath components &amp; establish clock methodology</li>
+<li>Assemble datapath meeting the requirements</li>
+<li>Analyze implementation of each instruction to determine setting of control points that affect register transfer</li>
+<li>Assemble the control logic
+<ul>
+<li>Formulate Logic Equations</li>
+<li>Design Circuits</li>
+</ul>
+</li>
+</ol>
+<p>Control logic determines how the CPU executes each instruction</p>
+<h3 id="determining-control-signals">Determining control signals<a hidden class="anchor" aria-hidden="true" href="#determining-control-signals">#</a></h3>
+<ul>
+<li>Any time a datapath element has an input that changes behavior, it requires a <strong>control signal</strong>
+<ul>
+<li>e.g., ALU operation, read/write signal</li>
+</ul>
+</li>
+<li>Use a <strong>MUX</strong> when multiple sources decide the same destination</li>
+<li>Different instructions → different control signals</li>
+<li>Your control signals will <strong>change based on your datapath</strong></li>
+<li>Your datapath will <strong>change based on your ISA</strong></li>
+</ul>
+<h3 id="the-iron-law-of-processor-performance">The &ldquo;Iron Law&rdquo; of Processor Performance<a hidden class="anchor" aria-hidden="true" href="#the-iron-law-of-processor-performance">#</a></h3>
+<pre tabindex="0"><code>Time / Program = 
+    (Instructions / Program) × 
+    (Cycles / Instruction) × 
+    (Time / Cycle)
+</code></pre><p>This formula breaks down <strong>execution time</strong> into three key components:</p>
+<hr>
+<h4 id="1-instructions--program">1. Instructions / Program<a hidden class="anchor" aria-hidden="true" href="#1-instructions--program">#</a></h4>
+<ul>
+<li>How many instructions are executed in a program?</li>
+<li>Affected by: compiler, algorithm, and <strong>ISA design</strong></li>
+</ul>
+<h5 id="examples">Examples:<a hidden class="anchor" aria-hidden="true" href="#examples">#</a></h5>
+<ul>
+<li>CISC (Complex Instruction Set Computer)
+<ul>
+<li>Fewer instructions needed to do more work</li>
+</ul>
+</li>
+<li>RISC (Reduced Instruction Set Computer)
+<ul>
+<li>Simpler instructions, but more of them may be needed</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-cpi-cycles--instruction">2. CPI (Cycles / Instruction)<a hidden class="anchor" aria-hidden="true" href="#2-cpi-cycles--instruction">#</a></h4>
+<ul>
+<li>How many clock cycles does each instruction take?</li>
+<li>Affected by: instruction type, pipeline structure, data hazards</li>
+</ul>
+<h5 id="examples-1">Examples:<a hidden class="anchor" aria-hidden="true" href="#examples-1">#</a></h5>
+<ul>
+<li>RISC-V aims for <strong>CPI ≈ 1</strong> (1 instruction per cycle)</li>
+<li>Complex instructions (e.g., <code>DIV</code>) may take multiple cycles</li>
+</ul>
+<hr>
+<h4 id="3-time--cycle">3. Time / Cycle<a hidden class="anchor" aria-hidden="true" href="#3-time--cycle">#</a></h4>
+<ul>
+<li>How long is each clock cycle?</li>
+<li>Affected by: technology node, clock frequency, and fabrication</li>
+</ul>
+<h5 id="examples-2">Examples:<a hidden class="anchor" aria-hidden="true" href="#examples-2">#</a></h5>
+<ul>
+<li>Time per cycle = <code>1 / frequency</code></li>
+<li>2GHz → 0.5 nanoseconds per cycle</li>
+</ul>
+<hr>
+<h3 id="energy-per-program">Energy per Program<a hidden class="anchor" aria-hidden="true" href="#energy-per-program">#</a></h3>
+<pre tabindex="0"><code>Energy / Program = 
+    (Instructions / Program) × 
+    (Energy / Instruction)
+</code></pre><p>Alternative form:</p>
+<pre tabindex="0"><code>Energy / Program ∝ 
+    (Instructions / Program) × 
+    C × V²
+</code></pre><p>Where:</p>
+<ul>
+<li><code>C</code> = capacitance, depends on design and number of cores</li>
+<li><code>V</code> = supply voltage</li>
+</ul>
+<hr>
+<h3 id="energy-iron-law">Energy “Iron Law”<a hidden class="anchor" aria-hidden="true" href="#energy-iron-law">#</a></h3>
+<pre tabindex="0"><code>Performance = Power × Energy Efficiency
+
+             = (Joules / Second) × (Tasks / Joule)
+             = Tasks / Second
+</code></pre><hr>
+<h3 id="key-implications">Key Implications<a hidden class="anchor" aria-hidden="true" href="#key-implications">#</a></h3>
+<ul>
+<li><strong>Energy efficiency</strong> (e.g., instructions per Joule) is a critical metric</li>
+<li>For <strong>power-constrained systems</strong> (e.g., data centers):
+<ul>
+<li>Need higher energy efficiency to deliver more performance per watt</li>
+</ul>
+</li>
+<li>For <strong>energy-constrained systems</strong> (e.g., phones):
+<ul>
+<li>Need better energy efficiency to extend battery life</li>
+</ul>
+</li>
+</ul>
 
 
   </div>
@@ -352,10 +412,10 @@ Only <code>lw</code> and <code>sw</code> instructions go through the <strong>MEM
     <br>
     <span>Registers File reg[]</span>
   </a>
-  <a class="next" href="https://dev-helia.github.io/Tech-Blog-Website/posts/promptllery/">
+  <a class="next" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/06_circuits/">
     <span class="title">Next »</span>
     <br>
-    <span>My First Full-Stack Project — Promptllery</span>
+    <span>Switches in Circuits</span>
   </a>
 </nav>
 

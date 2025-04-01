@@ -109,12 +109,11 @@
   <div class="entry-content">
     <p>Clock Cycle A single-cycle CPU completes all stages of an instruction within one long clock cycle.
 Each instruction goes through the following five stages:
-Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.
-Instruction Execution Stages (RISC-V) Stage Name Description IF Instruction Fetch Fetch the instruction from IMEM, increment PC &#43;= 4 ID Instruction Decode Decode the instruction, read rs1 and rs2 EX Execute Perform computation via ALU (arithmetic or address calculation) MEM Memory Access lw: read from memory; sw: write to memory WB Write Back Write result to rd Every instruction passes through IF, ID, EX, WB.
-Only lw and sw instructions go through the MEM stage.
+All stages of an instruction completed within one long clock cycle
+Clock cycle sufficiently long to allow each instruction to complete all stages without interruption 1. Instruction Fetch → 2. Decode/Register Read → 3. Execute → 4. Memory → 5. Reg. Write Instruction Fetch Decode / Register Read Execute Memory Access Register Write Back The clock cycle is long enough to complete all these stages without interruption.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;124 words&nbsp;·&nbsp;Helia</footer>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;538 words&nbsp;·&nbsp;Helia</footer>
   <a class="entry-link" aria-label="post link to Clock Cycle and Instruction Stages" href="https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/07_cpu/"></a>
 </article>
     </main>
