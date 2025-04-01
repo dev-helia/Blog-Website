@@ -521,16 +521,75 @@ A &lt;strong&gt;single-cycle CPU&lt;/strong&gt; completes &lt;strong&gt;all stag
 &lt;p&gt;&lt;em&gt;(Insert single-cycle datapath diagram here)&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Memory Hierarchy &amp; Locality</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</guid>
+      <description>&lt;h1 id=&#34;memory-hierarchy&#34;&gt;Memory Hierarchy&lt;/h1&gt;
+&lt;p&gt;Modern computer systems use a layered memory model to balance &lt;strong&gt;speed&lt;/strong&gt;, &lt;strong&gt;capacity&lt;/strong&gt;, and &lt;strong&gt;cost&lt;/strong&gt;. This structure is known as the &lt;strong&gt;memory hierarchy&lt;/strong&gt;.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Level&lt;/th&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Speed&lt;/th&gt;
+          &lt;th&gt;Cost&lt;/th&gt;
+          &lt;th&gt;Capacity&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L0&lt;/td&gt;
+          &lt;td&gt;Registers&lt;/td&gt;
+          &lt;td&gt;Fastest&lt;/td&gt;
+          &lt;td&gt;Highest&lt;/td&gt;
+          &lt;td&gt;Smallest&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L1&lt;/td&gt;
+          &lt;td&gt;L1 Cache&lt;/td&gt;
+          &lt;td&gt;Very Fast&lt;/td&gt;
+          &lt;td&gt;Very High&lt;/td&gt;
+          &lt;td&gt;Tiny&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L2&lt;/td&gt;
+          &lt;td&gt;L2 Cache&lt;/td&gt;
+          &lt;td&gt;Fast&lt;/td&gt;
+          &lt;td&gt;High&lt;/td&gt;
+          &lt;td&gt;Small&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L3&lt;/td&gt;
+          &lt;td&gt;L3 Cache&lt;/td&gt;
+          &lt;td&gt;Medium&lt;/td&gt;
+          &lt;td&gt;Moderate&lt;/td&gt;
+          &lt;td&gt;Medium&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L4&lt;/td&gt;
+          &lt;td&gt;Main Memory (RAM)&lt;/td&gt;
+          &lt;td&gt;Slower&lt;/td&gt;
+          &lt;td&gt;Lower&lt;/td&gt;
+          &lt;td&gt;Large&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L5&lt;/td&gt;
+          &lt;td&gt;SSD/Disk&lt;/td&gt;
+          &lt;td&gt;Much Slower&lt;/td&gt;
+          &lt;td&gt;Cheapest&lt;/td&gt;
+          &lt;td&gt;Very Large&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As we go down the hierarchy:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Pipeline</title>
       <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</guid>
-      <description>&lt;hr&gt;
-&lt;h2 id=&#34;categories-cs61c-notes&#34;&gt;title: &amp;ldquo;09_Pipeline&amp;rdquo;
-date: 2025-03-31
-tags: [&amp;ldquo;RISC-V&amp;rdquo;, &amp;ldquo;Pipeline&amp;rdquo;, &amp;ldquo;Computer Architecture&amp;rdquo;, &amp;ldquo;CS61C&amp;rdquo;]
-categories: [&amp;ldquo;CS61C Notes&amp;rdquo;]&lt;/h2&gt;
-&lt;h1 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;pipeline&#34;&gt;Pipeline&lt;/h1&gt;
 &lt;h2 id=&#34;what-is-a-pipeline&#34;&gt;What is a pipeline?&lt;/h2&gt;
 &lt;p&gt;Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU &lt;strong&gt;throughput&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;five-stage-pipeline-structure-risc-v&#34;&gt;Five-stage pipeline structure (RISC-V)&lt;/h2&gt;
@@ -548,13 +607,6 @@ This diagram shows the five classic stages in a RISC-V pipelined processor:&lt;/
 &lt;li&gt;&lt;strong&gt;Write Back (WB)&lt;/strong&gt; – Write result back to register file.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img alt=&#34;Pipelining with RISC-V Detailed&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/images/pipeline_diagram_detailed.png&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</guid>
-      <description></description>
     </item>
     <item>
       <title></title>

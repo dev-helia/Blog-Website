@@ -6,13 +6,6 @@ categories: ["Computer Science", "CS61C"]
 draft: false
 ---
 
----
-title: "09_Pipeline"
-date: 2025-03-31
-tags: ["RISC-V", "Pipeline", "Computer Architecture", "CS61C"]
-categories: ["CS61C Notes"]
----
-
 # Pipeline
 
 ## What is a pipeline?
