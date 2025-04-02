@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Principles of Computer Composition on Helia&#39;s Tech-Blog</title>
+    <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/</link>
+    <description>Recent content in Principles of Computer Composition on Helia&#39;s Tech-Blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hex &amp; Binary Basics</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/01_bit/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/01_bit/</guid>
+      <description>&lt;p&gt;Hexadecimal (Hex) is a base-16 system used to represent binary data. Its key relationships:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 hex digit = 4 bits (also called a &lt;strong&gt;nibble&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;2 hex digits = 1 byte (8 bits)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In computer systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 bit&lt;/code&gt; = smallest binary unit, can be 0 or 1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 byte&lt;/code&gt; = 8 bits&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 nibble&lt;/code&gt; = 4 bits&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 word&lt;/code&gt; = usually 4 bytes (32 bits)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 double word&lt;/code&gt; = usually 8 bytes (64 bits)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;example-hex-vs-binary-table&#34;&gt;Example: Hex vs Binary Table&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Hex&lt;/th&gt;
+          &lt;th&gt;Binary&lt;/th&gt;
+          &lt;th&gt;Size&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;A&lt;/td&gt;
+          &lt;td&gt;1010&lt;/td&gt;
+          &lt;td&gt;4 bits (1 nibble)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3F&lt;/td&gt;
+          &lt;td&gt;0011 1111&lt;/td&gt;
+          &lt;td&gt;8 bits (1 byte)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7E2A&lt;/td&gt;
+          &lt;td&gt;0111 1110 0010 1010&lt;/td&gt;
+          &lt;td&gt;16 bits (2 bytes)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FF AA 01&lt;/td&gt;
+          &lt;td&gt;1111 1111 1010 1010 0000 0001&lt;/td&gt;
+          &lt;td&gt;24 bits (3 bytes)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1 hex digit = 4 bits&lt;/li&gt;
+&lt;li&gt;2 hex digits = 1 byte (8 bits)&lt;/li&gt;
+&lt;li&gt;8 hex digits = 4 bytes = 1 word = 32 bits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;offset-bits-and-block-size&#34;&gt;Offset Bits and Block Size&lt;/h2&gt;
+&lt;p&gt;The number of &lt;strong&gt;offset bits&lt;/strong&gt; depends on the &lt;strong&gt;block size&lt;/strong&gt;, using this formula:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Floating Point Encoding (IEEE 754)</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/02_float/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/02_float/</guid>
+      <description>&lt;h2 id=&#34;floating-point-encoding-single-precision&#34;&gt;Floating Point Encoding: Single Precision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;normalized&lt;/strong&gt; base-2 scientific notation:&lt;br&gt;
+&lt;code&gt;+1.xxxxx... × 2^y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;IEEE 754 (32-bit float) splits into &lt;strong&gt;3 fields&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1 bit&lt;/strong&gt;: Sign (0 = positive, 1 = negative)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8 bits&lt;/strong&gt;: Exponent (with bias)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;23 bits&lt;/strong&gt;: Significand / Mantissa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Value = (–1)^Sign × 1.Significand × 2^(Exponent – Bias)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;bit-breakdown-32-bit-float-layout&#34;&gt;Bit Breakdown (32-bit float layout)&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Field&lt;/th&gt;
+          &lt;th&gt;Size&lt;/th&gt;
+          &lt;th&gt;Purpose&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Sign&lt;/td&gt;
+          &lt;td&gt;1 bit&lt;/td&gt;
+          &lt;td&gt;1 = negative, 0 = positive&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Exponent&lt;/td&gt;
+          &lt;td&gt;8 bits&lt;/td&gt;
+          &lt;td&gt;Biased exponent&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Significand&lt;/td&gt;
+          &lt;td&gt;23 bits&lt;/td&gt;
+          &lt;td&gt;Fractional part (assumes leading 1)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-use-biased-notation-for-exponent&#34;&gt;Why Use Biased Notation for Exponent?&lt;/h2&gt;
+&lt;p&gt;If exponent were stored directly (signed int), comparison &amp;amp; sorting would be more complex.&lt;br&gt;
+So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent range to all positive values.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding IEEE 754 &amp; Fraction Encoding</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/03_ieee754/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/03_ieee754/</guid>
+      <description>&lt;h2 id=&#34;representing-fractions-binary-point&#34;&gt;Representing Fractions (Binary Point)&lt;/h2&gt;
+&lt;h3 id=&#34;key-idea-fixed-binary-point&#34;&gt;Key Idea: Fixed Binary Point&lt;/h3&gt;
+&lt;p&gt;Use a fixed binary point to separate &lt;strong&gt;negative&lt;/strong&gt; and &lt;strong&gt;non-negative powers&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example: &lt;code&gt;0b xx.xxxx&lt;/code&gt; (6-bit format)&lt;/li&gt;
+&lt;li&gt;Each position represents:&lt;br&gt;
+&lt;code&gt;2^1 | 2^0 | . | 2^-1 | 2^-2 | ...&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Example:&lt;br&gt;
+&lt;code&gt;10.101&lt;/code&gt; = 1×2^1 + 0×2^0 + 1×2^-1 + 0×2^-2 + 1×2^-3 = &lt;code&gt;2.625&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;scientific-notation&#34;&gt;Scientific Notation&lt;/h3&gt;
+&lt;p&gt;Use base-10 or base-2 scientific form:&lt;br&gt;
+&lt;code&gt;2.625 = 2 × 10^0 + 6 × 10^-1 + 2 × 10^-2 + 5 × 10^-3&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Instruction Set Architecture</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/04_isa/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/04_isa/</guid>
+      <description>&lt;h1 id=&#34;instruction-formats-overview&#34;&gt;Instruction Formats Overview&lt;/h1&gt;
+&lt;h2 id=&#34;1-what-is-an-instruction-format&#34;&gt;1. What is an Instruction Format?&lt;/h2&gt;
+&lt;p&gt;In most mainstream instruction set architectures (ISAs), an instruction is parsed from &lt;strong&gt;right to left&lt;/strong&gt; in execution.&lt;/p&gt;
+&lt;p&gt;For example, after an instruction like:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ecall
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It simply ends execution. But most other instructions contain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rd&lt;/code&gt;: destination register&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rs1&lt;/code&gt;, &lt;code&gt;rs2&lt;/code&gt;: source registers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In &lt;strong&gt;RISC-V&lt;/strong&gt;, instruction format &lt;strong&gt;strictly requires&lt;/strong&gt; &lt;code&gt;rs1&lt;/code&gt; and &lt;code&gt;rs2&lt;/code&gt; to be placed at fixed bit positions in the 32-bit instruction word.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This avoids decoding complexity caused by variable field placement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registers File reg[]</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/05_registers/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/05_registers/</guid>
+      <description>&lt;h3 id=&#34;1-how-many-registers-in-risc-v&#34;&gt;1. How Many Registers in RISC-V?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;RISC-V defines &lt;strong&gt;32 general-purpose registers&lt;/strong&gt;:&lt;br&gt;
+&lt;code&gt;x0&lt;/code&gt; ~ &lt;code&gt;x31&lt;/code&gt; (each 32-bit, holds a &lt;strong&gt;word&lt;/strong&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Trade-off:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More registers = more variables can be stored&lt;/li&gt;
+&lt;li&gt;But → harder to access quickly → slower hardware&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-register-classification&#34;&gt;2. Register Classification&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Type&lt;/th&gt;
+          &lt;th&gt;Alias&lt;/th&gt;
+          &lt;th&gt;Range&lt;/th&gt;
+          &lt;th&gt;Usage Hint&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Saved regs&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;s0&lt;/code&gt;~&lt;code&gt;s1&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x8&lt;/code&gt;~&lt;code&gt;x9&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Values preserved across function calls&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;s2&lt;/code&gt;~&lt;code&gt;s11&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x18&lt;/code&gt;~&lt;code&gt;x27&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Temp regs&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;t0&lt;/code&gt;~&lt;code&gt;t2&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x5&lt;/code&gt;~&lt;code&gt;x7&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Temporary variables&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;t3&lt;/code&gt;~&lt;code&gt;t6&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;x28&lt;/code&gt;~&lt;code&gt;x31&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Registers have &lt;strong&gt;no inherent type&lt;/strong&gt;, unlike variables in C.&lt;br&gt;
+Their role depends on how you use them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CPU</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/07_cpu/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/07_cpu/</guid>
+      <description>&lt;h2 id=&#34;clock-cycle&#34;&gt;Clock Cycle&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/07_cpu/image.png&#34;&gt;
+&lt;strong&gt;Graph:&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;From cs61c&lt;/em&gt;
+A &lt;strong&gt;single-cycle CPU&lt;/strong&gt; completes &lt;strong&gt;all stages&lt;/strong&gt; of an instruction within &lt;strong&gt;one long clock cycle&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Each instruction goes through the following five stages:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All stages of an instruction completed &lt;strong&gt;within one long clock cycle&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Clock cycle sufficiently long to allow each instruction to complete &lt;strong&gt;all stages without interruption&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. Instruction Fetch 
+→ 2. Decode/Register Read 
+→ 3. Execute 
+→ 4. Memory 
+→ 5. Reg. Write
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Instruction Fetch&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decode / Register Read&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Memory Access&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Register Write Back&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The clock cycle is long enough to complete all these stages without interruption.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Circuits</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/06_circuits/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/06_circuits/</guid>
+      <description>&lt;h1 id=&#34;switches&#34;&gt;Switches&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The basic element of physical implementations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Convention&lt;/strong&gt;: if input is a &lt;code&gt;1&lt;/code&gt;, the switch is &lt;strong&gt;asserted&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;   A         Z
+   o——o      💡
+    |         |
+   ===        ===
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Open&lt;/strong&gt; switch if A is &lt;code&gt;0&lt;/code&gt; (unasserted) and turn &lt;strong&gt;OFF&lt;/strong&gt; light bulb (Z)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Close&lt;/strong&gt; switch if A is &lt;code&gt;1&lt;/code&gt; (asserted) and turn &lt;strong&gt;ON&lt;/strong&gt; light bulb (Z)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;maximum-clock-frequency&#34;&gt;Maximum Clock Frequency&lt;/h1&gt;
+&lt;p&gt;What is the max frequency of this circuit?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Limited by how much time needed to get correct &lt;strong&gt;Next State to Register&lt;/strong&gt; (&lt;code&gt;t_setup&lt;/code&gt; constraint)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Equation:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Data Path</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/08_datapath/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/08_datapath/</guid>
+      <description>&lt;h1 id=&#34;1-current-datapath&#34;&gt;1. Current Datapath&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/08_datapath/image.png&#34;&gt;
+&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/08_datapath/image-2.png&#34;&gt;
+&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/08_datapath/image-1.png&#34;&gt;
+&lt;strong&gt;Graph:&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;From cs61c&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;2-component-table&#34;&gt;2. Component Table&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Abbreviation&lt;/th&gt;
+          &lt;th&gt;Full Name&lt;/th&gt;
+          &lt;th&gt;Function&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;IMEM&lt;/td&gt;
+          &lt;td&gt;Instruction Memory&lt;/td&gt;
+          &lt;td&gt;Stores instruction codes, used for fetch&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Reg[]&lt;/td&gt;
+          &lt;td&gt;Register File&lt;/td&gt;
+          &lt;td&gt;Register file containing 32 registers (x0 ~ x31)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Imm.Gen&lt;/td&gt;
+          &lt;td&gt;Immediate Generator&lt;/td&gt;
+          &lt;td&gt;Extracts immediate from instruction&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;inst&lt;/td&gt;
+          &lt;td&gt;Instruction&lt;/td&gt;
+          &lt;td&gt;Current instruction fetched from IMEM&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rs1&lt;/td&gt;
+          &lt;td&gt;Register Source 1&lt;/td&gt;
+          &lt;td&gt;First input operand from Reg[]&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rs2&lt;/td&gt;
+          &lt;td&gt;Register Source 2&lt;/td&gt;
+          &lt;td&gt;Second input operand from Reg[]&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;DMEM&lt;/td&gt;
+          &lt;td&gt;Data Memory&lt;/td&gt;
+          &lt;td&gt;Used in lw/sw instructions&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ImmSel&lt;/td&gt;
+          &lt;td&gt;Immediate Select&lt;/td&gt;
+          &lt;td&gt;Selects immediate type (I, S, B, U, J)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;BSel&lt;/td&gt;
+          &lt;td&gt;B Operand Select&lt;/td&gt;
+          &lt;td&gt;Selects between rs2 or imm as second operand&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ALUSel&lt;/td&gt;
+          &lt;td&gt;ALU Operation Select&lt;/td&gt;
+          &lt;td&gt;ALU operation selector (add, sub, logic, etc.)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MemRW&lt;/td&gt;
+          &lt;td&gt;Memory Read/Write&lt;/td&gt;
+          &lt;td&gt;Controls memory read/write (&lt;code&gt;lw&lt;/code&gt; or &lt;code&gt;sw&lt;/code&gt;)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;DataR&lt;/td&gt;
+          &lt;td&gt;Data Read&lt;/td&gt;
+          &lt;td&gt;Data read from DMEM&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Addr&lt;/td&gt;
+          &lt;td&gt;Address&lt;/td&gt;
+          &lt;td&gt;Address sent to DMEM&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Mem&lt;/td&gt;
+          &lt;td&gt;Memory&lt;/td&gt;
+          &lt;td&gt;Memory module&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WB&lt;/td&gt;
+          &lt;td&gt;Write Back&lt;/td&gt;
+          &lt;td&gt;Controls whether to write back ALU or memory result to Reg[]&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-imem-vs-dmem&#34;&gt;3. IMEM vs DMEM&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Storage&lt;/th&gt;
+          &lt;th&gt;Function&lt;/th&gt;
+          &lt;th&gt;Content&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;IMEM&lt;/td&gt;
+          &lt;td&gt;Instruction Memory&lt;/td&gt;
+          &lt;td&gt;Instruction codes&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;DMEM&lt;/td&gt;
+          &lt;td&gt;Data Memory&lt;/td&gt;
+          &lt;td&gt;Data accessed by lw/sw&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;4-rs1-vs-rs2-vs-rd&#34;&gt;4. rs1 vs rs2 vs rd&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Field&lt;/th&gt;
+          &lt;th&gt;Meaning&lt;/th&gt;
+          &lt;th&gt;Example (&lt;code&gt;add x1, x2, x3&lt;/code&gt;)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rs1&lt;/td&gt;
+          &lt;td&gt;First source operand&lt;/td&gt;
+          &lt;td&gt;x2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rs2&lt;/td&gt;
+          &lt;td&gt;Second source operand&lt;/td&gt;
+          &lt;td&gt;x3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;rd&lt;/td&gt;
+          &lt;td&gt;Destination register&lt;/td&gt;
+          &lt;td&gt;x1&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;5-immediate-generator-immgen&#34;&gt;5. Immediate Generator (Imm.Gen)&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Instruction Example&lt;/th&gt;
+          &lt;th&gt;Extracted Immediate&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;addi x1, x2, 10&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;sw x1, 100(x2)&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;100&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;beq x1, x2, -8&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;-8&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;6-alusel--bsel&#34;&gt;6. ALUSel &amp;amp; BSel&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Signal&lt;/th&gt;
+          &lt;th&gt;Function&lt;/th&gt;
+          &lt;th&gt;Options&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ALUSel&lt;/td&gt;
+          &lt;td&gt;Selects ALU operation&lt;/td&gt;
+          &lt;td&gt;add, sub, AND, OR, XOR, shift&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;BSel&lt;/td&gt;
+          &lt;td&gt;Selects second operand&lt;/td&gt;
+          &lt;td&gt;rs2 or imm&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;7-memrw-memory-readwrite&#34;&gt;7. MemRW (Memory Read/Write)&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Signal&lt;/th&gt;
+          &lt;th&gt;Meaning&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;Read (&lt;code&gt;lw&lt;/code&gt;)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;Write (&lt;code&gt;sw&lt;/code&gt;)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;8-wb-write-back&#34;&gt;8. WB (Write Back)&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Signal&lt;/th&gt;
+          &lt;th&gt;Meaning&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;Write back ALU result&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;Write back memory data from DMEM&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;9-single-cycle-risc-v-rv32i-datapath&#34;&gt;9. Single-Cycle RISC-V RV32I Datapath&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;(Insert single-cycle datapath diagram here)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cache Structure &amp; Strategies</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/11_cache/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/11_cache/</guid>
+      <description>&lt;h1 id=&#34;cache-structure-tag--index--offset--data&#34;&gt;Cache Structure: Tag | Index | Offset | Data&lt;/h1&gt;
+&lt;p&gt;A memory address is divided into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tag&lt;/strong&gt;: Identifies which block the data belongs to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Index&lt;/strong&gt;: Points to a specific cache line (set).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offset&lt;/strong&gt;: Locates the exact byte inside a block.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;: The actual value stored.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, in a &lt;strong&gt;4KB Direct-Mapped Cache&lt;/strong&gt; with &lt;strong&gt;64B block size&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Tag&lt;/th&gt;
+          &lt;th&gt;Index&lt;/th&gt;
+          &lt;th&gt;Offset&lt;/th&gt;
+          &lt;th&gt;Data Block (64B)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0x1A3&lt;/td&gt;
+          &lt;td&gt;010&lt;/td&gt;
+          &lt;td&gt;000000&lt;/td&gt;
+          &lt;td&gt;64 bytes of data&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0x2B4&lt;/td&gt;
+          &lt;td&gt;101&lt;/td&gt;
+          &lt;td&gt;000000&lt;/td&gt;
+          &lt;td&gt;64 bytes of data&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;cache-lookup-process&#34;&gt;Cache Lookup Process&lt;/h1&gt;
+&lt;p&gt;When the CPU sends a memory request:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Memory</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/10_memory/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/10_memory/</guid>
+      <description>&lt;h1 id=&#34;memory-hierarchy&#34;&gt;Memory Hierarchy&lt;/h1&gt;
+&lt;p&gt;Modern computer systems use a layered memory model to balance &lt;strong&gt;speed&lt;/strong&gt;, &lt;strong&gt;capacity&lt;/strong&gt;, and &lt;strong&gt;cost&lt;/strong&gt;. This structure is known as the &lt;strong&gt;memory hierarchy&lt;/strong&gt;.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Level&lt;/th&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Speed&lt;/th&gt;
+          &lt;th&gt;Cost&lt;/th&gt;
+          &lt;th&gt;Capacity&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L0&lt;/td&gt;
+          &lt;td&gt;Registers&lt;/td&gt;
+          &lt;td&gt;Fastest&lt;/td&gt;
+          &lt;td&gt;Highest&lt;/td&gt;
+          &lt;td&gt;Smallest&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L1&lt;/td&gt;
+          &lt;td&gt;L1 Cache&lt;/td&gt;
+          &lt;td&gt;Very Fast&lt;/td&gt;
+          &lt;td&gt;Very High&lt;/td&gt;
+          &lt;td&gt;Tiny&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L2&lt;/td&gt;
+          &lt;td&gt;L2 Cache&lt;/td&gt;
+          &lt;td&gt;Fast&lt;/td&gt;
+          &lt;td&gt;High&lt;/td&gt;
+          &lt;td&gt;Small&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L3&lt;/td&gt;
+          &lt;td&gt;L3 Cache&lt;/td&gt;
+          &lt;td&gt;Medium&lt;/td&gt;
+          &lt;td&gt;Moderate&lt;/td&gt;
+          &lt;td&gt;Medium&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L4&lt;/td&gt;
+          &lt;td&gt;Main Memory (RAM)&lt;/td&gt;
+          &lt;td&gt;Slower&lt;/td&gt;
+          &lt;td&gt;Lower&lt;/td&gt;
+          &lt;td&gt;Large&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L5&lt;/td&gt;
+          &lt;td&gt;SSD/Disk&lt;/td&gt;
+          &lt;td&gt;Much Slower&lt;/td&gt;
+          &lt;td&gt;Cheapest&lt;/td&gt;
+          &lt;td&gt;Very Large&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As we go down the hierarchy:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pipeline</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/</link>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/</guid>
+      <description>&lt;h2 id=&#34;what-is-a-pipeline&#34;&gt;What is a pipeline?&lt;/h2&gt;
+&lt;p&gt;Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU &lt;strong&gt;throughput&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;five-stage-pipeline-structure-risc-v&#34;&gt;Five-stage pipeline structure (RISC-V)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;IF ➝ ID ➝ EX ➝ MEM ➝ WB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/image.png&#34;&gt;
+&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/image-1.png&#34;&gt;
+&lt;strong&gt;Graph:&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;From cs61c&lt;/em&gt;
+This diagram shows the five classic stages in a RISC-V pipelined processor:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Instruction Fetch (IF)&lt;/strong&gt; – Fetch instruction from memory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Instruction Decode / Register Read (ID)&lt;/strong&gt; – Decode the instruction and read source registers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute / Address Calculation (EX)&lt;/strong&gt; – Perform ALU operations or calculate addresses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Memory Access (MEM)&lt;/strong&gt; – Read/write data from/to memory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write Back (WB)&lt;/strong&gt; – Write result back to register file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;multicycle--pipelining&#34;&gt;Multicycle → Pipelining&lt;/h2&gt;
+&lt;h3 id=&#34;five-classic-pipeline-stages-in-risc-v&#34;&gt;Five Classic Pipeline Stages in RISC-V&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Stage&lt;/th&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;IF&lt;/td&gt;
+          &lt;td&gt;Instruction Fetch&lt;/td&gt;
+          &lt;td&gt;Fetch instruction from memory&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ID&lt;/td&gt;
+          &lt;td&gt;Instruction Decode / Register Read&lt;/td&gt;
+          &lt;td&gt;Decode instruction and read registers&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EX&lt;/td&gt;
+          &lt;td&gt;Execute / Address Calculation&lt;/td&gt;
+          &lt;td&gt;Perform ALU operations or address compute&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MEM&lt;/td&gt;
+          &lt;td&gt;Memory Access&lt;/td&gt;
+          &lt;td&gt;Access memory (read/write)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;WB&lt;/td&gt;
+          &lt;td&gt;Write Back&lt;/td&gt;
+          &lt;td&gt;Write result back to registers&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;how-do-multiple-instructions-run-in-parallel&#34;&gt;How do multiple instructions run in parallel?&lt;/h3&gt;
+&lt;p&gt;Each instruction enters the pipeline and advances one stage per cycle.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

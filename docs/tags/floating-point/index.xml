@@ -10,9 +10,9 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/floating-point/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding IEEE 754 &amp; Fraction Encoding</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/03_ieee754/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/03_ieee754/</guid>
       <description>&lt;h2 id=&#34;representing-fractions-binary-point&#34;&gt;Representing Fractions (Binary Point)&lt;/h2&gt;
 &lt;h3 id=&#34;key-idea-fixed-binary-point&#34;&gt;Key Idea: Fixed Binary Point&lt;/h3&gt;
 &lt;p&gt;Use a fixed binary point to separate &lt;strong&gt;negative&lt;/strong&gt; and &lt;strong&gt;non-negative powers&lt;/strong&gt;:&lt;/p&gt;

@@ -10,9 +10,9 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/registers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Registers File reg[]</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/05_registers/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/05_registers/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/05_registers/</guid>
       <description>&lt;h3 id=&#34;1-how-many-registers-in-risc-v&#34;&gt;1. How Many Registers in RISC-V?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;

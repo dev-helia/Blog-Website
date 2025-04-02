@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Helia&#39;s Tech-Blog</title>
+    <link>https://dev-helia.github.io/Tech-Blog-Website/posts/dev/</link>
+    <description>Recent content on Helia&#39;s Tech-Blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/posts/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Full-Stack Project — Promptllery</title>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/dev/promptllery/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/dev/promptllery/</guid>
+      <description>&lt;h2 id=&#34;why-i-decided-to-build-a-full-stack-project&#34;&gt;Why I Decided to Build a Full-Stack Project&lt;/h2&gt;
+&lt;p&gt;Honestly, the motivation wasn&amp;rsquo;t pure tech passion — it was anxiety from comparison. I saw classmates with polished full-stack projects, while I had only built algorithm demos or component pages.&lt;/p&gt;
+&lt;p&gt;So I forced myself to make something that &lt;em&gt;looks&lt;/em&gt; like a full-stack product.&lt;/p&gt;
+&lt;p&gt;On the first day I broke down:&lt;br&gt;
+What is JSX? What’s the deal between Vite and React? Why am I getting &lt;code&gt;@babel/preset-react&lt;/code&gt; errors in testing? What&amp;rsquo;s the difference between Supabase and Node.js?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -10,9 +10,9 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/cs61c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hex &amp; Binary Basics</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/01_bit/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/01_bit/</guid>
       <description>&lt;p&gt;Hexadecimal (Hex) is a base-16 system used to represent binary data. Its key relationships:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1 hex digit = 4 bits (also called a &lt;strong&gt;nibble&lt;/strong&gt;)&lt;/li&gt;
@@ -72,9 +72,9 @@
     </item>
     <item>
       <title>Floating Point Encoding (IEEE 754)</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/02_float/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/02_float/</guid>
       <description>&lt;h2 id=&#34;floating-point-encoding-single-precision&#34;&gt;Floating Point Encoding: Single Precision&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Use &lt;strong&gt;normalized&lt;/strong&gt; base-2 scientific notation:&lt;br&gt;
@@ -124,9 +124,9 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
     </item>
     <item>
       <title>Understanding IEEE 754 &amp; Fraction Encoding</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/03_ieee754/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/03_ieee754/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/03_ieee754/</guid>
       <description>&lt;h2 id=&#34;representing-fractions-binary-point&#34;&gt;Representing Fractions (Binary Point)&lt;/h2&gt;
 &lt;h3 id=&#34;key-idea-fixed-binary-point&#34;&gt;Key Idea: Fixed Binary Point&lt;/h3&gt;
 &lt;p&gt;Use a fixed binary point to separate &lt;strong&gt;negative&lt;/strong&gt; and &lt;strong&gt;non-negative powers&lt;/strong&gt;:&lt;/p&gt;
@@ -144,9 +144,9 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
     </item>
     <item>
       <title>Cache Structure &amp; Strategies</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/11_cache/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/11_cache/</guid>
       <description>&lt;h1 id=&#34;cache-structure-tag--index--offset--data&#34;&gt;Cache Structure: Tag | Index | Offset | Data&lt;/h1&gt;
 &lt;p&gt;A memory address is divided into:&lt;/p&gt;
 &lt;ul&gt;
@@ -186,9 +186,9 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
     </item>
     <item>
       <title>Memory</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/10_memory/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/10_memory/</guid>
       <description>&lt;h1 id=&#34;memory-hierarchy&#34;&gt;Memory Hierarchy&lt;/h1&gt;
 &lt;p&gt;Modern computer systems use a layered memory model to balance &lt;strong&gt;speed&lt;/strong&gt;, &lt;strong&gt;capacity&lt;/strong&gt;, and &lt;strong&gt;cost&lt;/strong&gt;. This structure is known as the &lt;strong&gt;memory hierarchy&lt;/strong&gt;.&lt;/p&gt;
 &lt;table&gt;
@@ -250,17 +250,17 @@ So IEEE 754 uses &lt;strong&gt;bias notation&lt;/strong&gt;, shifting exponent r
     </item>
     <item>
       <title>Pipeline</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/</guid>
       <description>&lt;h2 id=&#34;what-is-a-pipeline&#34;&gt;What is a pipeline?&lt;/h2&gt;
 &lt;p&gt;Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU &lt;strong&gt;throughput&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;five-stage-pipeline-structure-risc-v&#34;&gt;Five-stage pipeline structure (RISC-V)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;IF ➝ ID ➝ EX ➝ MEM ➝ WB&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image.png&#34;&gt;
-&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/09_pipeline/image-1.png&#34;&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/image.png&#34;&gt;
+&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/image-1.png&#34;&gt;
 &lt;strong&gt;Graph:&lt;/strong&gt;&lt;br&gt;
 &lt;em&gt;From cs61c&lt;/em&gt;
 This diagram shows the five classic stages in a RISC-V pipelined processor:&lt;/p&gt;

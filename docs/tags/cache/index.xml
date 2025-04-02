@@ -10,9 +10,9 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/cache/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cache Structure &amp; Strategies</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/11_cache/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/11_cache/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/11_cache/</guid>
       <description>&lt;h1 id=&#34;cache-structure-tag--index--offset--data&#34;&gt;Cache Structure: Tag | Index | Offset | Data&lt;/h1&gt;
 &lt;p&gt;A memory address is divided into:&lt;/p&gt;
 &lt;ul&gt;
@@ -52,9 +52,9 @@
     </item>
     <item>
       <title>Memory</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/10_memory/</link>
       <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/10_memory/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/10_memory/</guid>
       <description>&lt;h1 id=&#34;memory-hierarchy&#34;&gt;Memory Hierarchy&lt;/h1&gt;
 &lt;p&gt;Modern computer systems use a layered memory model to balance &lt;strong&gt;speed&lt;/strong&gt;, &lt;strong&gt;capacity&lt;/strong&gt;, and &lt;strong&gt;cost&lt;/strong&gt;. This structure is known as the &lt;strong&gt;memory hierarchy&lt;/strong&gt;.&lt;/p&gt;
 &lt;table&gt;

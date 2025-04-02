@@ -10,9 +10,9 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/float/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Floating Point Encoding (IEEE 754)</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/02_float/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/02_float/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/02_float/</guid>
       <description>&lt;h2 id=&#34;floating-point-encoding-single-precision&#34;&gt;Floating Point Encoding: Single Precision&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Use &lt;strong&gt;normalized&lt;/strong&gt; base-2 scientific notation:&lt;br&gt;

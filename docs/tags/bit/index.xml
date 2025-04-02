@@ -10,9 +10,9 @@
     <atom:link href="https://dev-helia.github.io/Tech-Blog-Website/tags/bit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hex &amp; Binary Basics</title>
-      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</link>
+      <link>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/01_bit/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/principles_of_computer_composition/01_bit/</guid>
+      <guid>https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/01_bit/</guid>
       <description>&lt;p&gt;Hexadecimal (Hex) is a base-16 system used to represent binary data. Its key relationships:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1 hex digit = 4 bits (also called a &lt;strong&gt;nibble&lt;/strong&gt;)&lt;/li&gt;

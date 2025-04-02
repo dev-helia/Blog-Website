@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Principles of Computer Composition | Helia&#39;s Tech-Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Whole Picture
+Hi! This is my Computer Architecture notebook, created while studying UC Berkeley’s CS61C online course. It&rsquo;s truly an amazing course! After reviewing all the lecture notes, I tried to connect all the concepts together to grasp the full picture of how a computer system works.
+Below is a mind map illustrating my understanding of the overall structure of a computer system and some aspects of Operating Systems:
+">
+<meta name="author" content="Helia">
+<link rel="canonical" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/">
+<link crossorigin="anonymous" href="/Tech-Blog-Website/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://dev-helia.github.io/Tech-Blog-Website/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dev-helia.github.io/Tech-Blog-Website/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dev-helia.github.io/Tech-Blog-Website/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://dev-helia.github.io/Tech-Blog-Website/apple-touch-icon.png">
+<link rel="mask-icon" href="https://dev-helia.github.io/Tech-Blog-Website/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/index.xml">
+<link rel="alternate" hreflang="en" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/">
+  <meta property="og:site_name" content="Helia&#39;s Tech-Blog">
+  <meta property="og:title" content="Principles of Computer Composition">
+  <meta property="og:description" content="Whole Picture Hi! This is my Computer Architecture notebook, created while studying UC Berkeley’s CS61C online course. It’s truly an amazing course! After reviewing all the lecture notes, I tried to connect all the concepts together to grasp the full picture of how a computer system works.
+Below is a mind map illustrating my understanding of the overall structure of a computer system and some aspects of Operating Systems:">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Principles of Computer Composition">
+<meta name="twitter:description" content="A collection of curated prompts, AI thoughts, and tech experiments by Helia">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://dev-helia.github.io/Tech-Blog-Website/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "https://dev-helia.github.io/Tech-Blog-Website/posts/cs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Principles of Computer Composition",
+      "item": "https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://dev-helia.github.io/Tech-Blog-Website/" accesskey="h" title="Helia&#39;s Tech-Blog (Alt + H)">Helia&#39;s Tech-Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://dev-helia.github.io/Tech-Blog-Website/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dev-helia.github.io/Tech-Blog-Website/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dev-helia.github.io/Tech-Blog-Website/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://dev-helia.github.io/Tech-Blog-Website/">Home</a>&nbsp;»&nbsp;<a href="https://dev-helia.github.io/Tech-Blog-Website/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/"></a></div>
+  <h1>
+    Principles of Computer Composition
+  </h1>
+</header>
+<div class="post-content"><h2 id="whole-picture">Whole Picture<a hidden class="anchor" aria-hidden="true" href="#whole-picture">#</a></h2>
+<p>Hi! This is my Computer Architecture notebook, created while studying UC Berkeley’s CS61C online course. It&rsquo;s truly an amazing course! After reviewing all the lecture notes, I tried to connect all the concepts together to grasp the full picture of how a computer system works.</p>
+<p>Below is a mind map illustrating my understanding of the overall structure of a computer system and some aspects of Operating Systems:</p>
+<p><img alt="Computer Architecture: Whole Picture" loading="lazy" src="/Tech-Blog-Website/posts/cs/principles_of_computer_composition/whole_structure.jpg"></p>
+<hr>
+<h2 id="suggested-learning-path">Suggested Learning Path<a hidden class="anchor" aria-hidden="true" href="#suggested-learning-path">#</a></h2>
+<p>This blog is structured intentionally according to the following learning path. I believe it is essential to first understand bits, as they form the fundamental building blocks. Then, comprehending the Instruction Set Architecture (ISA) becomes important for understanding how hardware communicates. Once we grasp ISA, we can explore the CPU and data paths. Finally, memory concepts and cache mechanisms help bridge our understanding towards Operating System operations.</p>
+<p><img alt="Learning Path" loading="lazy" src="/Tech-Blog-Website/posts/cs/principles_of_computer_composition/image.png"></p>
+<table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Topics</th>
+          <th>Reasoning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Step 1</td>
+          <td>Bits &amp; Floating Points</td>
+          <td>Build foundational understanding of binary data and representation</td>
+      </tr>
+      <tr>
+          <td>Step 2</td>
+          <td>ISA &amp; Registers</td>
+          <td>Understand how software instructions communicate with hardware components</td>
+      </tr>
+      <tr>
+          <td>Step 3</td>
+          <td>CPU &amp; Datapath</td>
+          <td>Deepen our knowledge of the core computing pipeline</td>
+      </tr>
+      <tr>
+          <td>Step 4</td>
+          <td>Pipeline, Memory &amp; Cache</td>
+          <td>Learn about performance optimization techniques and system efficiency</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="ultimate-comparison-computer-organization-vs-operating-systems">Ultimate Comparison: Computer Organization vs. Operating Systems<a hidden class="anchor" aria-hidden="true" href="#ultimate-comparison-computer-organization-vs-operating-systems">#</a></h2>
+<p>While studying CS61C, I often found the distinction between computer organization and operating systems confusing. Here is my attempt at clarifying these two distinct yet closely related fields:</p>
+<h3 id="computer-organization-vs-operating-systems">Computer Organization vs. Operating Systems<a hidden class="anchor" aria-hidden="true" href="#computer-organization-vs-operating-systems">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Computer Organization (Hardware)</th>
+          <th>Operating System (OS)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Research Goal</td>
+          <td>Structural design at the hardware level, such as CPU, registers, and memory interactions</td>
+          <td>Resource management at the software level, such as CPU scheduling, memory allocation, and process management</td>
+      </tr>
+      <tr>
+          <td>Hierarchical Position</td>
+          <td>Closer to hardware, emphasizing logic circuits and data pathways</td>
+          <td>Closer to user applications, acting as an intermediary</td>
+      </tr>
+      <tr>
+          <td>Components</td>
+          <td>ALU, Control Unit, Cache, ISA, Data Path</td>
+          <td>Process management, Virtual memory, File system, System calls</td>
+      </tr>
+      <tr>
+          <td>Key Techniques</td>
+          <td>Binary arithmetic, Instruction formats, Register files, Pipelining</td>
+          <td>Multithreading, Memory paging, Inter-process communication</td>
+      </tr>
+      <tr>
+          <td>Common Misunderstandings</td>
+          <td>Also covers memory hierarchies but focuses on structural design principles</td>
+          <td>Also addresses memory (e.g., virtual memory, paging) but focuses on policy and management decisions</td>
+      </tr>
+      <tr>
+          <td>Analogy</td>
+          <td>Structural engineers building a physical structure</td>
+          <td>Management companies operating and managing the structure</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="an-illustrative-example">An Illustrative Example<a hidden class="anchor" aria-hidden="true" href="#an-illustrative-example">#</a></h2>
+<p>Consider executing the following line of code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> b <span style="color:#f92672">+</span> c;
+</span></span></code></pre></div><h3 id="concerns-from-the-computer-organization-perspective">Concerns from the Computer Organization Perspective:<a hidden class="anchor" aria-hidden="true" href="#concerns-from-the-computer-organization-perspective">#</a></h3>
+<ul>
+<li>How does this instruction get translated into machine code?</li>
+<li>How is data stored and accessed in registers?</li>
+<li>How does the ALU execute this addition operation?</li>
+<li>How does data flow inside the CPU to execute this operation?</li>
+</ul>
+<h3 id="concerns-from-the-operating-system-perspective">Concerns from the Operating System Perspective:<a hidden class="anchor" aria-hidden="true" href="#concerns-from-the-operating-system-perspective">#</a></h3>
+<ul>
+<li>Which process is responsible for executing this instruction?</li>
+<li>How should the OS schedule CPU resources to execute it?</li>
+<li>On which page in virtual memory does variable <code>a</code> reside?</li>
+<li>Does this code execution require disk access?</li>
+</ul>
+<hr>
+<h2 id="why-are-these-concepts-easily-confused">Why Are These Concepts Easily Confused?<a hidden class="anchor" aria-hidden="true" href="#why-are-these-concepts-easily-confused">#</a></h2>
+<p>Concepts such as virtual memory, page tables, and address translation mechanisms are commonly addressed in both Operating Systems and Computer Organization, albeit from different perspectives:</p>
+<ul>
+<li>
+<p><strong>Computer Organization Perspective:</strong><br>
+Focuses on the physical and structural implementation of address translation mechanisms, such as TLBs and caches.</p>
+</li>
+<li>
+<p><strong>Operating System Perspective:</strong><br>
+Emphasizes using these mechanisms for policy management and resource allocation decisions, like paging strategies, process isolation, and handling page faults.</p>
+</li>
+</ul>
+<hr>
+<h2 id="additional-reference-cs61c-slides">Additional Reference: CS61C Slides<a hidden class="anchor" aria-hidden="true" href="#additional-reference-cs61c-slides">#</a></h2>
+<p>The diagrams included in these notes are from UC Berkeley&rsquo;s CS61C (Spring 2022). A special thanks to the course instructors and teaching staff for the excellent materials. This blog is strictly for educational and non-commercial use.</p>
+<p><img alt="CS61C Diagram Summary" loading="lazy" src="/Tech-Blog-Website/posts/cs/principles_of_computer_composition/cs61c_diagram.jpg"></p>
+
+
+</div>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Circuits
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Switches The basic element of physical implementations Convention: if input is a 1, the switch is asserted A Z o——o 💡 | | === === Open switch if A is 0 (unasserted) and turn OFF light bulb (Z) Close switch if A is 1 (asserted) and turn ON light bulb (Z) Maximum Clock Frequency What is the max frequency of this circuit?
+Limited by how much time needed to get correct Next State to Register (t_setup constraint) Equation:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-06 00:00:00 +0000 UTC'>March 6, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;181 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Circuits" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/06_circuits/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Data Path
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. Current Datapath Graph:
+From cs61c
+2. Component Table Abbreviation Full Name Function IMEM Instruction Memory Stores instruction codes, used for fetch Reg[] Register File Register file containing 32 registers (x0 ~ x31) Imm.Gen Immediate Generator Extracts immediate from instruction inst Instruction Current instruction fetched from IMEM rs1 Register Source 1 First input operand from Reg[] rs2 Register Source 2 Second input operand from Reg[] DMEM Data Memory Used in lw/sw instructions ImmSel Immediate Select Selects immediate type (I, S, B, U, J) BSel B Operand Select Selects between rs2 or imm as second operand ALUSel ALU Operation Select ALU operation selector (add, sub, logic, etc.) MemRW Memory Read/Write Controls memory read/write (lw or sw) DataR Data Read Data read from DMEM Addr Address Address sent to DMEM Mem Memory Memory module WB Write Back Controls whether to write back ALU or memory result to Reg[] 3. IMEM vs DMEM Storage Function Content IMEM Instruction Memory Instruction codes DMEM Data Memory Data accessed by lw/sw 4. rs1 vs rs2 vs rd Field Meaning Example (add x1, x2, x3) rs1 First source operand x2 rs2 Second source operand x3 rd Destination register x1 5. Immediate Generator (Imm.Gen) Instruction Example Extracted Immediate addi x1, x2, 10 10 sw x1, 100(x2) 100 beq x1, x2, -8 -8 6. ALUSel &amp; BSel Signal Function Options ALUSel Selects ALU operation add, sub, AND, OR, XOR, shift BSel Selects second operand rs2 or imm 7. MemRW (Memory Read/Write) Signal Meaning 0 Read (lw) 1 Write (sw) 8. WB (Write Back) Signal Meaning 0 Write back ALU result 1 Write back memory data from DMEM 9. Single-Cycle RISC-V RV32I Datapath (Insert single-cycle datapath diagram here)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;931 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Data Path" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/08_datapath/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Cache Structure &amp; Strategies
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Cache Structure: Tag | Index | Offset | Data A memory address is divided into:
+Tag: Identifies which block the data belongs to. Index: Points to a specific cache line (set). Offset: Locates the exact byte inside a block. Data: The actual value stored. For example, in a 4KB Direct-Mapped Cache with 64B block size:
+Tag Index Offset Data Block (64B) 0x1A3 010 000000 64 bytes of data 0x2B4 101 000000 64 bytes of data Cache Lookup Process When the CPU sends a memory request:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;974 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Cache Structure & Strategies" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/11_cache/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Memory
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Memory Hierarchy Modern computer systems use a layered memory model to balance speed, capacity, and cost. This structure is known as the memory hierarchy.
+Level Name Speed Cost Capacity L0 Registers Fastest Highest Smallest L1 L1 Cache Very Fast Very High Tiny L2 L2 Cache Fast High Small L3 L3 Cache Medium Moderate Medium L4 Main Memory (RAM) Slower Lower Large L5 SSD/Disk Much Slower Cheapest Very Large As we go down the hierarchy:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;403 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Memory" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/10_memory/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Pipeline
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>What is a pipeline? Pipelining refers to processing different parts of multiple instructions simultaneously to improve CPU throughput.
+Five-stage pipeline structure (RISC-V) IF ➝ ID ➝ EX ➝ MEM ➝ WB Graph:
+From cs61c This diagram shows the five classic stages in a RISC-V pipelined processor:
+Instruction Fetch (IF) – Fetch instruction from memory. Instruction Decode / Register Read (ID) – Decode the instruction and read source registers. Execute / Address Calculation (EX) – Perform ALU operations or calculate addresses. Memory Access (MEM) – Read/write data from/to memory. Write Back (WB) – Write result back to register file. Multicycle → Pipelining Five Classic Pipeline Stages in RISC-V Stage Name Description IF Instruction Fetch Fetch instruction from memory ID Instruction Decode / Register Read Decode instruction and read registers EX Execute / Address Calculation Perform ALU operations or address compute MEM Memory Access Access memory (read/write) WB Write Back Write result back to registers How do multiple instructions run in parallel? Each instruction enters the pipeline and advances one stage per cycle.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-31 00:00:00 +0000 UTC'>March 31, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;1396 words&nbsp;·&nbsp;Helia</footer>
+  <a class="entry-link" aria-label="post link to Pipeline" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/09_pipeline/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://dev-helia.github.io/Tech-Blog-Website/posts/cs/principles_of_computer_composition/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://dev-helia.github.io/Tech-Blog-Website/">Helia&#39;s Tech-Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
